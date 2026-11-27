@@ -2,72 +2,48 @@
 @model rici7Sch.Pages.Topics.idh_ddesignateModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this dialog box to specify the detailed settings for the Designate/Chapter 
- function.</p>
-<p>Available functions differ depending on the printer or printer driver 
- you are using.</p>
-<p aria-level="3" class="T2" id="number" role="heading"><span class="Term-Soft">Page Number:</span></p>
-<p>Enter the page number on which a new chapter begins. If you specify 
- the page range, use a hyphen between page numbers. If you enter multiple 
- numbers, use a comma to separate entries.</p>
-<p class="Note">Note:</p>
+<p>このダイアログボックスでは、指定ページ/章区切り機能の詳細を設定します。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p aria-level="3" class="T2" id="number" role="heading"><span class="Term-Soft">ページ番号：</span></p>
+<p>新しい章が始まるページの番号を入力します。ページの範囲を指定するときは、ページ番号をハイフンでつなぎます。複数の番号を入力するときは、コンマで区切ります。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>The Designate/Chapter function is unavailable 
- within the specified range of pages on the specified paper.</p></li>
+<li><p>指定した用紙に印刷するページの範囲内では、指定ページ/章区切り機能は使用できません。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="chaptermode" role="heading"><span class="Term-Soft">Print Mode:</span></p>
-<p>Select one of the print mode options for the pages specified in <span class="Term-Soft">Page Number:</span>.</p>
-<p>Depending on the printer you are using, the available items may vary.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Designate: Leave Blank</span></p>
-<p class="Normal-indent">Inserts a blank sheet as a separator from a different 
- tray selected in <span class="Term-Soft">Input Tray:</span> before the page 
- specified in <span class="Term-Soft">Page Number:</span>.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Designate: One Side</span></p>
-<p class="Normal-indent">Prints the page specified in <span class="Term-Soft">Page 
- Number:</span> on a chapter cover from the tray selected in <span class="Term-Soft">Input 
- Tray:</span>. If you enable this setting, sheets will be printed on the 
- front side only, even if you have specified 2 sided printing.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Designate: Both Sides</span></p>
-<p class="Normal-indent">Prints the page specified in <span class="Term-Soft">Page 
- Number:</span> on the front side of a chapter cover from a different tray 
- selected in <span class="Term-Soft">Input Tray:</span> and the next page 
- on the back side. This option is for 2 sided printing.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Chapter</span></p>
-<p class="Normal-indent">Prints the page specified in <span class="Term-Soft">Page 
- Number:</span> on the front side of the sheet at all times while in 2 
- sided print mode. With this selection, you will be unable to use a different 
- input tray setting than the other pages.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Designated Sheet Print</span></p>
-<p class="Normal-indent">Prints the specified range of pages on different 
- sheets of paper.</p>
-<p aria-level="3" class="T2" id="chaptertray" role="heading"><span class="Term-Soft">Input Tray:</span></p>
-<p>Select the tray containing the paper to use for the chapter covers.</p>
-<p aria-level="3" class="T2" id="chapterpapertype" role="heading"><span class="Term-Soft">Paper Type in Bypass Tray:</span></p>
-<p>Specify the type of printing medium you want to use when using bypass 
- tray paper for Designate/Chapter. Available media types differ depending 
- on the printer you are using.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="chaptermode" role="heading"><span class="Term-Soft">印刷モード：</span></p>
+<p><span class="Term-Soft">ページ番号：</span>に指定したページの印刷モードを選択します。</p>
+<p>お使いのプリンターによって、使用できる項目は異なる場合があります。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">指定ページ：白紙</span></p>
+<p class="Normal-indent"><span class="Term-Soft">ページ番号：</span>に指定したページの前に、<span class="Term-Soft">給紙トレイ：</span>で選択した別のトレイから白紙を仕切りとして挿入します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">指定ページ：片面</span></p>
+<p class="Normal-indent"><span class="Term-Soft">ページ番号：</span>に指定したページを、<span class="Term-Soft">給紙トレイ：</span>で選択したトレイの章区切り用紙に印刷します。この設定を有効にすると、両面印刷を指定していても表面だけに印刷されます。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">指定ページ：両面</span></p>
+<p class="Normal-indent"><span class="Term-Soft">ページ番号：</span>に指定したページを <span class="Term-Soft">給紙トレイ：</span>で選択した別のトレイの章区切り用紙の表面に、次のページを裏面に印刷します。両面印刷用のオプションです。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">章区切り</span></p>
+<p class="Normal-indent">両面印刷モードのとき、<span class="Term-Soft">ページ番号：</span>に指定したページを常に用紙の表面に印刷します。この設定では、ほかのページと異なる給紙トレイを設定できません。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">指定ページ印刷</span></p>
+<p class="Normal-indent">指定した範囲のページを別の用紙に印刷します。</p>
+<p aria-level="3" class="T2" id="chaptertray" role="heading"><span class="Term-Soft">給紙トレイ：</span></p>
+<p>章区切りに使う用紙がセットされたトレイを選択します。</p>
+<p aria-level="3" class="T2" id="chapterpapertype" role="heading"><span class="Term-Soft">手差しトレイの用紙種類：</span></p>
+<p>手差しトレイの用紙を指定ページ/章区切りに使う場合に、使用する用紙の種類を指定します。使用できる用紙の種類は、お使いのプリンターによって異なります。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>If you select <span class="Term-Soft">Plain &amp; Recycled (Auto. for Postcard)</span>, it is normally printed as plain paper/recycled paper. If the print paper size is postcard, print with a paper type suitable for postcards.</p></li>
+<li><p><span class="Term-Soft">普通紙・再生紙（はがきは自動）</span> を選択すると、通常は普通紙・再生紙として印刷されます。印刷する用紙サイズがはがきの場合は、はがきに適した用紙種類で印刷されます。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="add" role="heading"><span class="Term-Soft">Add</span></p>
-<p>Click this to add your specifications of <span class="Term-Soft">Print 
- Mode:</span>, <span class="Term-Soft">Page Number:</span> and <span class="Term-Soft">Input 
- Tray:</span> to the <span class="Term-Soft">Designate/Chapter Settings List:</span>.</p>
-<p aria-level="3" class="T2" id="modify" role="heading"><span class="Term-Soft">Modify</span></p>
-<p>Click this to change a setting in <span class="Term-Soft">Designate/Chapter 
- Settings List:</span>.</p>
-<p aria-level="3" class="T2" id="list" role="heading"><span class="Term-Soft">Designate/Chapter Settings List:</span></p>
-<p>Lists the print modes specified for the chapter covers and their corresponding 
- pages.</p>
-<p aria-level="3" class="T2" id="delete" role="heading"><span class="Term-Soft">Delete</span></p>
-<p>Click this to remove an unnecessary item after selecting it in <span class="Term-Soft">Designate/Chapter Settings List:</span>.</p>
-<p aria-level="3" class="T2" id="deleteall" role="heading"><span class="Term-Soft">Delete All</span></p>
-<p>Click this to delete all the items in <span class="Term-Soft">Designate/Chapter 
- Settings List:</span>.</p>
+<p aria-level="3" class="T2" id="add" role="heading"><span class="Term-Soft">追加</span></p>
+<p>クリックすると、<span class="Term-Soft">印刷モード：</span>、<span class="Term-Soft">ページ番号：</span>、<span class="Term-Soft">給紙トレイ：</span>の指定を <span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>に追加します。</p>
+<p aria-level="3" class="T2" id="modify" role="heading"><span class="Term-Soft">変更</span></p>
+<p>クリックすると、<span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>の設定を変更します。</p>
+<p aria-level="3" class="T2" id="list" role="heading"><span class="Term-Soft">指定ページ/章区切りの設定一覧：</span></p>
+<p>章区切りに指定した印刷モードと、その対象ページを一覧表示します。</p>
+<p aria-level="3" class="T2" id="delete" role="heading"><span class="Term-Soft">削除</span></p>
+<p><span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>で不要な項目を選択してからクリックすると、その項目を削除します。</p>
+<p aria-level="3" class="T2" id="deleteall" role="heading"><span class="Term-Soft">すべて削除</span></p>
+<p>クリックすると、<span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>のすべての項目を削除します。</p>
 <p aria-level="3" class="T2" id="ok" role="heading"><span class="Term-Soft">OK</span></p>
-<p>Saves the changes and closes the dialog box.</p>
-<p aria-level="3" class="T2" id="cancel" role="heading"><span class="Term-Soft">Cancel</span></p>
-<p>Closes the dialog box without saving any changes.</p>
-<p aria-level="3" class="T2" id="help" role="heading"><span class="Term-Soft">Help</span></p>
-<p>Displays Help for the dialog box opened.</p>
+<p>変更を保存してダイアログボックスを閉じます。</p>
+<p aria-level="3" class="T2" id="cancel" role="heading"><span class="Term-Soft">キャンセル</span></p>
+<p>変更を保存せずにダイアログボックスを閉じます。</p>
+<p aria-level="3" class="T2" id="help" role="heading"><span class="Term-Soft">ヘルプ</span></p>
+<p>開いているダイアログボックスのヘルプを表示します。</p>

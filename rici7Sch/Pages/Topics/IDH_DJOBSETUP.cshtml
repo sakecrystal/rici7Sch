@@ -2,123 +2,63 @@
 @model rici7Sch.Pages.Topics.IDH_DJOBSETUPModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this menu to make settings for print job.</p>
-<p>Available functions differ depending on the printer or printer driver you are using.</p>
-<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">Restore Defaults</span></p>
-<p>Restores the settings on this menu to the default settings.</p>
-<p aria-level="3" class="T2" id="jobtype" role="heading"><span class="Term-Soft">Job Type:</span></p>
-<p>Select a type of print job.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Normal Print</span></p>
-<p class="Normal-indent">The print job starts immediately after a print command 
- is given.<br/>
-To optionally enter a user ID, click <span class="Term-Soft">Details...</span>.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Sample Print</span></p>
-<p class="Normal-indent">Select to have only the first set of a multiple 
- set print job printed so you can check the appearance before printing 
- the remaining sets. The remaining sets can be printed or canceled from 
- the printer's control panel.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_PROOF_START">Printing a Single 
- Sample Set before Remaining Sets</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Locked Print</span></p>
-<p class="Normal-indent">When you want to print something you do not want 
- anyone else to see, you can be sure that the printer does not start printing 
- until you are physically present at the printer and enter password on 
- the printer's control panel.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_SECURE_START">Avoiding Others 
- Seeing Your Prints</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Hold Print</span></p>
-<p class="Normal-indent">The print job is sent to the printer and saved temporarily 
- on the printer's hard disk. When the saved job is printed, the job is 
- deleted from the printer's hard disk. You can also print it at a specified 
- time.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_HOLDPRINT">Printing Documents 
- Later</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Stored Print</span></p>
-<p class="Normal-indent">The print job is sent to the printer and stored 
- on the printer's hard disk. You can print the stored job as many times 
- as you require until you delete the job from the printer's hard disk.</p>
-<p class="Normal-indent">If you select the <span class="Term-Soft">User Authentication</span> 
- check box on the <span class="Term-Soft">Advanced Options</span> tab of 
- the printer properties dialog box, a document can be printed only by its 
- creator after she/he has logged in through the control panel.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_SAVE_PRINTER">Storing Documents 
- on the Hard Disk</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Stored Print (Shared)</span></p>
-<p class="Normal-indent">This option is available when you select the <span class="Term-Soft">User Authentication</span> check box on the <span class="Term-Soft">Advanced 
- Options</span> tab in the printer properties dialog box. If you select 
- this option instead of <span class="Term-Soft">Stored Print</span>, any 
- user with print privileges can print the job.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_SAVE_PRINTER">Storing Documents 
- on the Hard Disk</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Store and Print</span></p>
-<p class="Normal-indent">The print job is stored on the printer's hard disk 
- and printed at the same time. You can reprint the stored job as many times 
- as you require until you delete the job from the printer's hard disk.</p>
-<p class="Normal-indent">If you select the <span class="Term-Soft">User Authentication</span> 
- check box on the <span class="Term-Soft">Advanced Options</span> tab of 
- the printer properties dialog box, a document can be printed only by its 
- creator after she/he has logged in through the control panel.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_STORE_PRINT">Storing Documents 
- on the Printer and Printing them</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Store and Print (Shared)</span></p>
-<p class="Normal-indent">This option is available when you select the <span class="Term-Soft">User Authentication</span> check box on the <span class="Term-Soft">Advanced 
- Options</span> tab in the printer properties dialog box. If you select 
- this option instead of <span class="Term-Soft">Store and Print</span>, any 
- user with print privileges can print the job.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_STORE_PRINT">Storing Documents 
- on the Printer and Printing them</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Document Server</span></p>
-<p class="Normal-indent">Select this to send a file to the document server. 
- The file will be stored in the document server for future editing or printing. 
- To optionally enter a user ID, file name, password, or user name for the 
- file, click <span class="Term-Soft">Details...</span>.</p>
-<p class="Normal-indent"><a href="~/Topics/IDH_HOW_DOCUMENT_SERVER">Using the 
- Document Server</a></p>
-<p class="Note-indent">Note:</p>
+<p>このメニューでは、印刷ジョブに関する設定を行います。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">初期値に戻す</span></p>
+<p>このメニューの設定を初期値に戻します。</p>
+<p aria-level="3" class="T2" id="jobtype" role="heading"><span class="Term-Soft">印刷方法：</span></p>
+<p>印刷ジョブの種類を選択します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">通常印刷</span></p>
+<p class="Normal-indent">印刷を指示するとすぐに印刷が始まります。<br/> 必要に応じてユーザー ID を入力するには、<span class="Term-Soft">詳細...</span> をクリックします。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">試し印刷</span></p>
+<p class="Normal-indent">複数部の印刷ジョブのうち 1 部だけを印刷して仕上がりを確認してから、残りの部を印刷できます。残りの部の印刷やキャンセルは、プリンターの操作部から行います。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_PROOF_START">1 部だけ試し印刷してから残りを印刷する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">機密印刷</span></p>
+<p class="Normal-indent">他人に見られたくない文書を印刷するときに使います。プリンターの前で操作部からパスワードを入力するまで、印刷は始まりません。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_SECURE_START">印刷物を他人に見られないようにする</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">保留印刷</span></p>
+<p class="Normal-indent">印刷ジョブがプリンターに送信され、プリンターのハードディスクに一時的に保存されます。保存したジョブを印刷すると、ジョブはプリンターのハードディスクから削除されます。指定した時刻に印刷することもできます。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_HOLDPRINT">文書をあとで印刷する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">保存印刷</span></p>
+<p class="Normal-indent">印刷ジョブがプリンターに送信され、プリンターのハードディスクに保存されます。保存したジョブは、プリンターのハードディスクから削除するまで何度でも印刷できます。</p>
+<p class="Normal-indent">プリンターのプロパティダイアログボックスの <span class="Term-Soft">拡張設定</span> タブで <span class="Term-Soft">ユーザー認証</span> にチェックを入れると、文書は作成者本人が操作部からログインしたあとにのみ印刷できます。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_SAVE_PRINTER">文書をハードディスクに保存する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">保存印刷（共有）</span></p>
+<p class="Normal-indent">このオプションは、プリンターのプロパティダイアログボックスの <span class="Term-Soft">拡張設定</span> タブで <span class="Term-Soft">ユーザー認証</span> にチェックを入れたときに使用できます。<span class="Term-Soft">保存印刷</span> の代わりにこのオプションを選択すると、印刷権限のあるどのユーザーでもジョブを印刷できます。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_SAVE_PRINTER">文書をハードディスクに保存する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">保存して印刷</span></p>
+<p class="Normal-indent">印刷ジョブがプリンターのハードディスクに保存されると同時に印刷されます。保存したジョブは、プリンターのハードディスクから削除するまで何度でも再印刷できます。</p>
+<p class="Normal-indent">プリンターのプロパティダイアログボックスの <span class="Term-Soft">拡張設定</span> タブで <span class="Term-Soft">ユーザー認証</span> にチェックを入れると、文書は作成者本人が操作部からログインしたあとにのみ印刷できます。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_STORE_PRINT">文書をプリンターに保存して印刷する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">保存して印刷（共有）</span></p>
+<p class="Normal-indent">このオプションは、プリンターのプロパティダイアログボックスの <span class="Term-Soft">拡張設定</span> タブで <span class="Term-Soft">ユーザー認証</span> にチェックを入れたときに使用できます。<span class="Term-Soft">保存して印刷</span> の代わりにこのオプションを選択すると、印刷権限のあるどのユーザーでもジョブを印刷できます。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_STORE_PRINT">文書をプリンターに保存して印刷する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">ドキュメントサーバー</span></p>
+<p class="Normal-indent">ファイルをドキュメントサーバーに送信するときに選択します。ファイルはドキュメントサーバーに保存され、あとで編集や印刷ができます。必要に応じてファイルのユーザー ID・ファイル名・パスワード・ユーザー名を入力するには、<span class="Term-Soft">詳細...</span> をクリックします。</p>
+<p class="Normal-indent"><a href="~/Topics/IDH_HOW_DOCUMENT_SERVER">ドキュメントサーバーを使う</a></p>
+<p class="Note-indent">注意：</p>
 <ul>
-<li><p class="Normal-indent">Depending on 
- the printer you are using, custom paper size document files cannot be 
- stored in the document server.</p></li>
-<li><p class="Normal-indent">When the file 
- stored in the document server is printed, certain features settings need 
- to be set on the printer's control panel.</p></li>
+<li><p class="Normal-indent">お使いのプリンターによっては、不定形サイズの文書ファイルをドキュメントサーバーに保存できません。</p></li>
+<li><p class="Normal-indent">ドキュメントサーバーに保存したファイルを印刷するときは、一部の機能の設定をプリンターの操作部で行う必要があります。</p></li>
 </ul>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Save as Overlay Data</span> </p>
-<p class="Normal-indent">Creates Overlay Data, an image that is superimposed 
- onto a document you have created. Click the <span class="Term-Soft">Details...</span> 
- button, and enter the file name and destination for the ".rpo" 
- overlay data file.</p>
-<p class="Normal-indent"><a href="~/Topics/RPCS/IDH_HOW_OVERLAY">Overlaying Printing 
- Documents with Data</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Store as Image Overlay</span></p>
-<p class="Normal-indent">Saves image overlay data in the printer so that 
- the data is superimposed onto a document you have created. Click the <span class="Term-Soft">Details...</span> button, and enter the registration number 
- and registration name for the image overlay data.</p>
-<p class="Normal-indent"><a href="~/Topics/RPCS/IDH_HOW_IMAGEOVER">Registering 
- Image Overlay</a></p>
-<p aria-level="3" class="T2" id="jobdetail" role="heading"><span class="Term-Soft">Details...</span></p>
-<p>Opens the <span class="Term-Soft">Job Type Details</span> dialog box to 
- enter a user ID, file name, or password according to the job type.</p>
-<p aria-level="3" class="T2" id="classification" role="heading"><span class="Term-Soft">Classification Code:</span></p>
-<p>According to the usage purpose, you can set a classification code.<br/>
-Enter up to 32 alphanumeric (a-z, A-Z, 0-9, '_', '-') characters.</p>
-<p><a href="~/Topics/PCL_CS/IDH_HOW_CLASS#class">Registering a Classification 
- Code</a></p>
-<p aria-level="3" class="T2" id="usercode" role="heading"><span class="Term-Soft">User Code:</span></p>
-<p>Enter a user code using up to 8 digits. A user code identifies a group 
- of users and allows you to check the number of sheets printed under each 
- code.</p>
-<p><a href="~/Topics/PCL_CS/IDH_HOW_CLASS#usercode">Registering User Code</a></p>
-<p aria-level="3" class="T2" id="auth" role="heading"><span class="Term-Soft">Authentication...</span></p>
-<p>Opens the <span class="Term-Soft">Authentication</span> dialog box, where 
- you can enter the login user name and password already set on the printer 
- or server for the user authentication. To make this button available, 
- select the <span class="Term-Soft">User Authentication</span> check box 
- on the <span class="Term-Soft">Advanced Options</span> tab in the printing 
- properties dialog box.</p>
-<p><a href="~/Topics/PCL_CS/IDH_HOW_AUTHENTICATION">Using User Authentication</a></p>
-<p class="Note">Note:</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">オーバーレイデータとして保存</span> </p>
+<p class="Normal-indent">作成した文書に重ねて印刷する画像であるオーバーレイデータを作成します。<span class="Term-Soft">詳細...</span> ボタンをクリックし、オーバーレイデータファイル（.rpo）のファイル名と保存先を入力します。</p>
+<p class="Normal-indent"><a href="~/Topics/RPCS/IDH_HOW_OVERLAY">文書にデータを重ねて印刷する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">イメージオーバーレイとして保存</span></p>
+<p class="Normal-indent">作成した文書に重ねて印刷できるよう、イメージオーバーレイデータをプリンターに保存します。<span class="Term-Soft">詳細...</span> ボタンをクリックし、イメージオーバーレイデータの登録番号と登録名を入力します。</p>
+<p class="Normal-indent"><a href="~/Topics/RPCS/IDH_HOW_IMAGEOVER">イメージオーバーレイを登録する</a></p>
+<p aria-level="3" class="T2" id="jobdetail" role="heading"><span class="Term-Soft">詳細...</span></p>
+<p><span class="Term-Soft">印刷方法の詳細</span> ダイアログボックスを開き、印刷方法に応じてユーザー ID・ファイル名・パスワードを入力します。</p>
+<p aria-level="3" class="T2" id="classification" role="heading"><span class="Term-Soft">分類コード：</span></p>
+<p>用途に応じて分類コードを設定できます。<br/> 英数字（a-z、A-Z、0-9、'_'、'-'）で 32 文字以内で入力します。</p>
+<p><a href="~/Topics/PCL_CS/IDH_HOW_CLASS#class">分類コードを登録する</a></p>
+<p aria-level="3" class="T2" id="usercode" role="heading"><span class="Term-Soft">ユーザーコード：</span></p>
+<p>ユーザーコードを 8 桁以内の数字で入力します。ユーザーコードはユーザーのグループを識別するもので、コードごとの印刷枚数を確認できます。</p>
+<p><a href="~/Topics/PCL_CS/IDH_HOW_CLASS#usercode">ユーザーコードを登録する</a></p>
+<p aria-level="3" class="T2" id="auth" role="heading"><span class="Term-Soft">認証...</span></p>
+<p><span class="Term-Soft">認証</span> ダイアログボックスを開き、ユーザー認証のためにプリンターやサーバーに設定済みのログインユーザー名とパスワードを入力します。このボタンを使えるようにするには、印刷のプロパティダイアログボックスの <span class="Term-Soft">拡張設定</span> タブで <span class="Term-Soft">ユーザー認証</span> にチェックを入れます。</p>
+<p><a href="~/Topics/PCL_CS/IDH_HOW_AUTHENTICATION">ユーザー認証を使う</a></p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>For details about user authentication, see the 
- operating instructions provided with the printer.</p></li>
+<li><p>ユーザー認証について詳しくは、プリンターに付属の使用説明書を参照してください。</p></li>
 </ul>

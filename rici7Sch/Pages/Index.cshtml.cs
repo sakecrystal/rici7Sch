@@ -17,7 +17,7 @@ public class IndexModel(HelpCatalog catalog) : PageModel
     /// <summary>サイト内のページ一覧 (ヘッダーと同じ並び)。</summary>
     public IReadOnlyList<PageLink> Pages { get; } =
     [
-        new("目次", "/Topics/IDH_CONTENTS", "「Using Help」(ヘルプの使い方) から目次をたどる"),
+        new("目次", "/Topics/IDH_CONTENTS", "「ヘルプの使い方」から目次をたどる"),
         new("索引", "/Keywords", "キーワードをアルファベット順に探す"),
         new("検索", "/Search", "語句を含むトピックを全文検索する"),
         new("Classic 表示", "/Classic", "元のページ・スタイル・効果を WebHelp 形式で表示する"),
@@ -31,9 +31,11 @@ public class IndexModel(HelpCatalog catalog) : PageModel
         Sections = catalog.Toc;
         TopicCount = catalog.Topics.Count();
         KeywordCount = catalog.Keywords.Count;
+        // 日本語のタイトルは読みで並べられないため、元の英語のタイトルの頭文字でまとめる
+        string Key(TopicInfo t) => string.IsNullOrEmpty(t.TitleEn) ? t.Title : t.TitleEn;
         AllTopics = catalog.Topics
-            .OrderBy(t => t.Title, StringComparer.OrdinalIgnoreCase)
-            .GroupBy(t => char.IsLetter(t.Title.FirstOrDefault()) ? char.ToUpperInvariant(t.Title[0]) : '#')
+            .OrderBy(Key, StringComparer.OrdinalIgnoreCase)
+            .GroupBy(t => char.IsLetter(Key(t).FirstOrDefault()) ? char.ToUpperInvariant(Key(t)[0]) : '#')
             .ToList();
         OtherTopics = catalog.TopicsNotInToc.ToList();
     }

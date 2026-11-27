@@ -2,75 +2,45 @@
 @model rici7Sch.Pages.Topics.idh_dprint_qlt_adModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this menu to adjust the advanced settings that can affect the output 
- quality of the print jobs.</p>
-<p>Available functions differ depending on the printer or printer driver 
- you are using.</p>
-<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">Restore Defaults</span></p>
-<p>Restores the settings on this menu to the default settings.</p>
-<p aria-level="3" class="T2" id="cmyk" role="heading"><span class="Term-Soft">Separate into CMYK, then Print in Designated 
- Color Only</span></p>
-<p>Normally full color (CMYK) is used for color printing. However, you 
- can choose to use only specific CMYK color(s).</p>
-<p><a href="~/Topics/PS_CS/IDH_HOW_CMYK">Printing a Document Using Only Specific 
- CMYK Colors</a></p>
-<p aria-level="3" class="T2" id="rastervector" role="heading"><span class="Term-Soft">Vector/Raster:</span></p>
-<p>Specify how document data are printed. The printer driver can send document 
- data as either raster or vector graphic images. All data can be printed 
- as raster images, but most geometric shapes and patterns print faster 
- as vector images.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Vector</span></p>
-<p class="Normal-indent">Sends document data to the printer as a mixture 
- of vector and raster images.</p>
-<p class="Note-indent">Note:</p>
+<p>このメニューでは、印刷ジョブの出力品質に影響する詳細な設定を調整します。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">初期値に戻す</span></p>
+<p>このメニューの設定を初期値に戻します。</p>
+<p aria-level="3" class="T2" id="cmyk" role="heading"><span class="Term-Soft">CMYK に分解して指定色のみ印刷する</span></p>
+<p>通常、カラー印刷にはフルカラー（CMYK）が使われますが、特定の CMYK の色だけを使うこともできます。</p>
+<p><a href="~/Topics/PS_CS/IDH_HOW_CMYK">特定の CMYK の色だけで文書を印刷する</a></p>
+<p aria-level="3" class="T2" id="rastervector" role="heading"><span class="Term-Soft">ベクター/ラスター：</span></p>
+<p>文書データの印刷方法を指定します。プリンタードライバーは、文書データをラスター画像またはベクター画像として送信できます。すべてのデータはラスター画像として印刷できますが、多くの幾何学的な図形やパターンはベクター画像のほうが速く印刷できます。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">ベクター</span></p>
+<p class="Normal-indent">文書データを、ベクター画像とラスター画像を組み合わせてプリンターに送信します。</p>
+<p class="Note-indent">注意：</p>
 <ul>
-<li><p class="Normal-indent">Not all images 
- can be printed using Vector. If you select <span class="Term-Soft">Vector</span> 
- and the images do not print as they appear on the computer screen, select 
- <span class="Term-Soft">Raster</span> and reprint the document.</p></li>
+<li><p class="Normal-indent">すべての画像をベクターで印刷できるわけではありません。<span class="Term-Soft">ベクター</span> を選択して画像がコンピューターの画面どおりに印刷されない場合は、<span class="Term-Soft">ラスター</span> を選択して再印刷してください。</p></li>
 </ul>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Raster</span></p>
-<p class="Normal-indent">Sends all document data to the printer as raster 
- images.</p>
-<p aria-level="3" class="T2" id="thicker" role="heading"><span class="Term-Soft">Line Width Adjustment</span></p>
-<p>This function adjusts the thickness of the lines, such as in figures, 
- in dot units.</p>
-<p aria-level="3" class="T2" id="textblack" role="heading"><span class="Term-Soft">Print All Text as Black</span></p>
-<p>Prints all text in the print job in black regardless of the original 
- color.</p>
-<p aria-level="3" class="T2" id="blackover" role="heading"><span class="Term-Soft">Black Over Print</span></p>
-<p>This function allows black printing on a colored background and helps 
- prevent misregistration. Use this function if your document features black 
- graphics and/or text on a colored background.</p>
-<p><a href="~/Topics/IDH_HOW_BLACK_PRINTING#blackover">Overprinting Black on 
- a Background Color (Black over print)</a></p>
-<p aria-level="3" class="T2" id="photograph" role="heading"><span class="Term-Soft">Adjust Photographs</span></p>
-<p>Corrects the color tone of images taken with a digital camera.</p>
-<p aria-level="3" class="T2" id="edgesmooth" role="heading"><span class="Term-Soft">Edge Smoothing</span></p>
-<p>Improves the quality of text and graphics by smoothing jagged outer 
- edges to enhance the appearance of curved lines. If you are printing a 
- document that features images containing fine gradations of tone such 
- as photographs, leave this check box unselected.</p>
-<p aria-level="3" class="T2" id="fuesr" role="heading"><span class="Term-Soft">Fuser Setting:</span></p>
-<p>If residual gloss appears on the same page or the next page, select 
- <span class="Term-Soft">High Quality</span>.</p>
-<p><span class="Term-Soft">High Quality</span> may reduce productivity. If 
- residual gloss does not appear, select <span class="Term-Soft">Normal</span>. 
- </p>
-<p aria-level="3" class="T2" id="dataprocess" role="heading"><span class="Term-Soft">Change Data Processing</span></p>
-<p>Depending on the application, there may be cases where printing takes 
- a long time, or colors are not reproduced correctly. In this kind of situation, 
- selecting this may rectify the problem.</p>
-<p>Since selecting this may cause printing not to function correctly with 
- some applications, you should normally leave this option unselected.</p>
-<p aria-level="3" class="T2" id="ditherbrush" role="heading"><span class="Term-Soft">Shift Shading Pattern</span></p>
-<p>Select the check box if the shading pattern appears faint when printing 
- is performed.</p>
-<p aria-level="3" class="T2" id="enlargeditherbrush" role="heading"><span class="Term-Soft">Enlarge Shading Pattern</span></p>
-<p>Select the check box if the pattern colors are not printed correctly 
- as the dithering and brush effects interfere. </p>
-<p aria-level="3" class="T2" id="boldtext" role="heading"><span class="Term-Soft">Bold Text Adjustment</span></p>
-<p>Prints bold-faced characters even bolder.</p>
-<p aria-level="3" class="T2" id="textthick" role="heading">Make Text Thick</p>
-<p>This function increases the thickness of the font to be printed by 1 
- dot.</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">ラスター</span></p>
+<p class="Normal-indent">すべての文書データを、ラスター画像としてプリンターに送信します。</p>
+<p aria-level="3" class="T2" id="thicker" role="heading"><span class="Term-Soft">線幅の調整</span></p>
+<p>図形などの線の太さをドット単位で調整する機能です。</p>
+<p aria-level="3" class="T2" id="textblack" role="heading"><span class="Term-Soft">すべての文字を黒で印刷する</span></p>
+<p>元の色にかかわらず、印刷ジョブのすべての文字を黒で印刷します。</p>
+<p aria-level="3" class="T2" id="blackover" role="heading"><span class="Term-Soft">黒のオーバープリント</span></p>
+<p>カラーの背景の上に黒を重ねて印刷し、色ずれを防ぐ機能です。カラーの背景の上に黒い図形や文字がある文書に使います。</p>
+<p><a href="~/Topics/IDH_HOW_BLACK_PRINTING#blackover">背景色の上に黒を重ねて印刷する（黒のオーバープリント）</a></p>
+<p aria-level="3" class="T2" id="photograph" role="heading"><span class="Term-Soft">写真の調整</span></p>
+<p>デジタルカメラで撮影した画像の色調を補正します。</p>
+<p aria-level="3" class="T2" id="edgesmooth" role="heading"><span class="Term-Soft">エッジスムージング</span></p>
+<p>ギザギザした外側の輪郭をなめらかにして曲線をきれいに見せることで、文字や図形の品質を高めます。写真のように細かな階調を含む画像がある文書を印刷する場合は、チェックを入れないでください。</p>
+<p aria-level="3" class="T2" id="fuesr" role="heading"><span class="Term-Soft">定着の設定：</span></p>
+<p>同じページや次のページに光沢が残る場合は、<span class="Term-Soft">高画質</span> を選択します。</p>
+<p><span class="Term-Soft">高画質</span> を選択すると生産性が下がることがあります。光沢が残らない場合は <span class="Term-Soft">標準</span> を選択します。</p>
+<p aria-level="3" class="T2" id="dataprocess" role="heading"><span class="Term-Soft">データ処理の変更</span></p>
+<p>アプリケーションによっては、印刷に時間がかかったり、色が正しく再現されなかったりすることがあります。このような場合、これを選択すると問題が解決することがあります。</p>
+<p>これを選択すると一部のアプリケーションで正しく印刷できなくなる場合があるため、通常はこのオプションを選択しないでください。</p>
+<p aria-level="3" class="T2" id="ditherbrush" role="heading"><span class="Term-Soft">地紋パターンをずらす</span></p>
+<p>印刷すると網掛けのパターンが薄くなる場合はチェックを入れます。</p>
+<p aria-level="3" class="T2" id="enlargeditherbrush" role="heading"><span class="Term-Soft">地紋パターンを拡大する</span></p>
+<p>ディザリングとブラシの効果が干渉してパターンの色が正しく印刷されない場合はチェックを入れます。</p>
+<p aria-level="3" class="T2" id="boldtext" role="heading"><span class="Term-Soft">太字の調整</span></p>
+<p>太字の文字をさらに太く印刷します。</p>
+<p aria-level="3" class="T2" id="textthick" role="heading">文字を太くする</p>
+<p>印刷するフォントの太さを 1 ドット太くする機能です。</p>

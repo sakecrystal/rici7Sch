@@ -2,60 +2,36 @@
 @model rici7Sch.Pages.Topics.IDH_DACCESSModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this tab to configure the options installed on the printer, and 
- register the available input trays and paper sizes.</p>
-<p>Registration of paper sizes enables you to search for a printer loaded 
- with paper of a desired size using the Active Directory function of Windows.</p>
-<p>Available functions differ depending on the printer or printer driver 
- you are using.</p>
-<p aria-level="3" class="T2" id="image" role="heading">Machine Image</p>
-<p>Displays the printer configuration as an image.</p>
-<p aria-level="2" class="T1" id="options" role="heading"><span class="Term-Soft">Options</span></p>
-<p>Select the options installed on the printer.<br/>
-Whenever an option is added, select it in the <span class="Term-Soft">Options</span> 
- group. Even if an option is physically installed, it will not be available 
- for printing unless it is selected on this tab.</p>
-<p>The <span class="Term-Soft">Punch Unit:</span> list is available when 
- an optional finisher with punch unit is installed and selected. Select 
- a type of punch unit in the list. Depending on the type of unit selected, 
- available punching positions will vary.</p>
-<p class="Note">Note:</p>
+<p>このタブでは、プリンターに装着されているオプションを設定し、使用できる給紙トレイと用紙サイズを登録します。</p>
+<p>用紙サイズを登録しておくと、Windows の Active Directory 機能を使って、目的のサイズの用紙がセットされたプリンターを検索できます。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p aria-level="3" class="T2" id="image" role="heading">本体イメージ</p>
+<p>プリンターの構成をイメージで表示します。</p>
+<p aria-level="2" class="T1" id="options" role="heading"><span class="Term-Soft">オプション</span></p>
+<p>プリンターに装着されているオプションを選択します。<br/> オプションを追加したときは、<span class="Term-Soft">オプション</span> グループで選択してください。オプションが物理的に装着されていても、このタブで選択していなければ印刷に使用できません。</p>
+<p><span class="Term-Soft">パンチユニット：</span>一覧は、パンチユニット付きのオプションのフィニッシャーが装着され、選択されている場合に使用できます。一覧からパンチユニットの種類を選択します。選択したユニットの種類によって、使用できるパンチ位置が異なります。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>If the settings configured on this tab do not 
- match the physical configuration of the printer, you may get unexpected 
- print results.</p></li>
+<li><p>このタブの設定がプリンターの実際の構成と一致していないと、予期しない印刷結果になることがあります。</p></li>
 </ul>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">Total Memory:</span></p>
-<p>Specify the total size that is currently installed on the printer. Or 
- simply clicking <span class="Term-Soft">Update Now</span> configures the 
- current size of memory if the printer has bidirectional communication.</p>
-<p aria-level="2" class="T1" id="tray" role="heading"><span class="Term-Soft">Input Tray Settings</span></p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">Change Input Tray Settings...</span></p>
-<p>Opens the <span class="Term-Soft">Change Input Tray Settings</span> dialog 
- box, where you can configure settings related to the paper in the paper 
- trays.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">Input Tray Settings List:</span></p>
-<p>Lists input trays and the size of paper loaded.</p>
-<p aria-level="3" class="T2" id="auto" role="heading"><span class="Term-Soft">Automatically Update Printer Information</span></p>
-<p>Whenever you open the printer properties dialog box, this function queries 
- the printer for its configuration and automatically obtains information 
- about any options installed on the printer.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">合計メモリー：</span></p>
+<p>プリンターに現在装着されているメモリーの合計容量を指定します。プリンターと双方向通信ができる場合は、<span class="Term-Soft">今すぐ更新</span> をクリックするだけで現在のメモリー容量が設定されます。</p>
+<p aria-level="2" class="T1" id="tray" role="heading"><span class="Term-Soft">給紙トレイ設定</span></p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">給紙トレイ設定の変更...</span></p>
+<p><span class="Term-Soft">給紙トレイ設定の変更</span> ダイアログボックスを開き、給紙トレイの用紙に関する設定を行います。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">給紙トレイ設定一覧：</span></p>
+<p>給紙トレイと、セットされている用紙のサイズを一覧表示します。</p>
+<p aria-level="3" class="T2" id="auto" role="heading"><span class="Term-Soft">プリンター情報を自動的に更新する</span></p>
+<p>プリンターのプロパティダイアログボックスを開くたびに、プリンターに構成を問い合わせ、装着されているオプションの情報を自動的に取得します。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>This function is available only if bidirectional 
- communication between the printer and computer is established by network 
- or direct cable connection. For more information about bidirectional communication, 
- see the operating instructions provided with the printer. </p></li>
+<li><p>この機能は、ネットワークまたはケーブルの直接接続によってプリンターとコンピューターの間で双方向通信ができる場合にのみ使用できます。双方向通信について詳しくは、プリンターに付属の使用説明書を参照してください。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="updatenow" role="heading"><span class="Term-Soft">Update Now</span></p>
-<p>Queries the printer for its configuration and automatically obtains 
- information about any options installed on the printer.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="updatenow" role="heading"><span class="Term-Soft">今すぐ更新</span></p>
+<p>プリンターに構成を問い合わせ、装着されているオプションの情報を自動的に取得します。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>This function is available only if bidirectional 
- communication between the printer and computer is established by network 
- or direct cable connection. For more information about bidirectional communication, 
- see the operating instructions provided with the printer.</p></li>
+<li><p>この機能は、ネットワークまたはケーブルの直接接続によってプリンターとコンピューターの間で双方向通信ができる場合にのみ使用できます。双方向通信について詳しくは、プリンターに付属の使用説明書を参照してください。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">Restore Defaults</span></p>
-<p>Restores the settings on this tab to the default settings.</p>
+<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">初期値に戻す</span></p>
+<p>このタブの設定を初期値に戻します。</p>

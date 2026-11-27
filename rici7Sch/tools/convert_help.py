@@ -29,6 +29,89 @@ PAGES = ROOT / "Pages" / "Topics"
 DATA = ROOT / "Data"
 IMGOUT = ROOT / "wwwroot" / "images" / "help"
 NS_ROOT = "rici7Sch.Pages.Topics"
+JA_DIR = SRC / "ja"                       # 日本語訳 (英語→日本語の対訳辞書, *.json)
+UNTRANSLATED = ROOT / "tools" / "untranslated.json"
+
+# ---------------------------------------------------------------- 日本語訳
+TRANS: dict[str, str] = {}
+MISSING: dict[str, str] = {}               # 未翻訳の英語 → 最初に出現したトピック
+BLOCKS = ["p", "li", "td", "th", "h2", "h3", "h4", "caption"]
+NESTED = ["p", "li", "ul", "ol", "div", "table"]
+
+
+def tkey(s: str) -> str:
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def load_translations():
+    if JA_DIR.exists():
+        for f in sorted(JA_DIR.glob("*.json")):
+            for k, v in json.loads(f.read_text(encoding="utf-8")).items():
+                TRANS[tkey(k)] = v
+
+
+def tr(s: str, ctx: str) -> str:
+    """見出しやタイトルなどの文字列を訳す。訳がなければ英語のまま (未翻訳として記録)。"""
+    k = tkey(s)
+    if not k or not re.search("[A-Za-z]", k):
+        return s
+    if k in TRANS:
+        return TRANS[k]
+    MISSING.setdefault(k, ctx)
+    return s
+
+
+def translate_blocks(body, ctx: str):
+    """段落・リスト項目などの末端ブロックの中身 (インラインのタグ込み) を訳文に置き換える。"""
+    for el in body.find_all(BLOCKS):
+        if el.find(NESTED):
+            continue
+        html = el.decode_contents()
+        k = tkey(html)
+        if not re.search("[A-Za-z]", BeautifulSoup(k, "html.parser").get_text()):
+            continue
+        if k in TRANS:
+            el.clear()
+            el.append(BeautifulSoup(TRANS[k], "html.parser"))
+        elif translate_terms_only(el) or translate_links_only(el):
+            pass
+        else:
+            MISSING.setdefault(k, ctx)
+
+
+def translate_links_only(el) -> bool:
+    """リンク (他トピックへの参照) だけのブロックは、リンク文字列をトピック名の訳で置き換える。"""
+    links = el.find_all("a")
+    if not links:
+        return False
+    outside = "".join(t for t in el.find_all(string=True) if not t.find_parent("a"))
+    if re.search("[A-Za-z]", outside):
+        return False
+    keys = [tkey(a.get_text(" ")) for a in links]
+    if not all(k in TRANS for k in keys):
+        return False
+    for a, k in zip(links, keys):
+        a.clear()
+        a.append(BeautifulSoup(TRANS[k], "html.parser"))
+    return True
+
+
+def translate_terms_only(el) -> bool:
+    """画面項目名 (span.Term-*) だけで構成されたブロック (例: 見出し) は項目名ごとに訳す。"""
+    spans = el.find_all("span", class_=re.compile(r"^Term-"))
+    if not spans:
+        return False
+    outside = "".join(t for t in el.find_all(string=True) if not t.find_parent("span"))
+    if re.search("[A-Za-z]", outside):
+        return False
+    keys = [tkey(sp.decode_contents()) for sp in spans]
+    if not all(k in TRANS for k in keys):
+        return False
+    for sp, k in zip(spans, keys):
+        sp.clear()
+        sp.append(BeautifulSoup(TRANS[k], "html.parser"))
+    return True
+
 
 # 実ファイル名 (大文字小文字を正規化して解決するため)
 ALL_TOPICS = {}  # lower id -> real id (e.g. "rpcs/idh_how_creep" -> "RPCS/IDH_HOW_CREEP")
@@ -116,7 +199,8 @@ def build_toc():
             params = parse_object(tok)
             name = next((v for n, v in params if n == "Name"), "")
             local = next((v for n, v in params if n == "Local"), None)
-            node = {"title": re.sub(r"\s+", " ", name).strip(), "children": []}
+            en = re.sub(r"\s+", " ", name).strip()
+            node = {"title": tr(en, "toc"), "titleEn": en, "children": []}
             if local:
                 tid, anchor = resolve_topic(local, None)
                 if tid:
@@ -146,17 +230,18 @@ def build_keywords():
             if n == "Name" and i + 1 < len(rest) and rest[i + 1][0] == "Local":
                 tid, anchor = resolve_topic(rest[i + 1][1], None)
                 if tid:
-                    topics.append({"title": re.sub(r"\s+", " ", v).strip(), "topic": tid, **({"anchor": anchor} if anchor else {})})
+                    en = re.sub(r"\s+", " ", v).strip()
+                    topics.append({"title": tr(en, "index"), "titleEn": en, "topic": tid, **({"anchor": anchor} if anchor else {})})
                 i += 2
             elif n == "Local":
                 tid, anchor = resolve_topic(v, None)
                 if tid:
-                    topics.append({"title": keyword, "topic": tid, **({"anchor": anchor} if anchor else {})})
+                    topics.append({"title": tr(keyword, "index"), "titleEn": keyword, "topic": tid, **({"anchor": anchor} if anchor else {})})
                 i += 1
             else:
                 i += 1
-        entries.append({"keyword": keyword, "topics": topics})
-    entries.sort(key=lambda e: e["keyword"].lower())
+        entries.append({"keyword": tr(keyword, "index"), "keywordEn": keyword, "topics": topics})
+    entries.sort(key=lambda e: e["keywordEn"].lower())
     return entries
 
 
@@ -344,6 +429,14 @@ def convert_topic(path: Path):
         if not p.get_text(strip=True) and not p.find(["img", "button"]):
             p.decompose()
 
+    # body 直下の地の文 (タグなしのテキスト) を段落にする
+    for node in list(body.children):
+        if isinstance(node, NavigableString) and not isinstance(node, Comment) and node.strip():
+            node.wrap(soup.new_tag("p"))
+
+    text_en = re.sub(r"\s+", " ", body.get_text(" ", strip=True))
+    translate_blocks(body, tid)
+
     inner = "".join(str(c) for c in body.contents)
     inner = re.sub(r"[ \t]*\n\s*\n+", "\n", inner)
     inner = re.sub(r"[ \t]+", " ", inner).strip()
@@ -351,7 +444,7 @@ def convert_topic(path: Path):
     text = BeautifulSoup(inner, "html.parser").get_text(" ", strip=True)
     text = re.sub(r"\s+", " ", text)
     norm = lambda x: re.sub(r"\s+", " ", x).strip()
-    return tid, norm(title), norm(heading), inner, text, sheet
+    return tid, norm(title), norm(heading), inner, text, text_en, sheet
 
 
 def razor_escape(html: str) -> str:
@@ -394,11 +487,15 @@ def main():
     PAGES.mkdir(parents=True, exist_ok=True)
     DATA.mkdir(exist_ok=True)
 
+    load_translations()
     topics = []
     for path in sorted(HTMLDIR.rglob("*.htm")):
-        tid, title, heading, inner, text, sheet = convert_topic(path)
+        tid, title, heading, inner, text, text_en, sheet = convert_topic(path)
         write_page(tid, title, heading, inner)
-        topics.append({"id": tid, "title": heading or title, "stylesheet": sheet, "text": text})
+        en = heading or title
+        # 検索は日本語・英語のどちらでもヒットするよう両方を持つ
+        topics.append({"id": tid, "title": tr(en, tid), "titleEn": en, "stylesheet": sheet,
+                       "text": text if text == text_en else f"{text} {text_en}"})
 
     toc = build_toc()
     keywords = build_keywords()
@@ -415,7 +512,11 @@ def main():
     # mshtmlExp*.css が url(t3.gif) で参照するため CSS と同じ場所に置く
     shutil.copy2(SRC / "t3.gif", ROOT / "wwwroot" / "css" / "t3.gif")
 
+    # 未翻訳の一覧 (翻訳作業用)
+    UNTRANSLATED.write_text(json.dumps(MISSING, ensure_ascii=False, indent=1), encoding="utf-8")
+
     print(f"topics: {len(topics)}  toc roots: {len(toc)}  keywords: {len(keywords)}")
+    print(f"translations: {len(TRANS)}  untranslated: {len(MISSING)} (tools/untranslated.json)")
     for w in sorted(set(warnings)):
         print("WARN", w, file=sys.stderr)
 

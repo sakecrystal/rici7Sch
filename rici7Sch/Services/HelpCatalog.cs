@@ -7,6 +7,8 @@ namespace rici7Sch.Services
     public sealed class TocNode
     {
         public string Title { get; set; } = "";
+        /// <summary>元の英語の名前。</summary>
+        public string TitleEn { get; set; } = "";
         public string? Topic { get; set; }
         public string? Anchor { get; set; }
         public List<TocNode> Children { get; set; } = [];
@@ -18,12 +20,15 @@ namespace rici7Sch.Services
     public sealed class KeywordEntry
     {
         public string Keyword { get; set; } = "";
+        /// <summary>元の英語のキーワード (並び順と頭文字に使う)。</summary>
+        public string KeywordEn { get; set; } = "";
         public List<KeywordTopic> Topics { get; set; } = [];
     }
 
     public sealed class KeywordTopic
     {
         public string Title { get; set; } = "";
+        public string TitleEn { get; set; } = "";
         public string Topic { get; set; } = "";
         public string? Anchor { get; set; }
         public string Url => HelpCatalog.TopicUrl(Topic, Anchor);
@@ -33,6 +38,9 @@ namespace rici7Sch.Services
     {
         public string Id { get; set; } = "";
         public string Title { get; set; } = "";
+        /// <summary>元の英語のタイトル。</summary>
+        public string TitleEn { get; set; } = "";
+        /// <summary>検索用の本文 (日本語訳 + 英語の原文)。</summary>
         public string Text { get; set; } = "";
         /// <summary>元トピックが参照していたスタイルシート (mshtmlExpNonbrand / mshtmlExp2nd)。</summary>
         public string Stylesheet { get; set; } = "mshtmlExpNonbrand";
@@ -162,13 +170,14 @@ namespace rici7Sch.Services
                 var all = true;
                 foreach (var term in terms)
                 {
-                    var inTitle = Count(t.Title, term);
+                    var inTitle = Count(t.Title, term) + Count(t.TitleEn, term);
                     var inText = Count(t.Text, term);
                     if (inTitle + inText == 0) { all = false; break; }
                     score += inTitle * 10 + Math.Min(inText, 20);
                 }
                 if (!all) continue;
-                if (t.Title.Contains(query!.Trim(), StringComparison.OrdinalIgnoreCase)) score += 25;
+                if (t.Title.Contains(query!.Trim(), StringComparison.OrdinalIgnoreCase) ||
+                    t.TitleEn.Contains(query.Trim(), StringComparison.OrdinalIgnoreCase)) score += 25;
                 hits.Add(new SearchHit(t, score, Snippet(t.Text, terms)));
             }
             return hits.OrderByDescending(h => h.Score).ThenBy(h => h.Topic.Title).Take(max).ToList();

@@ -121,7 +121,7 @@
         <ul>
             <li><p>Web 検索ボタン: <span class="Term-Soft">@(web.Enabled ? "有効" : "無効")</span> (ボタン名: <span class="Term-OS">@web.ButtonLabel</span>)</p></li>
             <li><p>埋め込み: @(web.Embedded ? "はい" : "いいえ") / メインウィンドウのみ: @(web.MainWindowOnly ? "はい" : "いいえ")</p></li>
-            <li><p>最初のページ: @(Model.Source.FirstPage ?? "未設定 (Using Help を最初に表示)")</p></li>
+            <li><p>最初のページ: @(Model.Source.FirstPage ?? "未設定（「ヘルプの使い方」を最初に表示）")</p></li>
         </ul>
         <p class="T2" role="heading" aria-level="3">ブラウズシーケンス (.brs)</p>
         <p>@(Model.Source.BrowseSequences.Count == 0 ? "ブラウズシーケンスは定義されていません。前へ / 次へ は目次の順序で移動します。" : $"{Model.Source.BrowseSequences.Count} 件のシーケンスが定義されています。")</p>

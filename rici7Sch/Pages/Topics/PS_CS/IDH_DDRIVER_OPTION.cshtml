@@ -2,73 +2,43 @@
 @model rici7Sch.Pages.Topics.PS_CS.IDH_DDRIVER_OPTIONModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this menu to provide functions related to controls specific to the 
- driver.</p>
-<p>Available functions differ depending on the printer or printer driver 
- you are using.</p>
-<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">Restore Defaults</span></p>
-<p>Restores the settings on this menu to the default settings.</p>
-<p aria-level="3" class="T2" id="spool" role="heading"><span class="Term-Soft">Spool Data in EMF Format</span></p>
-<p>Select the check box to set the spooling format to EMF. This will reduce 
- the time the printer takes to release itself from the printing process. 
- Changing the spooling format might also resolve print problems.</p>
-<p class="Note">Note:</p>
+<p>このメニューでは、ドライバー固有の制御に関する機能を設定します。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">初期値に戻す</span></p>
+<p>このメニューの設定を初期値に戻します。</p>
+<p aria-level="3" class="T2" id="spool" role="heading"><span class="Term-Soft">EMF 形式でスプールする</span></p>
+<p>スプール形式を EMF にするときはチェックを入れます。印刷処理からプリンターが解放されるまでの時間が短くなります。スプール形式を変更すると、印刷の問題が解決することもあります。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>Depending on the application you are using, this 
- function might be disabled even if you select the EMF spool check box.</p></li>
-<li><p>If this function is disabled, the following functions 
- are not available:<span class="Term-Soft"><br/>
- Layout:</span> - <span class="Term-Soft">Page Order:</span><span class="Term-Soft"><br/>
- Booklet:</span><span class="Term-Soft"><br/>
- Reverse Order Printing</span><span class="Term-Soft"><br/>
- Watermarks:</span></p></li>
+<li><p>お使いのアプリケーションによっては、EMF スプールにチェックを入れてもこの機能が無効になる場合があります。</p></li>
+<li><p>この機能が無効の場合、次の機能は使用できません。<span class="Term-Soft"><br/> レイアウト：</span> - <span class="Term-Soft">ページ順：</span><span class="Term-Soft"><br/> 製本：</span><span class="Term-Soft"><br/> 逆順印刷</span><span class="Term-Soft"><br/> スタンプ：</span></p></li>
 </ul>
-<p aria-level="3" class="T2" id="jobload" role="heading"><span class="Term-Soft">Job Load Distribution:</span></p>
-<p>This allows you to assign the load share of the print process between 
- the printer and printer driver (computer).</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Shift Load to Driver</span></p>
-<p class="Normal-indent">Maximizes the load share of the print process on 
- the printer driver. Select this if the print process takes time and the 
- computer has a high capacity to process the job.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Shift Load to Printer</span></p>
-<p class="Normal-indent">Maximizes the load share of the print process on 
- the printer. Select this if the print process takes time and the computer 
- has a low capacity to process the job.</p>
-<p aria-level="3" class="T2" id="emulation" role="heading"><span class="Term-Soft">Restore Last Emulation</span></p>
-<p>Returns to the setting before the print job.</p>
-<p aria-level="3" class="T2" id="near" role="heading"><span class="Term-Soft">Near Standard Size</span></p>
-<p>When a document is scanned for printing, its size might be detected 
- as larger than the original and a printer error might occur.</p>
-<p>Select the check box to prevent this problem.</p>
-<p aria-level="3" class="T2" id="appzoom" role="heading"><span class="Term-Soft">Use Application Zoom</span></p>
-<p>Use the application's zoom.</p>
-<p>Select the check box when lines are not printed in Microsoft® or Excel® 
- files.</p>
-<p aria-level="3" class="T2" id="dmcolor" role="heading"><span class="Term-Soft">Always apply COLOR to dmColor setting 
- for appLication</span></p>
-<p>When you perform black-and-white printing for color documents created 
- by using Microsoft® PowerPoint® and so on, some objects are filled with 
- black when printed.<br/>
-If this is the case, enable this function. You will obtain print results 
- you require.</p>
-<p aria-level="3" class="T2" id="preview" role="heading"><span class="Term-Soft">Display Preview and Print Screen</span></p>
-<p>Select the check box to display the preview screen to check print previews. 
- You can also change some of the settings on the screen.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="jobload" role="heading"><span class="Term-Soft">ジョブ処理の分担：</span></p>
+<p>印刷処理の負荷を、プリンターとプリンタードライバー（コンピューター）の間でどのように分担するかを指定します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">ドライバーで処理する</span></p>
+<p class="Normal-indent">印刷処理の負荷をできるだけプリンタードライバー側で受け持ちます。印刷処理に時間がかかり、コンピューターの処理能力が高い場合に選択します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">プリンターで処理する</span></p>
+<p class="Normal-indent">印刷処理の負荷をできるだけプリンター側で受け持ちます。印刷処理に時間がかかり、コンピューターの処理能力が低い場合に選択します。</p>
+<p aria-level="3" class="T2" id="emulation" role="heading"><span class="Term-Soft">直前のエミュレーションに戻す</span></p>
+<p>印刷ジョブの前の設定に戻します。</p>
+<p aria-level="3" class="T2" id="near" role="heading"><span class="Term-Soft">近い定形サイズ</span></p>
+<p>印刷のために文書を読み込むと、サイズが原稿より大きく検出され、プリンターエラーになることがあります。</p>
+<p>この問題を防ぐにはチェックを入れます。</p>
+<p aria-level="3" class="T2" id="appzoom" role="heading"><span class="Term-Soft">アプリケーションの拡大縮小を使用する</span></p>
+<p>アプリケーションの拡大縮小を使います。</p>
+<p>Microsoft® や Excel® のファイルで線が印刷されないときにチェックを入れます。</p>
+<p aria-level="3" class="T2" id="dmcolor" role="heading"><span class="Term-Soft">アプリケーションの dmColor 設定に常に COLOR を適用する</span></p>
+<p>Microsoft® PowerPoint® などで作成したカラーの文書を白黒で印刷すると、一部のオブジェクトが黒く塗りつぶされることがあります。<br/> その場合は、この機能を有効にすると期待どおりの印刷結果が得られます。</p>
+<p aria-level="3" class="T2" id="preview" role="heading"><span class="Term-Soft">プレビューと印刷画面を表示する</span></p>
+<p>印刷プレビューを確認するためのプレビュー画面を表示するときはチェックを入れます。画面で一部の設定を変更することもできます。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>This function may not be available in a "Point 
- and Print" environment.</p></li>
+<li><p>「ポイントアンドプリント」環境では、この機能を使用できない場合があります。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="reduce" role="heading"><span class="Term-Soft">Auto Reduce:</span></p>
-<p>Documents larger than the specified size can be automatically reduced 
- and printed.</p>
+<p aria-level="3" class="T2" id="reduce" role="heading"><span class="Term-Soft">自動縮小：</span></p>
+<p>指定したサイズより大きい文書を自動的に縮小して印刷できます。</p>
 <ul>
-<li><p>For example, if you select<span class="Term-Soft"> 
- A3 (297 x 420 mm)</span>, an A2 size document will automatically be reduced 
- to A3 and printed.<br/>
- If you select <span class="Term-Soft">A4 (210 x 297 mm)</span>, a document 
- larger than A4 will automatically be reduced to A4 and printed.</p></li>
+<li><p>たとえば <span class="Term-Soft">A3（297 x 420 mm）</span> を選択すると、A2 サイズの文書は自動的に A3 に縮小して印刷されます。<br/> <span class="Term-Soft">A4（210 x 297 mm）</span> を選択すると、A4 より大きい文書は自動的に A4 に縮小して印刷されます。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="profile" role="heading"><span class="Term-Soft">Color Profile:</span></p>
-<p>Add, edit or delete a color profile in the list. You can add the new 
- color profile provided by the developer to the list and use it.</p>
+<p aria-level="3" class="T2" id="profile" role="heading"><span class="Term-Soft">カラープロファイル：</span></p>
+<p>一覧のカラープロファイルを追加・編集・削除します。開発元から提供された新しいカラープロファイルを一覧に追加して使用できます。</p>

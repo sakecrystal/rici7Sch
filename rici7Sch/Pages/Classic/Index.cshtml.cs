@@ -36,7 +36,10 @@ public class IndexModel(HelpCatalog catalog, HelpSourceService source) : PageMod
 
     /// <summary>Search タブ用の全文検索 (JSON)。</summary>
     public IActionResult OnGetSearch(string? q) =>
-        new JsonResult(catalog.Search(q, 50).Select(h => new { id = h.Topic.Id, title = h.Topic.Title }));
+        new JsonResult(catalog.Search(q, 50).Select(h => new { id = h.Topic.Id, title = En(h.Topic.TitleEn, h.Topic.Title) }));
+
+    /// <summary>Classic 表示は元の英語のページなので、目次・索引も英語の名前を使う。</summary>
+    public static string En(string? en, string fallback) => string.IsNullOrEmpty(en) ? fallback : en;
 
     public static string FrameUrl(string id) => "/Classic/HTMLFILE/" + id + ".htm";
 }

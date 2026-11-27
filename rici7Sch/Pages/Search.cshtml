@@ -20,7 +20,7 @@
             <input id="searchInput" name="q" class="form-control" type="search" value="@Model.Query" autofocus />
             <button class="btn btn-primary" type="submit">検索</button>
         </div>
-        <p class="filter-hint">すべての語句を含むトピックを表示します。本文は英語なので英語で入力してください。語句をそのまま探すときは <code>"2 sided"</code> のように引用符で囲みます。</p>
+        <p class="filter-hint">すべての語句を含むトピックを表示します。日本語でも英語（元の表記）でも検索できます。語句をそのまま探すときは <code>"2 sided"</code> のように引用符で囲みます。</p>
     </form>
 
     @if (Model.Terms.Count > 0)

@@ -30,7 +30,7 @@ cd rici7Sch && dotnet run      # http://localhost:5276
 
 ## ページ一覧
 
-画面の文言（ヘッダー・ボタン・案内など）は日本語です。トピックの本文とタイトルは元データのまま英語です。
+画面の文言とトピックの本文・タイトル・目次・索引はすべて日本語です。各トピックには元の英語のタイトルを表示し、「原文 (英語)」ボタンから元のページを Classic 表示で開けます。検索は日本語でも英語でもヒットします。
 
 ホーム (`/`) とヘッダーから、以下のすべてのページと全 140 トピックに移動できます
 （ヘッダーの **Topics** メニュー、ホームの Contents / All topics A–Z）。
@@ -74,6 +74,7 @@ cd rici7Sch && dotnet run      # http://localhost:5276
 | `*.glo`（用語集） | Classic の用語集タブ（元データが空） |
 | `RoboHHRE.lng`（UI 文言・英語） | 日本語訳がない文言の予備、Resources |
 | `RoboHHRE.ja.lng`（UI 文言・日本語） | Classic のボタン・ラベル、Resources（英語と並べて表示） |
+| `ja/*.json`（本文の日本語訳） | 変換ツールが Topics・目次・索引の日本語化に使用 |
 | `eHelp.xml`（WebSearch 設定） | ヘッダー / Classic の WebSearch ボタン（元の設定どおり無効）、Resources |
 | `wwwroot/js/ehlpdhtm.js` | Classic（元のドロップダウン・ポップアップ効果） |
 
@@ -116,9 +117,17 @@ python3 rici7Sch/tools/convert_help.py
 
 `Pages/Topics/` 内の生成ファイルは上書きされるため、直接編集しないでください。
 
+### 日本語訳について
+
+- 訳文は `HelpSource/ja/*.json` に「英語 → 日本語」の対訳として保存しています（段落・リスト項目などの単位。リンクや画像などのタグはそのまま残します）。
+- 画面の項目名（よく使う設定、詳細設定など）の訳語は `HelpSource/ja/00-terms.json` で統一しています。項目名だけの見出しやトピック名だけのリンクは、これらの訳を自動で当てはめます。
+- 変換ツールを実行すると、訳がない文が `tools/untranslated.json` に書き出されます（現在は 0 件）。訳を直したいときは `HelpSource/ja/*.json` を編集して変換ツールを再実行してください。
+- 画面の項目名は一般的なプリンタードライバーの用語で訳しているため、実際の日本語版ドライバーの表示と異なる場合があります。
+
 ## 更新履歴
 
 - 2026-11-27: Razor Pages プロジェクトを作成。Index / Error / Privacy を作成し、RoboHelp ヘルプ 140 トピック・目次・索引・検索を移植。VS Code の「実行とデバッグ」設定を追加。
 - 2026-11-27: プロジェクトを `rici7Sch/` に移動。`rici7Sch.slnx` にプロジェクトを登録し、VS Code 設定のパスを更新。元資産を `HelpSource/` に整理。`mshtmlExpNonbrand.css` / `mshtmlExp2nd.css` / `site.css` をレイヤーで重ねて UI に使用。Classic ビューアー（`ehlpdhtm.js`・.lng・.brs・.glo・eHelp.xml を使用）と Resources ページを追加。ホームとヘッダーから全ページ・全トピックへ移動できるように変更。
 - 2026-11-27: VS Code のエクスプローラーで `.cshtml.cs` を `.cshtml` の下に重ねて表示する設定を追加。
 - 2026-11-27: UI を日本語化（ヘッダー、各ページ、ボタン、JS のメッセージ）。Classic 用に `RoboHHRE.ja.lng` を追加し、英語版に重ねて読み込むように変更。日本語フォントの代替指定と、日本語を文字参照にせず出力する設定を追加。
+- 2026-11-27: 移植したトピック 140 件・目次・索引を日本語化。対訳辞書 `HelpSource/ja/*.json` と、変換ツールで訳を適用する仕組みを追加。トピックに元の英語タイトルと原文へのリンクを表示。索引は英語の頭文字でまとめ、日本語・英語の両方で絞り込み可能に。Classic 表示の目次・索引は元の英語名で表示。

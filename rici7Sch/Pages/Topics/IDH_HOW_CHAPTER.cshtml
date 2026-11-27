@@ -2,125 +2,60 @@
 @model rici7Sch.Pages.Topics.IDH_HOW_CHAPTERModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use the following procedure to divide a document into chapters and print 
- the first page of each chapter on different paper. You can also specify 
- a special print mode for the first page of each chapter. (Designate/Chapter)<br/>
-In addition, you can print the selected pages on different paper. (Designated 
- Sheet Print)</p>
-<p>Depending on the printer you use, this function may not be available.</p>
-<p>Available functions differ depending on the printer or printer driver you are using.</p>
-<h2>Changing the Print Mode for the First Page of Each Chapter</h2>
+<p>以下の手順で、文書を章に分けて、各章の先頭ページを別の用紙に印刷します。各章の先頭ページに特別な印刷モードを指定することもできます（指定ページ/章区切り）。<br/> また、選択したページを別の用紙に印刷することもできます（指定ページ印刷）。</p>
+<p>お使いのプリンターによっては、この機能を使用できない場合があります。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<h2>各章の先頭ページの印刷モードを変更する</h2>
 <ol>
-<li><p>Create a document containing several chapters 
- in your application and open the printing preferences dialog box.</p></li>
-<li><p>Click the <span class="Term-Soft">Cover/Slip/Designate</span> 
- menu on the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
-<li><p>Select the <span class="Term-Soft">Designate/Chapter</span> 
- check box. </p></li>
-<li><p>Click <span class="Term-Soft">Details...</span>.<br/>
- The <a href="~/Topics/idh_ddesignate"><span class="Term-Soft">Designate/Chapter 
- Details</span></a> dialog box appears.</p></li>
-<li><p>In <span class="Term-Soft">Page Number:</span>, 
- enter the page number on which a new chapter begins.<br/>
- You can specify multiple page numbers for multiple new chapters by 
- inserting commas between the page numbers.</p></li>
+<li><p>アプリケーションで複数の章を含む文書を作成し、印刷設定ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">詳細設定</span> タブの <span class="Term-Soft">表紙/合紙/指定ページ</span> メニューをクリックします。</p></li>
+<li><p><span class="Term-Soft">指定ページ/章区切り</span> にチェックを入れます。</p></li>
+<li><p><span class="Term-Soft">詳細...</span> をクリックします。<br/> <a href="~/Topics/idh_ddesignate"><span class="Term-Soft">指定ページ/章区切りの詳細</span></a> ダイアログボックスが表示されます。</p></li>
+<li><p><span class="Term-Soft">ページ番号：</span>に、新しい章が始まるページの番号を入力します。<br/> ページ番号をコンマで区切ると、複数の章の開始ページを指定できます。</p></li>
 </ol>
 <div class="help-step-extra">
 <ul>
-<li><p class="Normal-indent">If you use 
- the application to configure print settings such as page range, odd/even 
- pages only, or page layout, it is likely that this function's page numbering 
- will be affected. For instance, if the document contains 60 pages but 
- in the application you have specified the page range as 41 to 60, the 
- printer will print pages 1 to 20.</p></li>
+<li><p class="Normal-indent">アプリケーションで印刷範囲・奇数/偶数ページのみ・ページレイアウトなどの印刷設定を行うと、この機能のページ番号に影響する可能性があります。たとえば、60 ページの文書でアプリケーションの印刷範囲を 41 ～ 60 ページに指定した場合、プリンターは 1 ～ 20 ページとして印刷します。</p></li>
 </ul>
 </div>
 <ol start="6">
-<li><p>In the <span class="Term-Soft">Print Mode:</span> 
- list, select the <a class="help-popup-link" data-help-popup="true" href="~/Topics/PCL_CS/IDH_CCHAPTER">print mode</a> 
- for the page specified in <span class="Term-Soft">Page Number:</span>.</p></li>
-<li><p>In the <span class="Term-Soft">Input Tray:</span> 
- list, select the input tray containing the media type to use for the chapter 
- page.</p></li>
-<li><p>Specify the type of printing medium you want to 
- use in <span class="Term-Soft">Paper Type in Bypass Tray:</span> when using 
- bypass tray paper as the chapter page.</p></li>
-<li><p>Click <span class="Term-Soft">Add</span> to add 
- your definitions of <span class="Term-Soft">Page Number:</span>, <span class="Term-Soft">Print 
- Mode:</span>, and <span class="Term-Soft">Input Tray:</span> to <span class="Term-Soft">Designate/Chapter 
- Settings List:</span>.</p></li>
-<li><p>If necessary, make settings for other chapters. 
- The maximum numbers of chapter covers you can specify differs depending 
- on the printer you are using.</p></li>
-<li><p>When you have completed defining all chapter pages, 
- review the lists in <span class="Term-Soft">Designate/Chapter Settings List:</span>.</p></li>
-<li><p>To make modifications, select the item and make 
- corrections in the settings. Click <span class="Term-Soft">Modify</span> 
- after completing the corrections.</p></li>
-<li><p>To delete an unnecessary item, click <span class="Term-Soft">Delete</span> 
- after selecting the one in the list.</p></li>
-<li><p>After making any other necessary settings, click 
- <span class="Term-OS">OK</span> to close the printing preferences dialog 
- box.</p></li>
-<li><p>Start printing.</p></li>
+<li><p><span class="Term-Soft">印刷モード：</span>一覧で、<span class="Term-Soft">ページ番号：</span>に指定したページの<a class="help-popup-link" data-help-popup="true" href="~/Topics/PCL_CS/IDH_CCHAPTER">印刷モード</a>を選択します。</p></li>
+<li><p><span class="Term-Soft">給紙トレイ：</span>一覧で、章の先頭ページに使う用紙をセットした給紙トレイを選択します。</p></li>
+<li><p>手差しトレイの用紙を章の先頭ページに使う場合は、<span class="Term-Soft">手差しトレイの用紙種類：</span>で使用する用紙の種類を指定します。</p></li>
+<li><p><span class="Term-Soft">追加</span> をクリックして、<span class="Term-Soft">ページ番号：</span>、<span class="Term-Soft">印刷モード：</span>、<span class="Term-Soft">給紙トレイ：</span>の設定を <span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>に追加します。</p></li>
+<li><p>必要に応じて、ほかの章も設定します。指定できる章区切りの最大数は、お使いのプリンターによって異なります。</p></li>
+<li><p>すべての章の先頭ページを設定したら、<span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>の内容を確認します。</p></li>
+<li><p>修正するには、項目を選択して設定を修正し、修正が終わったら <span class="Term-Soft">変更</span> をクリックします。</p></li>
+<li><p>不要な項目を削除するには、一覧で項目を選択してから <span class="Term-Soft">削除</span> をクリックします。</p></li>
+<li><p>ほかに必要な設定を行ったら、<span class="Term-OS">OK</span> をクリックして印刷設定ダイアログボックスを閉じます。</p></li>
+<li><p>印刷を開始します。</p></li>
 </ol>
-<h2>Printing the Selected Pages on Different Paper</h2>
-<p class="Note">Note:</p>
+<h2>選択したページを別の用紙に印刷する</h2>
+<p class="Note">注意：</p>
 <ul>
-<li><p>Depending on the printer you use, the Designate/Chapter 
- function is unavailable.</p></li>
+<li><p>お使いのプリンターによっては、指定ページ/章区切り機能を使用できません。</p></li>
 </ul>
 <ol>
-<li><p>Create a document containing several chapters 
- in your application and open the printing preferences dialog box.</p></li>
-<li><p>Click the <span class="Term-Soft">Cover/Slip/Designate</span> 
- menu on the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
-<li><p>Select the <span class="Term-Soft">Designate/Chapter</span> 
- check box. </p></li>
-<li><p>Click <span class="Term-Soft">Details...</span>.<br/>
- The <a href="~/Topics/idh_ddesignate"><span class="Term-Soft">Designate/Chapter 
- Details</span></a> dialog box appears.</p></li>
-<li><p>In <span class="Term-Soft">Page Number:</span>, 
- enter the range of pages to specify a new chapter by inserting a hyphen 
- between the page numbers.<br/>
- You can specify multiple page numbers for multiple new chapters by 
- inserting commas between the page numbers.</p></li>
+<li><p>アプリケーションで複数の章を含む文書を作成し、印刷設定ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">詳細設定</span> タブの <span class="Term-Soft">表紙/合紙/指定ページ</span> メニューをクリックします。</p></li>
+<li><p><span class="Term-Soft">指定ページ/章区切り</span> にチェックを入れます。</p></li>
+<li><p><span class="Term-Soft">詳細...</span> をクリックします。<br/> <a href="~/Topics/idh_ddesignate"><span class="Term-Soft">指定ページ/章区切りの詳細</span></a> ダイアログボックスが表示されます。</p></li>
+<li><p><span class="Term-Soft">ページ番号：</span>に、ページ番号をハイフンでつないで、新しい章として指定するページの範囲を入力します。<br/> ページ番号をコンマで区切ると、複数の章を指定できます。</p></li>
 </ol>
 <div class="help-step-extra">
 <ul>
-<li><p class="Normal-indent">If you use 
- the application to configure print settings such as page range, odd/even 
- pages only, or page layout, it is likely that this function's page numbering 
- will be affected. For instance, if the document contains 60 pages but 
- in the application you have specified the page range as 41 to 60, the 
- printer will print pages 1 to 20.</p></li>
+<li><p class="Normal-indent">アプリケーションで印刷範囲・奇数/偶数ページのみ・ページレイアウトなどの印刷設定を行うと、この機能のページ番号に影響する可能性があります。たとえば、60 ページの文書でアプリケーションの印刷範囲を 41 ～ 60 ページに指定した場合、プリンターは 1 ～ 20 ページとして印刷します。</p></li>
 </ul>
 </div>
 <ol start="6">
-<li><p>In the <span class="Term-Soft">Print Mode:</span> 
- list, select <span class="Term-Soft">Designated Sheet Print</span>.</p></li>
-<li><p>In the <span class="Term-Soft">Input Tray:</span> 
- list, select the input tray containing the media type to use for the specified 
- range of pages.</p></li>
-<li><p>Specify the type of printing medium you want to 
- use in <span class="Term-Soft">Paper Type in Bypass Tray:</span> when using 
- bypass tray paper for the specified range of pages.</p></li>
-<li><p>Click <span class="Term-Soft">Add</span> to add 
- your definitions of <span class="Term-Soft">Page Number:</span>, <span class="Term-Soft">Print 
- Mode:</span>, and <span class="Term-Soft">Input Tray:</span> to <span class="Term-Soft">Designate/Chapter 
- Settings List:</span>.</p></li>
-<li><p>If necessary, make settings for other chapters. 
- The maximum numbers of chapters you can specify differs depending on the 
- printer you are using.</p></li>
-<li><p>When you have completed defining all chapter pages, 
- review the lists in <span class="Term-Soft">Designate/Chapter Settings List:</span>.</p></li>
-<li><p>To make modifications, select the item and make 
- corrections in the settings. Click <span class="Term-Soft">Modify</span> 
- after completing the corrections.</p></li>
-<li><p>To delete an unnecessary item, click <span class="Term-Soft">Delete</span> 
- after selecting the one in the list.</p></li>
-<li><p>After making any other necessary settings, click 
- <span class="Term-OS">OK</span> to close the printing preferences dialog 
- box.</p></li>
-<li><p>Start printing.</p></li>
+<li><p><span class="Term-Soft">印刷モード：</span>一覧で <span class="Term-Soft">指定ページ印刷</span> を選択します。</p></li>
+<li><p><span class="Term-Soft">給紙トレイ：</span>一覧で、指定した範囲のページに使う用紙をセットした給紙トレイを選択します。</p></li>
+<li><p>手差しトレイの用紙を指定した範囲のページに使う場合は、<span class="Term-Soft">手差しトレイの用紙種類：</span>で使用する用紙の種類を指定します。</p></li>
+<li><p><span class="Term-Soft">追加</span> をクリックして、<span class="Term-Soft">ページ番号：</span>、<span class="Term-Soft">印刷モード：</span>、<span class="Term-Soft">給紙トレイ：</span>の設定を <span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>に追加します。</p></li>
+<li><p>必要に応じて、ほかの章も設定します。指定できる章の最大数は、お使いのプリンターによって異なります。</p></li>
+<li><p>すべての章の先頭ページを設定したら、<span class="Term-Soft">指定ページ/章区切りの設定一覧：</span>の内容を確認します。</p></li>
+<li><p>修正するには、項目を選択して設定を修正し、修正が終わったら <span class="Term-Soft">変更</span> をクリックします。</p></li>
+<li><p>不要な項目を削除するには、一覧で項目を選択してから <span class="Term-Soft">削除</span> をクリックします。</p></li>
+<li><p>ほかに必要な設定を行ったら、<span class="Term-OS">OK</span> をクリックして印刷設定ダイアログボックスを閉じます。</p></li>
+<li><p>印刷を開始します。</p></li>
 </ol>

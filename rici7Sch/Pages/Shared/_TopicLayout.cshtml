@@ -23,10 +23,17 @@
     </nav>
 
     <header class="topic-header">
-        <h1 class="topic-title">@nav.Topic.Title</h1>
+        <div class="topic-heading">
+            <h1 class="topic-title">@nav.Topic.Title</h1>
+            @if (!string.IsNullOrEmpty(nav.Topic.TitleEn) && nav.Topic.TitleEn != nav.Topic.Title)
+            {
+                <p class="topic-original">原文: <span lang="en">@nav.Topic.TitleEn</span></p>
+            }
+        </div>
         <div class="topic-tools" role="toolbar" aria-label="トピックの操作">
             <button type="button" class="btn btn-outline-secondary btn-sm" id="expandAll" hidden>すべて展開</button>
             <button type="button" class="btn btn-outline-secondary btn-sm" data-action="print">印刷</button>
+            <a class="btn btn-outline-secondary btn-sm" href="@Url.Content("~/Classic?topic=" + Uri.EscapeDataString(nav.Topic.Id))" title="元の英語のページを Classic 表示で開く">原文 (英語)</a>
         </div>
     </header>
 

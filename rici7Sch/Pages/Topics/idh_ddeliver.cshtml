@@ -2,79 +2,52 @@
 @model rici7Sch.Pages.Topics.idh_ddeliverModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this menu to make settings for output tray or to specify how you 
- want to have prints delivered to the output tray.</p>
-<p>Available functions differ depending on the printer or printer driver 
- you are using.</p>
-<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">Restore Defaults</span></p>
-<p>Restores the settings on this menu to the default settings.</p>
-<p aria-level="3" class="T2" id="outputtray" role="heading"><span class="Term-Soft">Output Tray:</span></p>
-<p>Specify an output tray. If you select <span class="Term-Soft">Printer 
- Default</span>, prints are delivered to the output tray specified on the 
- printer.</p>
-<p aria-level="3" class="T2" id="collate" role="heading"><span class="Term-Soft">Collate:</span></p>
-<p>Sorts the prints into sets when multiple sets of documents are printed. 
- Select a collate method in the list.</p>
-<p><a href="~/Topics/IDH_HOW_COLLATE">Having Prints Sorted</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Printer Collate</span></p>
-<p class="Normal-indent">Ignores the application's collate function and applies 
- the printer driver's collate function.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Application Collate</span></p>
-<p class="Normal-indent">Applies the collate function set in the application's 
- <span class="Term-OS">Print</span> dialog box.</p>
-<p class="Note-indent">Note:</p>
+<p>このメニューでは、排紙トレイの設定や、排紙トレイへの排紙方法を指定します。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">初期値に戻す</span></p>
+<p>このメニューの設定を初期値に戻します。</p>
+<p aria-level="3" class="T2" id="outputtray" role="heading"><span class="Term-Soft">排紙先：</span></p>
+<p>排紙トレイを指定します。<span class="Term-Soft">プリンター初期値</span> を選択すると、プリンターで指定した排紙トレイに排紙されます。</p>
+<p aria-level="3" class="T2" id="collate" role="heading"><span class="Term-Soft">ソート：</span></p>
+<p>文書を複数部印刷するときに、部単位で仕分けます。一覧からソートの方法を選択します。</p>
+<p><a href="~/Topics/IDH_HOW_COLLATE">部単位で仕分けて印刷する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">プリンターソート</span></p>
+<p class="Normal-indent">アプリケーションのソート機能を無視して、プリンタードライバーのソート機能を適用します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">アプリケーションソート</span></p>
+<p class="Normal-indent">アプリケーションの <span class="Term-OS">印刷</span> ダイアログボックスで設定したソート機能を適用します。</p>
+<p class="Note-indent">注意：</p>
 <ul>
-<li><p class="Normal-indent">To apply stacking 
- options, select <span class="Term-Soft">Application Collate</span> and then 
- set the application's collate function to "OFF" in the <span class="Term-OS">Print</span> dialog box.</p></li>
+<li><p class="Normal-indent">仕分けのオプションを使うには、<span class="Term-Soft">アプリケーションソート</span> を選択してから、<span class="Term-OS">印刷</span> ダイアログボックスでアプリケーションのソート機能を「オフ」にします。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="collatetype" role="heading"><span class="Term-Soft">Collate Details...</span></p>
-<p>Opens the <span class="Term-Soft">Collate Details</span> dialog box, where 
- you can select a collate type.</p>
-<p aria-level="3" class="T2" id="mix" role="heading"><span class="Term-Soft">Rotate Mixed Original Orientation...</span></p>
-<p>When documents containing a mixture of landscape and portrait pages 
- are printed, document pages whose orientation differs from the paper orientation 
- are rotated by 90 degrees. You can change the direction in which the images 
- are rotated.</p>
-<p aria-level="3" class="T2" id="reverse" role="heading"><span class="Term-Soft">Reverse Order Printing</span></p>
-<p>When this check box is selected, the document starts printing from the 
- last page. Use this function when prints come out face up in the output 
- tray.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="collatetype" role="heading"><span class="Term-Soft">ソートの詳細...</span></p>
+<p><span class="Term-Soft">ソートの詳細</span> ダイアログボックスを開き、ソートの種類を選択します。</p>
+<p aria-level="3" class="T2" id="mix" role="heading"><span class="Term-Soft">原稿の向きの混在を回転...</span></p>
+<p>横向きと縦向きのページが混在した文書を印刷すると、用紙と向きが異なるページは 90 度回転して印刷されます。画像を回転する方向は変更できます。</p>
+<p aria-level="3" class="T2" id="reverse" role="heading"><span class="Term-Soft">逆順印刷</span></p>
+<p>チェックを入れると、最後のページから印刷を始めます。印刷物が表向きで排紙トレイに出てくる場合に使います。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>If the application you are using has a similar 
- function, do not make settings with the application's function.</p></li>
-<li><p>If you use this function when applying 2 sided 
- printing to a document with an odd number of pages, the blank last page 
- will also be included in the print count.</p></li>
+<li><p>お使いのアプリケーションに同様の機能がある場合は、アプリケーション側の機能では設定しないでください。</p></li>
+<li><p>ページ数が奇数の文書に両面印刷を適用してこの機能を使うと、最後の白紙ページも印刷枚数に含まれます。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="faceup" role="heading"><span class="Term-Soft">Eject Face-up</span></p>
-<p>Select this to deliver printed documents print side up. Use this function 
- with <span class="Term-Soft">Reverse Order Printing</span> to output a printed 
- document in page order.</p>
-<p><a href="~/Topics/idh_toc_faceup">Printing a Document Face Up</a></p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="faceup" role="heading"><span class="Term-Soft">表向きで排紙</span></p>
+<p>印刷した文書を印刷面を上にして排紙するときに選択します。<span class="Term-Soft">逆順印刷</span> と組み合わせると、ページ順に出力できます。</p>
+<p><a href="~/Topics/idh_toc_faceup">文書を表向きで印刷する</a></p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>This function might not be available depending 
- on the folding type you selected in the <span class="Term-Soft">Fold:</span> 
- list.</p></li>
+<li><p><span class="Term-Soft">折り：</span>一覧で選択した折りの種類によっては、この機能を使用できない場合があります。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="crops" role="heading"><span class="Term-Soft">Print Crop Marks</span></p>
-<p>Prints crop marks on each page.</p>
-<p aria-level="3" class="T2" id="cropsdetails" role="heading"><span class="Term-Soft">Details...</span></p>
-<p>Configure settings for crop marks.</p>
-<p aria-level="3" class="T2" id="stamp" role="heading"><span class="Term-Soft">Enable [Stamp] in Printer Settings on 
- the Device</span></p>
-<p>Select the check box to print stamps registered in the device. If you 
- want to print documents without the stamp, do not click the check box.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="crops" role="heading"><span class="Term-Soft">トンボを印刷する</span></p>
+<p>各ページにトンボを印刷します。</p>
+<p aria-level="3" class="T2" id="cropsdetails" role="heading"><span class="Term-Soft">詳細...</span></p>
+<p>トンボの設定を行います。</p>
+<p aria-level="3" class="T2" id="stamp" role="heading"><span class="Term-Soft">本体のプリンター設定の［スタンプ］を有効にする</span></p>
+<p>機器に登録されたスタンプを印刷するときはチェックを入れます。スタンプなしで印刷する場合は、チェックを入れないでください。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>For details about the stamp setting on the device, 
- see the operating instructions provided with the printer.</p></li>
+<li><p>機器のスタンプの設定について詳しくは、プリンターに付属の使用説明書を参照してください。</p></li>
 </ul>
-<p aria-level="2" class="T1" id="insert" role="heading"><span class="Term-Soft">Insert Separation Sheet</span></p>
-<p>Select the check box to insert a separation sheet after every set of 
- collated copies. To insert a separator after every two or more sets of 
- copies instead, select the number of sets in the spin box.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">Input Tray:</span></p>
-<p>Select an input tray.</p>
+<p aria-level="2" class="T1" id="insert" role="heading"><span class="Term-Soft">仕切り紙を挿入する</span></p>
+<p>ソートした 1 部ごとに仕切り紙を挿入するときはチェックを入れます。2 部以上ごとに仕切り紙を挿入するには、スピンボックスで部数を選択します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">給紙トレイ：</span></p>
+<p>給紙トレイを選択します。</p>

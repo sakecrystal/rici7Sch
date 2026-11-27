@@ -2,85 +2,61 @@
 @model rici7Sch.Pages.Topics.idh_dperfect_bindingModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>This allows you to configure the settings for Perfect Binding.</p>
-<p>Perfect binding is a binding method that applies heated glue to printed 
- sheets to form a book block, encloses the book block in a cover sheet, 
- and trims away excess paper to create neat edges.</p>
-<p>Available functions differ depending on the printer or printer driver 
- you are using.</p>
-<p class="Note">Note:</p>
+<p>無線とじの設定を行います。</p>
+<p>無線とじは、印刷した用紙を加熱した糊で固めて本文を作り、表紙でくるんでから、余分な部分を断裁して端をきれいに仕上げる製本方法です。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>For details about perfect binding and the supported 
- paper types and sizes, see the operating instructions provided with the 
- printer.</p></li>
+<li><p>無線とじと、対応している用紙の種類とサイズについて詳しくは、プリンターに付属の使用説明書を参照してください。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="position" role="heading"><span class="Term-Soft">Binding Position:</span></p>
-<p>Select the binding position.</p>
-<p aria-level="3" class="T2" id="tray" role="heading"><span class="Term-Soft">Binding Paper Source Tray:</span></p>
-<p>Select the paper tray from which the cover sheets will be fed.</p>
-<p aria-level="3" class="T2" id="cutopt" role="heading"><span class="Term-Soft">Perfect Binding Cutting Options:</span></p>
-<p>Select the type of cutting (edge trimming) method to apply when finishing.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Do not Cut</span></p>
-<p class="Normal-indent">No cut is applied. Edges are not trimmed.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Fore Edge (Finishing Size)</span></p>
-<p class="Normal-indent">Only the fore edge is trimmed. Specify the fore 
- edge's finishing size length in the <span class="Term-Soft">Adjust Cut Position</span> 
- area.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Fore Edge</span></p>
-<p class="Normal-indent">Only the fore edge is trimmed. Specify the cut length 
- in the <span class="Term-Soft">Adjust Cut Position</span> area.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">3 Edges (Finishing Size)</span></p>
-<p class="Normal-indent">All edges except the binding edge are trimmed. Specify 
- the finishing size in the <span class="Term-Soft">Perfect Binding Finishing 
- Size:</span> list. If you select <span class="Term-Soft">Custom Paper Size</span>, 
- specify the size for <span class="Term-Soft">I. Width:</span> and <span class="Term-Soft">H. Length:</span> in the <span class="Term-Soft">Adjust 
- Cut Position</span> area.</p>
-<p class="Normal-indent">If you want to shift the cut position along the 
- binding edge, specify in <span class="Term-Soft">J. Along Binding Edge:</span> 
- the distance by which to shift the cut position from the center.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">3 Edges</span></p>
-<p class="Normal-indent">All edges except the binding edge are trimmed. Specify 
- the cut lengths for <span class="Term-Soft">E. Head Edge:</span>, <span class="Term-Soft">F. Tail Edge:</span>, and <span class="Term-Soft">G. Fore 
- Edge:</span> in the <span class="Term-Soft">Adjust Cut Position</span> area. 
- </p>
-<p aria-level="3" class="T2" id="unit" role="heading"><span class="Term-Soft">Measurement Unit:</span></p>
-<p>Select <span class="Term-Soft">inch</span> or <span class="Term-Soft">mm</span> 
- as the measurement unit.</p>
-<p aria-level="2" class="T1" id="adjustimage" role="heading"><span class="Term-Soft">Adjust Image Position</span></p>
-<p>Specify the distance by which you want to shift the print image on the 
- book block.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">C. Along Binding Edge:</span></p>
-<p>Specify the distance by which to shift the print image along the binding 
- edge.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">D. Across Binding Edge:</span></p>
-<p>Specify the distance by which to shift the print image across the binding 
- edge.</p>
-<p aria-level="2" class="T1" role="heading"><span class="Term-Soft">Adjust Cut Position</span></p>
-<p>Specify settings according to the cutting (edge trimming) method selected 
- in the <span class="Term-Soft">Perfect Binding Cutting Options:</span> list. 
- The shaded settings are unavailable.</p>
-<p aria-level="3" class="T2" id="adjustcut" role="heading"><span class="Term-Soft">E. Head Edge:</span></p>
-<p>Specify the cut length of the head edge.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">F. Tail Edge:</span></p>
-<p>Specify the cut length of the tail edge.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">G. Fore Edge:</span></p>
-<p>Specify the cut length of the fore edge.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">H. Page Length:</span></p>
-<p>Specify the fore edge's finishing size length.</p>
-<p aria-level="3" class="T2" id="finish" role="heading"><span class="Term-Soft">Perfect Binding Finishing Size:</span></p>
-<p>Specify the finishing size in the list.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">I. Width:</span></p>
-<p>Specify the size of page width for the custom paper size.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">H. Length:</span></p>
-<p>Specify the size of page length for the custom paper size.</p>
-<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">J. Along Binding Edge:</span></p>
-<p>If you want to shift the cut position along the binding edge, specify 
- the distance by which to shift the cut position from the center.</p>
+<p aria-level="3" class="T2" id="position" role="heading"><span class="Term-Soft">とじ位置：</span></p>
+<p>とじる位置を選択します。</p>
+<p aria-level="3" class="T2" id="tray" role="heading"><span class="Term-Soft">製本表紙の給紙トレイ：</span></p>
+<p>表紙を給紙する給紙トレイを選択します。</p>
+<p aria-level="3" class="T2" id="cutopt" role="heading"><span class="Term-Soft">無線とじの断裁オプション：</span></p>
+<p>仕上げ時に行う断裁（端の切りそろえ）の方法を選択します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">断裁しない</span></p>
+<p class="Normal-indent">断裁しません。端は切りそろえません。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">小口（仕上がりサイズ）</span></p>
+<p class="Normal-indent">小口だけを断裁します。<span class="Term-Soft">断裁位置を調整する</span> 欄で、小口の仕上がりサイズの長さを指定します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">小口</span></p>
+<p class="Normal-indent">小口だけを断裁します。<span class="Term-Soft">断裁位置を調整する</span> 欄で、断裁幅を指定します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">3方（仕上がりサイズ）</span></p>
+<p class="Normal-indent">とじ辺以外のすべての辺を断裁します。<span class="Term-Soft">無線とじの仕上がりサイズ：</span>一覧で仕上がりサイズを指定します。<span class="Term-Soft">不定形サイズ</span> を選択した場合は、<span class="Term-Soft">断裁位置を調整する</span> 欄の <span class="Term-Soft">I. 幅：</span>と <span class="Term-Soft">H. 長さ：</span>でサイズを指定します。</p>
+<p class="Normal-indent">とじ辺に沿って断裁位置をずらしたい場合は、<span class="Term-Soft">J. とじ辺に沿った方向：</span>で、中央から断裁位置をずらす距離を指定します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">3方</span></p>
+<p class="Normal-indent">とじ辺以外のすべての辺を断裁します。<span class="Term-Soft">断裁位置を調整する</span> 欄の <span class="Term-Soft">E. 天：</span>、<span class="Term-Soft">F. 地：</span>、<span class="Term-Soft">G. 小口：</span>で断裁幅を指定します。</p>
+<p aria-level="3" class="T2" id="unit" role="heading"><span class="Term-Soft">単位：</span></p>
+<p>単位として <span class="Term-Soft">インチ</span> または <span class="Term-Soft">mm</span> を選択します。</p>
+<p aria-level="2" class="T1" id="adjustimage" role="heading"><span class="Term-Soft">画像位置を調整する</span></p>
+<p>本文の印刷画像をずらす距離を指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">C. とじ辺に沿った方向：</span></p>
+<p>とじ辺に沿った方向に印刷画像をずらす距離を指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">D. とじ辺と直交する方向：</span></p>
+<p>とじ辺と直交する方向に印刷画像をずらす距離を指定します。</p>
+<p aria-level="2" class="T1" role="heading"><span class="Term-Soft">断裁位置を調整する</span></p>
+<p><span class="Term-Soft">無線とじの断裁オプション：</span>一覧で選択した断裁（端の切りそろえ）方法に応じて設定します。網掛けの設定は使用できません。</p>
+<p aria-level="3" class="T2" id="adjustcut" role="heading"><span class="Term-Soft">E. 天：</span></p>
+<p>天の断裁幅を指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">F. 地：</span></p>
+<p>地の断裁幅を指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">G. 小口：</span></p>
+<p>小口の断裁幅を指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">H. ページの長さ：</span></p>
+<p>小口の仕上がりサイズの長さを指定します。</p>
+<p aria-level="3" class="T2" id="finish" role="heading"><span class="Term-Soft">無線とじの仕上がりサイズ：</span></p>
+<p>一覧で仕上がりサイズを指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">I. 幅：</span></p>
+<p>不定形サイズのページの幅を指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">H. 長さ：</span></p>
+<p>不定形サイズのページの長さを指定します。</p>
+<p aria-level="3" class="T2" role="heading"><span class="Term-Soft">J. とじ辺に沿った方向：</span></p>
+<p>とじ辺に沿って断裁位置をずらしたい場合は、中央から断裁位置をずらす距離を指定します。</p>
 <p aria-level="3" class="T2" id="ok" role="heading"><span class="Term-Soft">OK</span></p>
-<p>Saves the entries and closes the dialog box.</p>
-<p aria-level="3" class="T2" id="cancel" role="heading"><span class="Term-Soft">Cancel</span></p>
-<p>Closes the dialog box without saving any changes.</p>
-<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">Restore Defaults</span></p>
-<p>Restores the settings on this dialog box to the default settings.</p>
-<p aria-level="3" class="T2" id="help" role="heading"><span class="Term-Soft">Help</span></p>
-<p>Displays Help for the dialog box opened.</p>
+<p>入力内容を保存してダイアログボックスを閉じます。</p>
+<p aria-level="3" class="T2" id="cancel" role="heading"><span class="Term-Soft">キャンセル</span></p>
+<p>変更を保存せずにダイアログボックスを閉じます。</p>
+<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">初期値に戻す</span></p>
+<p>このダイアログボックスの設定を初期値に戻します。</p>
+<p aria-level="3" class="T2" id="help" role="heading"><span class="Term-Soft">ヘルプ</span></p>
+<p>開いているダイアログボックスのヘルプを表示します。</p>

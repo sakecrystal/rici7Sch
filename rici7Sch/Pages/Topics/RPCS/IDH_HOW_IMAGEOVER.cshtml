@@ -2,55 +2,28 @@
 @model rici7Sch.Pages.Topics.RPCS.IDH_HOW_IMAGEOVERModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>If the hard disk is installed on the printer, you can create and register 
- image overlays.</p>
-<h2>What Is Image Overlay?</h2>
-<p>This function allows you to create form data that is usable with page 
- frames, so you can make settings for combining and printing documents.</p>
-<p>For details about using image overlay, see the operating instructions 
- provided with the printer. </p>
-<p class="Note">Note:</p>
+<p>プリンターにハードディスクが装着されている場合は、イメージオーバーレイを作成して登録できます。</p>
+<h2>イメージオーバーレイとは</h2>
+<p>ページの枠と組み合わせて使えるフォームデータを作成し、文書と合成して印刷する設定ができる機能です。</p>
+<p>イメージオーバーレイの使い方について詳しくは、プリンターに付属の使用説明書を参照してください。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>Printing is not possible using this driver; only 
- image overlay registration can be performed. For details about print-capable 
- emulations, see the operating instructions provided with the printer.</p></li>
-<li><p>Use Web Image Monitor to confirm or delete registered 
- image overlay settings.<br/>
- For details, see the Web Image Monitor help.</p></li>
-<li><p>Always return to normal printing after registering 
- an image overlay.</p></li>
-<li><p>Always return to a resolution of 600 dpi, regardless 
- of the driver setting.</p></li>
-<li><p>The toner save function may become invalid.</p></li>
+<li><p>このドライバーでは印刷はできず、イメージオーバーレイの登録だけができます。印刷に対応したエミュレーションについて詳しくは、プリンターに付属の使用説明書を参照してください。</p></li>
+<li><p>登録済みのイメージオーバーレイの設定の確認や削除には、Web Image Monitor を使います。<br/> 詳しくは、Web Image Monitor のヘルプを参照してください。</p></li>
+<li><p>イメージオーバーレイを登録したあとは、必ず通常印刷に戻してください。</p></li>
+<li><p>ドライバーの設定にかかわらず、解像度は必ず 600 dpi に戻ります。</p></li>
+<li><p>トナー節約機能が無効になることがあります。</p></li>
 </ul>
 <ol>
-<li><p>Open the printing preferences dialog box after 
- creating frame data for use in an application.</p></li>
-<li><p>Click the <span class="Term-Soft">Frequently Used 
- Settings</span> tab or the <span class="Term-Soft">Job Setup</span> menu 
- of the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
-<li><p>Select <span class="Term-Soft">Store as Image Overlay</span> 
- in the <span class="Term-Soft">Job Type: </span>list.</p></li>
-<li><p>Click the <span class="Term-Soft">Details...</span> 
- button to open the <span class="Term-Soft">Register Image Overlay</span> 
- dialog box.</p></li>
-<li><p>Enter a number for the image overlay in <span class="Term-Soft">Registration Number:</span>.<br/>
- Enter a number between 1 and 300.<br/>
- Registration is cancelled if you enter a number that is already registered. 
- To register a new image overlay with an existing number, use Web Image 
- Monitor to delete the first registration.</p></li>
-<li><p>Enter a name for the image overlay in <span class="Term-Soft">Registration 
- Name:</span>.<br/>
- You can enter up to 64 single-byte or 32 double-byte characters except 
- double quotation marks.</p></li>
-<li><p>Select an orientation in the <span class="Term-Soft">Image 
- Overlay Orientation:</span> area.</p></li>
-<li><p>Click <span class="Term-Soft">OK</span> to close 
- the dialog box.</p></li>
-<li><p>After making any other necessary settings, click 
- <span class="Term-OS">OK</span> to close the printing preferences dialog 
- box.</p></li>
-<li><p>Start printing.</p></li>
-<li><p>The image overlay data is saved on the printer's 
- hard disk.</p></li>
+<li><p>アプリケーションで使う枠のデータを作成したあと、印刷設定ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">よく使う設定</span> タブ、または <span class="Term-Soft">詳細設定</span> タブの <span class="Term-Soft">印刷方法</span> メニューをクリックします。</p></li>
+<li><p><span class="Term-Soft">印刷方法：</span>一覧で <span class="Term-Soft">イメージオーバーレイとして保存</span> を選択します。</p></li>
+<li><p><span class="Term-Soft">詳細...</span> ボタンをクリックして、<span class="Term-Soft">イメージオーバーレイの登録</span> ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">登録番号：</span>に、イメージオーバーレイの番号を入力します。<br/> 1 ～ 300 の番号を入力します。<br/> 登録済みの番号を入力すると、登録はキャンセルされます。既存の番号で新しいイメージオーバーレイを登録するには、Web Image Monitor で先に登録したものを削除してください。</p></li>
+<li><p><span class="Term-Soft">登録名：</span>に、イメージオーバーレイの名前を入力します。<br/> 二重引用符を除く半角 64 文字（全角 32 文字）以内で入力できます。</p></li>
+<li><p><span class="Term-Soft">イメージオーバーレイの向き：</span>欄で、向きを選択します。</p></li>
+<li><p><span class="Term-Soft">OK</span> をクリックしてダイアログボックスを閉じます。</p></li>
+<li><p>ほかに必要な設定を行ったら、<span class="Term-OS">OK</span> をクリックして印刷設定ダイアログボックスを閉じます。</p></li>
+<li><p>印刷を開始します。</p></li>
+<li><p>イメージオーバーレイのデータがプリンターのハードディスクに保存されます。</p></li>
 </ol>

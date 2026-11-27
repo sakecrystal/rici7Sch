@@ -2,86 +2,47 @@
 @model rici7Sch.Pages.Topics.IDH_HOW_DOCUMENT_SERVERModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>If the printer is equipped with the document server inside, document 
- data can be stored in the document server for printing.</p>
-<p>The document server stores documents data for later printing. The data 
- can be combined and finishing such as stapling and punching can be specified 
- when printing. Even document data from different computers or document 
- data scanned from a scanner can be combined.</p>
-<p>Depending on the printer you are using, this function may not be available.</p>
-<p class="Note">Note:</p>
+<p>プリンターにドキュメントサーバーが内蔵されている場合は、文書データをドキュメントサーバーに保存して印刷できます。</p>
+<p>ドキュメントサーバーは、あとで印刷するための文書データを保存します。印刷時にデータを結合したり、ステープルやパンチなどの仕上げを指定したりできます。別のコンピューターの文書データや、スキャナーで読み取った文書データも結合できます。</p>
+<p>お使いのプリンターによっては、この機能を使用できない場合があります。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>You can optionally set user ID, file name, password, 
- and user name for each file depending on your purpose.</p></li>
-<li><p>Depending on the printer you are using, custom 
- paper size document files cannot be stored in the document server.</p></li>
+<li><p>目的に応じて、ファイルごとにユーザー ID・ファイル名・パスワード・ユーザー名を設定することもできます。</p></li>
+<li><p>お使いのプリンターによっては、不定形サイズの文書ファイルをドキュメントサーバーに保存できません。</p></li>
 </ul>
 <ol>
-<li><p>Open the printing preferences dialog box after 
- creating a document in an application.</p></li>
-<li><p>Click the <span class="Term-Soft">Frequently Used 
- Settings</span> tab or the <span class="Term-Soft">Job Setup</span> menu 
- of the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
-<li><p>In the <span class="Term-Soft">Job Type:</span> 
- list, select <span class="Term-Soft">Document Server</span> and click <span class="Term-Soft">Details...</span> to open the <span class="Term-Soft">Job 
- Type Details</span> dialog box.</p></li>
+<li><p>アプリケーションで文書を作成したあと、印刷設定ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">よく使う設定</span> タブ、または <span class="Term-Soft">詳細設定</span> タブの <span class="Term-Soft">印刷方法</span> メニューをクリックします。</p></li>
+<li><p><span class="Term-Soft">印刷方法：</span>一覧で <span class="Term-Soft">ドキュメントサーバー</span> を選択し、<span class="Term-Soft">詳細...</span> をクリックして <span class="Term-Soft">印刷方法の詳細</span> ダイアログボックスを開きます。</p></li>
 </ol>
 <div class="help-step-extra">
 <ul>
-<li><p class="Normal-indent">Click the <span class="Term-Soft">&lt;&lt; Collapse list</span> button if the <span class="Term-Soft">Job 
- Type:</span> list on the <span class="Term-Soft">Frequently Used Settings</span> 
- tab is not displayed.</p></li>
+<li><p class="Normal-indent"><span class="Term-Soft">よく使う設定</span> タブに <span class="Term-Soft">印刷方法：</span>一覧が表示されていない場合は、<span class="Term-Soft">&lt;&lt; 一覧を縮小</span> ボタンをクリックします。</p></li>
 </ul>
 </div>
 <ol start="4">
-<li><p>In the <span class="Term-Soft">User ID:</span> list, 
- select a user ID type.<br/>
- If you select <span class="Term-Soft">Create Own ID</span>, enter a user 
- ID in the <span class="Term-Soft">Enter User ID:</span> box using up to 
- eight characters, which are alphanumeric (a-z, A-Z, and 0-9) characters 
- and symbols ('_', '.', '-', '/', and ':').<br/>
- If you select <span class="Term-Soft">Windows Login Name</span>, the 
- user ID may appear as the following:</p></li>
+<li><p><span class="Term-Soft">ユーザー ID：</span>一覧で、ユーザー ID の種類を選択します。<br/> <span class="Term-Soft">独自の ID を作成する</span> を選択した場合は、<span class="Term-Soft">ユーザー ID を入力：</span>ボックスに、英数字（a-z、A-Z、0-9）と記号（'_'、'.'、'-'、'/'、':'）を使って 8 文字以内でユーザー ID を入力します。<br/> <span class="Term-Soft">Windows のログイン名</span> を選択した場合、ユーザー ID は次のように表示されることがあります。</p></li>
 </ol>
 <div class="help-step-extra">
 <ul>
-<li><p class="Normal-indent">If the number 
- of characters in your Windows login name exceeds 20 single-byte characters, 
- your user ID will only display up to 20 single-byte characters.</p></li>
+<li><p class="Normal-indent">Windows のログイン名が半角 20 文字を超える場合、ユーザー ID は半角 20 文字までしか表示されません。</p></li>
 </ul>
 </div>
 <ol start="5">
-<li><p>In the <span class="Term-Soft">File Name:</span> 
- box, enter a file name using up to 16 characters except double quotation 
- marks (optional).</p></li>
-<li><p>In the <span class="Term-Soft">Password:</span> 
- box, enter a 4 to 8 digits password (optional).<br/>
- If a password is used for a file, it must be entered on the printer's 
- control panel for editing or printing the file stored in the document 
- server.</p></li>
+<li><p><span class="Term-Soft">ファイル名：</span>ボックスに、二重引用符を除く 16 文字以内でファイル名を入力します（省略可）。</p></li>
+<li><p><span class="Term-Soft">パスワード：</span>ボックスに、4 ～ 8 桁のパスワードを入力します（省略可）。<br/> ファイルにパスワードを設定すると、ドキュメントサーバーに保存したファイルを編集・印刷するときに、プリンターの操作部でパスワードの入力が必要になります。</p></li>
 </ol>
 <ol start="7">
-<li><p>In the <span class="Term-Soft">User Name:</span> 
- box, enter a user name using up to 16 characters except double quotation 
- marks (optional).</p></li>
-<li><p>In the <span class="Term-Soft">Folder Number:</span> 
- box, enter the number for the folder where you store the document data. 
- If you specify "0", the document will be stored in the <span class="Term-Hard">Shared Folder</span>.<br/>
- If the folder is password-protected, enter the password in the <span class="Term-Soft">Folder Password:</span> box.</p></li>
-<li><p>Click <span class="Term-Soft">OK</span>.</p></li>
-<li><p>After making any other necessary settings, click 
- <span class="Term-OS">OK</span> to close the printing preferences dialog 
- box.</p></li>
+<li><p><span class="Term-Soft">ユーザー名：</span>ボックスに、二重引用符を除く 16 文字以内でユーザー名を入力します（省略可）。</p></li>
+<li><p><span class="Term-Soft">フォルダー番号：</span>ボックスに、文書データを保存するフォルダーの番号を入力します。「0」を指定すると、文書は <span class="Term-Hard">共有フォルダー</span> に保存されます。<br/> フォルダーにパスワードが設定されている場合は、<span class="Term-Soft">フォルダーパスワード：</span>ボックスにパスワードを入力します。</p></li>
+<li><p><span class="Term-Soft">OK</span> をクリックします。</p></li>
+<li><p>ほかに必要な設定を行ったら、<span class="Term-OS">OK</span> をクリックして印刷設定ダイアログボックスを閉じます。</p></li>
 </ol>
 <div class="help-step-extra">
 <ul>
-<li><p class="Normal-indent">When saving 
- document data in the document server, there are some settings unavailable 
- and those cannot be selected. If you want to change settings such as finishing, 
- specify the settings when printing the document from the document server.</p></li>
+<li><p class="Normal-indent">文書データをドキュメントサーバーに保存する場合、使用できないため選択できない設定があります。仕上げなどの設定を変更したい場合は、ドキュメントサーバーから文書を印刷するときに設定してください。</p></li>
 </ul>
 </div>
 <ol start="11">
-<li><p>Start the print job.<br/>
- The document is stored in the document server.</p></li>
+<li><p>印刷を開始します。<br/> 文書がドキュメントサーバーに保存されます。</p></li>
 </ol>

@@ -63,11 +63,11 @@
                                 title="@(node.Topic is null ? L("Book", "Book") : L("Page", "Page"))">
                                 @if (node.Topic is not null)
                                 {
-                                    <a href="@IndexModel.FrameUrl(node.Topic)" target="classicFrame" data-topic="@node.Topic">@node.Title</a>
+                                    <a href="@IndexModel.FrameUrl(node.Topic)" target="classicFrame" data-topic="@node.Topic" lang="en">@IndexModel.En(node.TitleEn, node.Title)</a>
                                 }
                                 else
                                 {
-                                    <span>@node.Title</span>
+                                    <span lang="en">@IndexModel.En(node.TitleEn, node.Title)</span>
                                 }
                             </li>
                         }
@@ -82,18 +82,18 @@
                         @for (var i = 0; i < Model.Catalog.Keywords.Count; i++)
                         {
                             var k = Model.Catalog.Keywords[i];
-                            <li data-keyword="@k.Keyword.ToLowerInvariant()">
+                            <li data-keyword="@($"{k.KeywordEn} {k.Keyword}".ToLowerInvariant())" lang="en">
                                 @if (k.Topics.Count == 1)
                                 {
-                                    <a href="@IndexModel.FrameUrl(k.Topics[0].Topic)" target="classicFrame" data-topic="@k.Topics[0].Topic">@k.Keyword</a>
+                                    <a href="@IndexModel.FrameUrl(k.Topics[0].Topic)" target="classicFrame" data-topic="@k.Topics[0].Topic">@IndexModel.En(k.KeywordEn, k.Keyword)</a>
                                 }
                                 else
                                 {
-                                    <button type="button" class="btn btn-link p-0 text-start" data-choose="kw-@i">@k.Keyword</button>
+                                    <button type="button" class="btn btn-link p-0 text-start" data-choose="kw-@i">@IndexModel.En(k.KeywordEn, k.Keyword)</button>
                                     <template id="kw-@i">
                                         @foreach (var t in k.Topics)
                                         {
-                                            <option value="@IndexModel.FrameUrl(t.Topic)">@t.Title</option>
+                                            <option value="@IndexModel.FrameUrl(t.Topic)">@IndexModel.En(t.TitleEn, t.Title)</option>
                                         }
                                     </template>
                                 }

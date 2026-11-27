@@ -43,10 +43,10 @@
                 <dl class="keyword-list">
                     @foreach (var e in g)
                     {
-                        <div class="keyword-entry" data-keyword="@e.Keyword.ToLowerInvariant()">
+                        <div class="keyword-entry" data-keyword="@($"{e.Keyword} {e.KeywordEn}".ToLowerInvariant())">
                             @if (e.Topics.Count == 1)
                             {
-                                <dt><a href="@Url.Content("~" + e.Topics[0].Url)">@e.Keyword</a></dt>
+                                <dt><a href="@Url.Content("~" + e.Topics[0].Url)">@e.Keyword</a> <span class="keyword-en" lang="en">@e.KeywordEn</span></dt>
                                 @if (!string.Equals(e.Topics[0].Title, e.Keyword, StringComparison.OrdinalIgnoreCase))
                                 {
                                     <dd class="keyword-single">@e.Topics[0].Title</dd>
@@ -55,7 +55,7 @@
                             else
                             {
                                 @* 複数トピックに該当するキーワードは「トピックの選択」を一覧で表示 *@
-                                <dt>@e.Keyword <span class="badge text-bg-light">@e.Topics.Count</span></dt>
+                                <dt>@e.Keyword <span class="keyword-en" lang="en">@e.KeywordEn</span> <span class="badge text-bg-light">@e.Topics.Count</span></dt>
                                 <dd>
                                     <ul class="keyword-topics">
                                         @foreach (var t in e.Topics)

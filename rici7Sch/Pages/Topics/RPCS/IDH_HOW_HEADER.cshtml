@@ -2,49 +2,25 @@
 @model rici7Sch.Pages.Topics.RPCS.IDH_HOW_HEADERModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Text inserted in the top margin of each page of a document is called 
- a header, and text inserted in the bottom margin is called a footer. Besides 
- date, page number, and file name, text of up to 16 double-byte or 32 single-byte 
- characters can be inserted into these areas.</p>
-<p class="Note">Note:</p>
+<p>文書の各ページの上余白に入れる文字をヘッダー、下余白に入れる文字をフッターといいます。日付・ページ番号・ファイル名のほか、全角 16 文字（半角 32 文字）以内の文字列を入れられます。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>If you print a document using the Reduce/Enlarge 
- function, the header and footer will also be reduced or enlarged.</p></li>
-<li><p>A header and footer will be printed on every page. 
- For example, if you print several document pages on a sheet of paper (Layout), 
- a header and footer will appear on every page.</p></li>
-<li><p>If you want to print a header and footer on every 
- sheet but not every page, clear the <span class="Term-Soft">Per Original 
- Page</span> check box. </p></li>
+<li><p>拡大/縮小機能を使って文書を印刷すると、ヘッダーとフッターも拡大・縮小されます。</p></li>
+<li><p>ヘッダーとフッターはすべてのページに印刷されます。たとえば 1 枚の用紙に複数のページを印刷する（レイアウト）場合も、各ページにヘッダーとフッターが印刷されます。</p></li>
+<li><p>ページごとではなく用紙 1 枚ごとにヘッダーとフッターを印刷したい場合は、<span class="Term-Soft">原稿ページごと</span> のチェックを外します。</p></li>
 </ul>
 <ol>
-<li><p>Open the printing preferences dialog box after 
- creating a document in an application.</p></li>
-<li><p>Click the <span class="Term-Soft">Effects</span> 
- menu on the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
-<li><p>Select the<span class="Term-Soft"> Header/Footer</span> 
- check box.</p></li>
-<li><p>Select the items that you want to print on header 
- and footer, <span class="Term-Soft">Date and Time</span>, <span class="Term-Soft">Page 
- Number</span>, and <span class="Term-Soft">Text</span>.</p></li>
-<li><p>To edit the header and footer items, click <span class="Term-Soft">Details...</span> to open the <span class="Term-Soft">Edit 
- Header/Footer</span> dialog box.</p></li>
-<li><p>In the <span class="Term-Soft">Date and Time</span> 
- group, select a position and a format for printing date and time.</p></li>
-<li><p>In the <span class="Term-Soft">Page Number</span> 
- group, select a position and a format for printing page number.</p></li>
-<li><p>In the <span class="Term-Soft">Text</span> group, 
- select a position and a format for printing text. If you select <span class="Term-Soft">User Text</span> in the <span class="Term-Soft">Format:</span> 
- list, enter the text for header/footer in the <span class="Term-Soft">Text:</span> 
- box using up to 32 single-byte or 16 double-byte characters.</p></li>
-<li><p>Specify a font and font size in <span class="Term-Soft">Font:</span> 
- and <span class="Term-Soft">Size:</span>.</p></li>
-<li><p>To print header and footer per page of document, 
- select the <span class="Term-Soft">Per Original Page</span> check box.</p></li>
-<li><p>Click <span class="Term-Soft">OK</span> to close 
- the dialog box.</p></li>
-<li><p>After making any other necessary settings, click 
- <span class="Term-OS">OK</span> to close the printing preferences dialog 
- box.</p></li>
-<li><p>Start printing.</p></li>
+<li><p>アプリケーションで文書を作成したあと、印刷設定ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">詳細設定</span> タブの <span class="Term-Soft">効果</span> メニューをクリックします。</p></li>
+<li><p><span class="Term-Soft">ヘッダー/フッター</span> にチェックを入れます。</p></li>
+<li><p>ヘッダーとフッターに印刷する項目（<span class="Term-Soft">日時</span>、<span class="Term-Soft">ページ番号</span>、<span class="Term-Soft">文字</span>）を選択します。</p></li>
+<li><p>ヘッダーとフッターの項目を編集するには、<span class="Term-Soft">詳細...</span> をクリックして <span class="Term-Soft">ヘッダー/フッターの編集</span> ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">日時</span> グループで、日時を印刷する位置と書式を選択します。</p></li>
+<li><p><span class="Term-Soft">ページ番号</span> グループで、ページ番号を印刷する位置と書式を選択します。</p></li>
+<li><p><span class="Term-Soft">文字</span> グループで、文字を印刷する位置と書式を選択します。<span class="Term-Soft">書式：</span>一覧で <span class="Term-Soft">ユーザー文字列</span> を選択した場合は、<span class="Term-Soft">文字：</span>ボックスにヘッダー/フッターの文字列を半角 32 文字（全角 16 文字）以内で入力します。</p></li>
+<li><p><span class="Term-Soft">フォント：</span>と <span class="Term-Soft">サイズ：</span>で、フォントとフォントサイズを指定します。</p></li>
+<li><p>文書のページごとにヘッダーとフッターを印刷するには、<span class="Term-Soft">原稿ページごと</span> にチェックを入れます。</p></li>
+<li><p><span class="Term-Soft">OK</span> をクリックしてダイアログボックスを閉じます。</p></li>
+<li><p>ほかに必要な設定を行ったら、<span class="Term-OS">OK</span> をクリックして印刷設定ダイアログボックスを閉じます。</p></li>
+<li><p>印刷を開始します。</p></li>
 </ol>

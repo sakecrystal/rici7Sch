@@ -2,85 +2,43 @@
 @model rici7Sch.Pages.Topics.IDH_HOW_PREVENTModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this function to embed a text and background pattern in confidential 
- documents. If an unauthorized copy of the document is made, the background 
- pattern and text will be clearly visible. This function makes it easy 
- to identify unauthorized copies.</p>
-<p>If documents printed with <span class="Term-Soft">Unauthorized Copy Prevention 
- for Pattern</span> are copied, scanned, and/or stored, functions are disabled 
- in order to prevent information leakage.</p>
-<p>Depending on the printer you are using, this function may not be available.</p>
-<p class="Note">Note:</p>
+<p>機密文書に文字と地紋を埋め込む機能です。文書が不正にコピーされると、地紋と文字がはっきり浮き出るため、不正なコピーを簡単に見分けられます。</p>
+<p><span class="Term-Soft">地紋による不正コピー抑止</span> を設定して印刷した文書をコピー・スキャン・蓄積しようとすると、情報漏えいを防ぐために機能が使えなくなります。</p>
+<p>お使いのプリンターによっては、この機能を使用できない場合があります。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>If you want the document image to be replaced 
- by a solid gray image when printed documents are scanned, copied, or sent 
- to the Document Server without permission, use the <a href="~/Topics/IDH_HOW_GUARD"><span class="Term-Soft">Data Security for Copying</span></a> function.</p></li>
-<li><p>For details about the unauthorized copy prevention 
- function and effects, see the operating instructions provided with the 
- printer.</p></li>
-<li><p>Printing with this function takes longer than 
- normal printing because more data is processed.</p></li>
-<li><p>Depending on the unauthorized copy prevention 
- settings, the driver's prevention pattern may be overwritten by the printer's 
- pattern.</p></li>
+<li><p>印刷した文書が無断でスキャン・コピー・ドキュメントサーバーへの送信をされたときに、文書の画像を全面灰色の画像に置き換えたい場合は、<a href="~/Topics/IDH_HOW_GUARD"><span class="Term-Soft">コピーガード</span></a> 機能を使います。</p></li>
+<li><p>不正コピー抑止機能とその効果について詳しくは、プリンターに付属の使用説明書を参照してください。</p></li>
+<li><p>この機能を使った印刷は、処理するデータが多いため、通常の印刷より時間がかかります。</p></li>
+<li><p>不正コピー抑止の設定によっては、ドライバーの抑止パターンがプリンターのパターンで上書きされることがあります。</p></li>
 </ul>
 <ol>
-<li><p>Open the printing preferences dialog box after 
- creating a document in an application.</p></li>
-<li><p>Click the <span class="Term-Soft">Effects</span> 
- menu on the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
-<li><p>Select the <span class="Term-Soft">Unauthorized 
- Copy Prevention</span> check box.</p></li>
-<li><p>Select <span class="Term-Soft">Unauthorized Copy 
- Prevention for Pattern</span> in <span class="Term-Soft">Unauthorized Copy 
- Prevention Type</span>.</p></li>
-<li><p>Click <span class="Term-Soft">Details...</span> 
- to open the <span class="Term-Soft">Unauthorized Copy Prevention for Pattern 
- Details</span> dialog box.</p></li>
-<li><p>Select the text type for the prevention text in 
- the list.</p></li>
-<li><p>If you select <span class="Term-Soft">User Text</span> 
- in <span class="Term-Soft">Text Type:</span> list, enter a user text using 
- up to 64 single-byte characters.</p></li>
-<li><p>To change the font, font style and font size, 
- specify from <span class="Term-Soft">Font:</span>, <span class="Term-Soft">Font 
- Style:</span> and <span class="Term-Soft">Size:</span>.</p></li>
-<li><p>To change the angle, specify a value in <span class="Term-Soft">Angle:</span>.</p></li>
-<li><p>Select a position to enter the prevention text 
- in <span class="Term-Soft">Position:</span>.</p></li>
-<li><p>To repeat text, select the pattern in <span class="Term-Soft">Repeat:</span>.</p></li>
-<li><p>Specify the line spacing in <span class="Term-Soft">Line 
- Space:</span>.</p></li>
-<li><p>To print the text in outline form, select the 
- <span class="Term-Soft">Outlined</span> check box.</p></li>
-<li><p>To use only the text pattern when printing with 
- the unauthorized copy prevention, select the <span class="Term-Soft">Text 
- Only</span> check box.</p></li>
-<li><p>To exchange the pattern of the text and the pattern 
- of the background, select the <span class="Term-Soft">Reverse Patterns (Text/Background)</span> 
- check box.</p></li>
-<li><p>Select the mask type for the background pattern 
- in <span class="Term-Soft">Mask Type:</span>.</p></li>
-<li><p>Select the density and color of the prevention 
- copy text/pattern in <span class="Term-Soft">Density:</span> and <span class="Term-Soft">Color:</span>.</p></li>
+<li><p>アプリケーションで文書を作成したあと、印刷設定ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">詳細設定</span> タブの <span class="Term-Soft">効果</span> メニューをクリックします。</p></li>
+<li><p><span class="Term-Soft">不正コピー抑止</span> にチェックを入れます。</p></li>
+<li><p><span class="Term-Soft">不正コピー抑止の種類</span> で <span class="Term-Soft">地紋による不正コピー抑止</span> を選択します。</p></li>
+<li><p><span class="Term-Soft">詳細...</span> をクリックして、<span class="Term-Soft">地紋による不正コピー抑止の詳細</span> ダイアログボックスを開きます。</p></li>
+<li><p>一覧から、抑止文字の種類を選択します。</p></li>
+<li><p><span class="Term-Soft">文字の種類：</span>一覧で <span class="Term-Soft">ユーザー文字列</span> を選択した場合は、半角 64 文字以内でユーザー文字列を入力します。</p></li>
+<li><p>フォント・スタイル・サイズを変更するには、<span class="Term-Soft">フォント：</span>、<span class="Term-Soft">スタイル：</span>、<span class="Term-Soft">サイズ：</span>で指定します。</p></li>
+<li><p>角度を変更するには、<span class="Term-Soft">角度：</span>で値を指定します。</p></li>
+<li><p><span class="Term-Soft">位置：</span>で、抑止文字を入れる位置を選択します。</p></li>
+<li><p>文字を繰り返すには、<span class="Term-Soft">繰り返し：</span>でパターンを選択します。</p></li>
+<li><p><span class="Term-Soft">行間：</span>で行の間隔を指定します。</p></li>
+<li><p>文字を輪郭線だけで印刷するには、<span class="Term-Soft">袋文字</span> にチェックを入れます。</p></li>
+<li><p>不正コピー抑止の印刷で文字パターンだけを使うには、<span class="Term-Soft">文字のみ</span> にチェックを入れます。</p></li>
+<li><p>文字のパターンと背景のパターンを入れ替えるには、<span class="Term-Soft">パターンを反転（文字/背景）</span> にチェックを入れます。</p></li>
+<li><p><span class="Term-Soft">マスクの種類：</span>で、背景パターンのマスクの種類を選択します。</p></li>
+<li><p><span class="Term-Soft">濃度：</span>と <span class="Term-Soft">カラー：</span>で、抑止文字/パターンの濃度と色を選択します。</p></li>
 </ol>
 <div class="help-step-extra">
 <ul>
-<li><p class="Normal-indent">You can use 
- only black for monochrome printers.</p></li>
+<li><p class="Normal-indent">モノクロプリンターでは黒のみ使用できます。</p></li>
 </ul>
 </div>
 <ol start="18">
-<li><p>To exclude the specified area from being printed 
- with the pattern, select the <span class="Term-Soft">No Pattern Area:</span> 
- check box.<br/>
- Specify the values for <span class="Term-Soft">A:top</span>, <span class="Term-Soft">B:bttm</span>, 
- <span class="Term-Soft">C:left</span>, and <span class="Term-Soft">D:right</span> 
- in mm. The specified range is 1-9999 mm.</p></li>
-<li><p>Click <span class="Term-Soft">OK</span> to close 
- the dialog box.</p></li>
-<li><p>After making any other necessary settings, click 
- <span class="Term-OS">OK</span> to close the printing preferences dialog 
- box.</p></li>
-<li><p>Start printing.</p></li>
+<li><p>指定した領域にパターンを印刷しないようにするには、<span class="Term-Soft">地紋なし領域：</span>にチェックを入れます。<br/> <span class="Term-Soft">A：上</span>、<span class="Term-Soft">B：下</span>、<span class="Term-Soft">C：左</span>、<span class="Term-Soft">D：右</span> の値を mm で指定します。指定できる範囲は 1 ～ 9999 mm です。</p></li>
+<li><p><span class="Term-Soft">OK</span> をクリックしてダイアログボックスを閉じます。</p></li>
+<li><p>ほかに必要な設定を行ったら、<span class="Term-OS">OK</span> をクリックして印刷設定ダイアログボックスを閉じます。</p></li>
+<li><p>印刷を開始します。</p></li>
 </ol>

@@ -2,59 +2,28 @@
 @model rici7Sch.Pages.Topics.IDH_HOW_COLLATEModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-When printing multiple sets of documents such as meeting materials, use 
- the Collate function to have the prints sorted into sets. 
-<p class="Note">Note:</p>
+<p>会議資料など、文書を複数部印刷するときは、ソート機能を使って部単位で仕分けて印刷します。</p><p class="Note">注意：</p>
 <ul>
-<li><p>If you select <span class="Term-Soft">Application 
- Collate</span> with Layout or 2 sided printing, depending on the application 
- used, problems such as the first and last page being printed on the same 
- sheet might occur since document separation might not be correctly detected. 
- In this case, select <span class="Term-Soft">Printer Collate</span>.</p></li>
-<li><p>If you select <span class="Term-Soft">Printer Collate</span>, 
- the amount of data passed to the printer is reduced compared to when using 
- an application's collate function, which might result in faster printing. 
- For example, if you are printing three sets of a two page document and 
- the application's collate function is used, six pages of data may be sent 
- to the printer depending on the application used. If the printer driver's 
- collate function is used, only two pages of data (P1, P2) is sent to the 
- printer which then generates the remaining sets (P1, P2, P1, P2).</p></li>
-<li><p>To apply stacking options, select <span class="Term-Soft">Application 
- Collate</span> and set the application's collate function to "OFF" 
- in the <span class="Term-OS">Print</span> dialog box.</p></li>
-<li><p>Depending on the printer you are using, this function 
- may require an additional memory or the optional hard disk to be installed 
- on the printer and selected on the <span class="Term-Soft">Accessories</span> 
- tab.</p></li>
+<li><p>レイアウト印刷や両面印刷で <span class="Term-Soft">アプリケーションソート</span> を選択すると、お使いのアプリケーションによっては文書の区切りが正しく検出されず、先頭ページと最終ページが同じ用紙に印刷されるなどの問題が起きることがあります。その場合は <span class="Term-Soft">プリンターソート</span> を選択してください。</p></li>
+<li><p><span class="Term-Soft">プリンターソート</span> を選択すると、アプリケーションのソート機能を使う場合よりプリンターに送るデータ量が少なくなり、印刷が速くなることがあります。たとえば 2 ページの文書を 3 部印刷する場合、アプリケーションのソート機能では、アプリケーションによっては 6 ページ分のデータがプリンターに送られます。プリンタードライバーのソート機能を使うと、2 ページ分（P1、P2）のデータだけが送られ、プリンターが残りの部（P1、P2、P1、P2）を作成します。</p></li>
+<li><p>仕分けのオプションを使うには、<span class="Term-Soft">アプリケーションソート</span> を選択し、<span class="Term-OS">印刷</span> ダイアログボックスでアプリケーションのソート機能を「オフ」にします。</p></li>
+<li><p>お使いのプリンターによっては、この機能を使うために、増設メモリーまたはオプションのハードディスクをプリンターに装着し、<span class="Term-Soft">オプション構成</span> タブで選択しておく必要があります。</p></li>
 </ul>
 <ol>
-<li><p>Open the printing preferences dialog box after 
- creating a document in an application.</p></li>
-<li><p>Click the <span class="Term-Soft">Frequently Used 
- Settings</span> tab or the <span class="Term-Soft">Basic</span> menu of 
- the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
-<li><p>In the <span class="Term-Soft">Copies:</span> box, 
- enter the number of copies you want to print.</p></li>
-<li><p>If the <span class="Term-Soft">Frequently Used Settings</span> 
- tab is open, click the <span class="Term-Soft">Detailed Settings</span> 
- tab.</p></li>
-<li><p>Click the <span class="Term-Soft">Output Settings</span> 
- menu, select <span class="Term-Soft">Printer Collate</span> in the <span class="Term-Soft">Collate:</span> list.</p></li>
-<li><p>Click <span class="Term-Soft">Collate Details...</span> 
- to select the collate type you require.</p></li>
+<li><p>アプリケーションで文書を作成したあと、印刷設定ダイアログボックスを開きます。</p></li>
+<li><p><span class="Term-Soft">よく使う設定</span> タブ、または <span class="Term-Soft">詳細設定</span> タブの <span class="Term-Soft">基本</span> メニューをクリックします。</p></li>
+<li><p><span class="Term-Soft">部数：</span>ボックスに、印刷する部数を入力します。</p></li>
+<li><p><span class="Term-Soft">よく使う設定</span> タブが開いている場合は、<span class="Term-Soft">詳細設定</span> タブをクリックします。</p></li>
+<li><p><span class="Term-Soft">出力設定</span> メニューをクリックし、<span class="Term-Soft">ソート：</span>一覧で <span class="Term-Soft">プリンターソート</span> を選択します。</p></li>
+<li><p><span class="Term-Soft">ソートの詳細...</span> をクリックして、必要なソートの種類を選択します。</p></li>
 </ol>
 <div class="help-step-extra">
 <ul>
-<li><p class="Normal-indent">Depending on 
- the printer you are using, <span class="Term-Soft">Rotating Collate</span> 
- and <span class="Term-Soft">Shift Collate</span> might not be available.</p></li>
+<li><p class="Normal-indent">お使いのプリンターによっては、<span class="Term-Soft">回転ソート</span> と <span class="Term-Soft">シフトソート</span> を使用できない場合があります。</p></li>
 </ul>
 </div>
 <ol start="7">
-<li><p>Click <span class="Term-Soft">OK</span> to close 
- the dialog box.</p></li>
-<li><p>After making any other necessary settings, click 
- <span class="Term-OS">OK</span> to close the printing preferences dialog 
- box.</p></li>
-<li><p>Start printing.</p></li>
+<li><p><span class="Term-Soft">OK</span> をクリックしてダイアログボックスを閉じます。</p></li>
+<li><p>ほかに必要な設定を行ったら、<span class="Term-OS">OK</span> をクリックして印刷設定ダイアログボックスを閉じます。</p></li>
+<li><p>印刷を開始します。</p></li>
 </ol>

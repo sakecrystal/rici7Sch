@@ -2,87 +2,53 @@
 @model rici7Sch.Pages.Topics.IDH_DBASICModel
 @* このファイルは tools/convert_help.py により生成されています。 *@
 
-<p>Use this menu to make basic print settings.</p>
-<p>Available functions differ depending on the printer or printer driver you are using.</p>
-<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">Restore Defaults</span></p>
-<p>Restores the settings on this menu to the default settings.</p>
-<p aria-level="3" class="T2" id="orient" role="heading"><span class="Term-Soft">Orientation</span></p>
-<p>Select the orientation of your document.</p>
-<p aria-level="3" class="T2" id="colorbw" role="heading"><span class="Term-Soft">Color/ Black and White:</span></p>
-<p>Select whether the document is printed in color or black and white.</p>
-<p class="Note">Note:</p>
+<p>このメニューでは、基本的な印刷設定を行います。</p>
+<p>使用できる機能は、お使いのプリンターやプリンタードライバーによって異なります。</p>
+<p aria-level="3" class="T2" id="default" role="heading"><span class="Term-Soft">初期値に戻す</span></p>
+<p>このメニューの設定を初期値に戻します。</p>
+<p aria-level="3" class="T2" id="orient" role="heading"><span class="Term-Soft">向き</span></p>
+<p>文書の向きを選択します。</p>
+<p aria-level="3" class="T2" id="colorbw" role="heading"><span class="Term-Soft">カラー/白黒：</span></p>
+<p>文書をカラーで印刷するか白黒で印刷するかを選択します。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>Color images will be printed using CMYK toner: 
- Cyan, Magenta, Yellow, and Black. CMY are the three primary subtractive 
- colors.</p></li>
-<li><p>If you want to adjust the print color, use the 
- settings on the <span class="Term-Soft">Print Quality:Standard</span> and/or 
- <span class="Term-Soft">Print Quality:Advanced</span> menus.</p></li>
-<li><p>For two-color printing, select <span class="Term-Soft">Color</span>. 
- Configure two-color printing in the <span class="Term-Soft">Two-color:</span> 
- list on the <span class="Term-Soft">Print Quality:Standard</span> menu.</p></li>
+<li><p>カラー画像は CMYK トナー（シアン・マゼンタ・イエロー・ブラック）で印刷されます。CMY は減法混色の三原色です。</p></li>
+<li><p>印刷の色を調整するには、<span class="Term-Soft">印刷品質：標準</span> メニューや <span class="Term-Soft">印刷品質：詳細</span> メニューの設定を使います。</p></li>
+<li><p>2色印刷をするには <span class="Term-Soft">カラー</span> を選択します。2色印刷の設定は、<span class="Term-Soft">印刷品質：標準</span> メニューの <span class="Term-Soft">2色：</span>一覧で行います。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="rotated" role="heading"><span class="Term-Soft">Rotate by 180 Degrees</span></p>
-<p>Prints the image upside down.</p>
-<p>For example, use this function if paper loaded in a tray has the top 
- and bottom fixed, and printing with the paper in that direction would 
- otherwise make the image upside-down.</p>
-<p aria-level="3" class="T2" id="copies" role="heading"><span class="Term-Soft">Copies:</span></p>
-<p>Enter the number of copies. Depending on the printer you use, the maximum 
- number of copies may be different.</p>
-<p aria-level="3" class="T2" id="docusize" role="heading"><span class="Term-Soft">Document Size:</span></p>
-<p>Select the paper size set in the application. Most applications will 
- specify the paper size automatically, so this setting might not be necessary. 
- To specify a non-standard paper size, select a registered custom paper 
- size. Alternatively, enter the paper size in the <span class="Term-Soft">Custom 
- Paper Size</span> dialog box, which is accessible through <span class="Term-Soft">Custom 
- Paper Size...</span>.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="rotated" role="heading"><span class="Term-Soft">180度回転</span></p>
+<p>画像を上下逆さまに印刷します。</p>
+<p>たとえば、トレイにセットした用紙の天地が決まっていて、そのままの向きで印刷すると画像が上下逆になってしまう場合に使います。</p>
+<p aria-level="3" class="T2" id="copies" role="heading"><span class="Term-Soft">部数：</span></p>
+<p>部数を入力します。お使いのプリンターによって、最大部数は異なる場合があります。</p>
+<p aria-level="3" class="T2" id="docusize" role="heading"><span class="Term-Soft">原稿サイズ：</span></p>
+<p>アプリケーションで設定した用紙サイズを選択します。多くのアプリケーションでは用紙サイズが自動的に指定されるため、通常この設定は不要です。定形外のサイズを指定するには、登録済みの不定形サイズを選択します。または、<span class="Term-Soft">不定形サイズ...</span> から開く <span class="Term-Soft">不定形サイズ</span> ダイアログボックスで用紙サイズを入力します。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>If you select a document size conflicting with 
- the size set in your application, the document may be printed with the 
- one specified in the application.</p></li>
-<li><p><span class="Term-Soft">Custom Paper Size 1</span> 
- to <span class="Term-Soft">Custom Paper Size 10</span> can be registered 
- on the <span class="Term-Soft">Advanced Options</span> tab in the printer 
- properties dialog box. Depending on the printer you are using, up to 100 
- custom paper sizes can be registered.</p></li>
+<li><p>アプリケーションで設定したサイズと異なる原稿サイズを選択した場合、アプリケーションで指定したサイズで印刷されることがあります。</p></li>
+<li><p><span class="Term-Soft">不定形サイズ 1</span> ～ <span class="Term-Soft">不定形サイズ 10</span> は、プリンターのプロパティダイアログボックスの <span class="Term-Soft">拡張設定</span> タブで登録できます。お使いのプリンターによっては、最大 100 個の不定形サイズを登録できます。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="custom" role="heading"><span class="Term-Soft">Custom Paper Size...</span></p>
-<p>Opens the <span class="Term-Soft">Custom Paper Size</span> dialog box, 
- where you can specify a non-standard paper size.</p>
-<p><a href="~/Topics/idh_how_custom">Printing on Custom Size Paper</a></p>
-<p aria-level="3" class="T2" id="reduce" role="heading"><span class="Term-Soft">Reduce/Enlarge:</span></p>
-<p>You can reduce or enlarge the image.</p>
-<p><a href="~/Topics/idh_how_zoom">Reducing and Enlarging a Document Size</a></p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Off</span></p>
-<p class="Normal-indent">Do not reduce or enlarge the image.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Fit to Print Size</span></p>
-<p class="Normal-indent">The document is automatically reduced or enlarged 
- to fit the paper size selected in the <span class="Term-Soft">Print On:</span> 
- list.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Zoom</span></p>
-<p class="Normal-indent">Select it if you want to reduce or enlarge the image 
- manually.</p>
-<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">Directional Magnification</span></p>
-<p class="Normal-indent">Enter reduction and enlargement ratios for the vertical 
- and horizontal directions separately.</p>
-<p aria-level="3" class="T2" id="zoom" role="heading"><span class="Term-Soft">Zoom:</span></p>
-<p>When you want to zoom in or out the image to print, define the value 
- in % in the spin box. The original size of the document is able to shrink 
- or enlarge from 25% to 400% when printed.</p>
-<p class="Note">Note:</p>
+<p aria-level="3" class="T2" id="custom" role="heading"><span class="Term-Soft">不定形サイズ...</span></p>
+<p><span class="Term-Soft">不定形サイズ</span> ダイアログボックスを開き、定形外の用紙サイズを指定します。</p>
+<p><a href="~/Topics/idh_how_custom">不定形サイズの用紙に印刷する</a></p>
+<p aria-level="3" class="T2" id="reduce" role="heading"><span class="Term-Soft">拡大/縮小：</span></p>
+<p>画像を縮小または拡大できます。</p>
+<p><a href="~/Topics/idh_how_zoom">文書のサイズを縮小・拡大する</a></p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">しない</span></p>
+<p class="Normal-indent">画像を縮小・拡大しません。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">用紙に合わせる</span></p>
+<p class="Normal-indent"><span class="Term-Soft">印刷用紙サイズ：</span>一覧で選択した用紙サイズに合わせて、文書が自動的に縮小・拡大されます。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">拡大/縮小</span></p>
+<p class="Normal-indent">画像を手動で縮小・拡大するときに選択します。</p>
+<p aria-level="4" class="T3" role="heading"><span class="Term-Soft">方向別変倍</span></p>
+<p class="Normal-indent">縦方向と横方向の縮小・拡大率を個別に入力します。</p>
+<p aria-level="3" class="T2" id="zoom" role="heading"><span class="Term-Soft">拡大/縮小：</span></p>
+<p>画像を拡大・縮小して印刷するときは、スピンボックスで値を % で指定します。印刷時に、文書の原寸を 25% ～ 400% の範囲で縮小・拡大できます。</p>
+<p class="Note">注意：</p>
 <ul>
-<li><p>This function is available only if <span class="Term-Soft">Zoom</span> 
- is selected for <span class="Term-Soft">Reduce/Enlarge:</span>.</p></li>
+<li><p>この機能は、<span class="Term-Soft">拡大/縮小：</span>で <span class="Term-Soft">拡大/縮小</span> を選択した場合にのみ使用できます。</p></li>
 </ul>
-<p aria-level="3" class="T2" id="magnification" role="heading"><span class="Term-Soft">Vertical:</span> / <span class="Term-Soft">Horizontal:</span></p>
-<p>Enter reduction and enlargement ratios for the vertical and horizontal 
- directions separately by specifying a percentage between 25 and 400% (adjustable 
- in steps of 1%).</p>
-<p aria-level="3" class="T2" id="printon" role="heading"><span class="Term-Soft">Print On:</span></p>
-<p>When you want to print the document on a different size paper than the 
- document size specified in the <span class="Term-Soft">Document Size:</span> 
- list, select the physical paper size from the list. If you do not want 
- to change the print size, you may select <span class="Term-Soft">Same as 
- Original Size</span>.</p>
+<p aria-level="3" class="T2" id="magnification" role="heading"><span class="Term-Soft">縦：</span> / <span class="Term-Soft">横：</span></p>
+<p>縦方向と横方向の縮小・拡大率を、25 ～ 400%（1% 単位）の範囲で個別に指定します。</p>
+<p aria-level="3" class="T2" id="printon" role="heading"><span class="Term-Soft">印刷用紙サイズ：</span></p>
+<p><span class="Term-Soft">原稿サイズ：</span>一覧で指定した原稿サイズとは異なるサイズの用紙に印刷するときは、実際の用紙サイズを一覧から選択します。印刷サイズを変更しない場合は、<span class="Term-Soft">原稿と同じサイズ</span> を選択します。</p>
