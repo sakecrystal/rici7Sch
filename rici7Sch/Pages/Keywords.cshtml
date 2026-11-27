@@ -1,0 +1,75 @@
+@page
+@model KeywordsModel
+@{
+    ViewData["Title"] = "Index";
+}
+<article class="topic">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Index</li>
+        </ol>
+    </nav>
+    <header class="topic-header">
+        <h1 class="topic-title">Index</h1>
+    </header>
+
+    <form method="get" class="filter-bar" role="search" data-keyword-filter>
+        <label for="keywordFilter" class="form-label">Type in the keyword to find:</label>
+        <div class="d-flex gap-2">
+            <input id="keywordFilter" name="k" class="form-control" type="search" value="@Model.Filter" autocomplete="off" />
+            <noscript><button class="btn btn-primary" type="submit">Filter</button></noscript>
+        </div>
+        <p class="filter-count" aria-live="polite"><span data-count>@Model.Total</span> keywords</p>
+    </form>
+
+    <nav class="alpha-nav" aria-label="Jump to letter">
+        @foreach (var g in Model.Groups)
+        {
+            <a href="#kw-@KeywordsModel.Slug(g.Key)" data-alpha="@g.Key">@g.Key</a>
+        }
+    </nav>
+
+    @if (Model.Total == 0)
+    {
+        <p class="empty-state">No keywords match “@Model.Filter”.</p>
+    }
+
+    <div class="keyword-index">
+        @foreach (var g in Model.Groups)
+        {
+            <section class="keyword-group" id="kw-@KeywordsModel.Slug(g.Key)" data-group="@g.Key">
+                <h2 class="keyword-letter">@g.Key</h2>
+                <dl class="keyword-list">
+                    @foreach (var e in g)
+                    {
+                        <div class="keyword-entry" data-keyword="@e.Keyword.ToLowerInvariant()">
+                            @if (e.Topics.Count == 1)
+                            {
+                                <dt><a href="@Url.Content("~" + e.Topics[0].Url)">@e.Keyword</a></dt>
+                                @if (!string.Equals(e.Topics[0].Title, e.Keyword, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    <dd class="keyword-single">@e.Topics[0].Title</dd>
+                                }
+                            }
+                            else
+                            {
+                                @* 複数トピックに該当するキーワードは「トピックの選択」を一覧で表示 *@
+                                <dt>@e.Keyword <span class="badge text-bg-light">@e.Topics.Count</span></dt>
+                                <dd>
+                                    <ul class="keyword-topics">
+                                        @foreach (var t in e.Topics)
+                                        {
+                                            <li><a href="@Url.Content("~" + t.Url)">@t.Title</a></li>
+                                        }
+                                    </ul>
+                                </dd>
+                            }
+                        </div>
+                    }
+                </dl>
+            </section>
+        }
+    </div>
+    <p class="empty-state" data-empty hidden>No keywords match.</p>
+</article>

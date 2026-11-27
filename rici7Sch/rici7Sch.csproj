@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>rici7Sch</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 変換ツールはビルド対象外 -->
+    <Compile Remove="tools/**" />
+    <Content Remove="tools/**" />
+    <None Remove="tools/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 変換済みの目次・索引・検索データ -->
+    <Content Update="Data/**/*.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <!-- 移植元の RoboHelp 資産 (Classic / Resources ページが実行時に読み込む) -->
+    <None Update="HelpSource/**" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

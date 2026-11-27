@@ -1,0 +1,123 @@
+@page
+@model ResourcesModel
+@{
+    ViewData["Title"] = "Resources";
+    var web = Model.Catalog.Options.WebSearch;
+}
+<article class="topic">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Resources</li>
+        </ol>
+    </nav>
+    <header class="topic-header">
+        <h1 class="topic-title">Resources</h1>
+    </header>
+
+    <nav class="page-toc" aria-label="On this page">
+        <a href="#images">Images</a>
+        <a href="#files">Project files</a>
+        <a href="#assets">Styles &amp; scripts</a>
+        <a href="#strings">UI strings</a>
+        <a href="#options">Options</a>
+    </nav>
+
+    <div class="help-content">
+        <p class="T1" role="heading" aria-level="2" id="images">Images <span class="badge text-bg-secondary">@Model.Images.Count</span></p>
+        <p>All images from <code>HelpSource/image</code>, with the topics that use them.</p>
+        <div class="image-grid">
+            @foreach (var img in Model.Images)
+            {
+                <figure class="image-card">
+                    <div class="image-frame"><img src="@Url.Content("~" + img.Url)" alt="@img.Name" loading="lazy" /></div>
+                    <figcaption>
+                        <span class="image-name">@img.Name</span>
+                        <span class="image-meta">@ResourcesModel.FormatSize(img.Size)</span>
+                        @if (img.UsedBy.Count == 0)
+                        {
+                            <span class="image-meta">Not used by any topic</span>
+                        }
+                        else
+                        {
+                            <ul class="image-usage">
+                                @foreach (var t in img.UsedBy)
+                                {
+                                    <li><a href="@Url.Content("~" + t.Url)">@t.Title</a></li>
+                                }
+                            </ul>
+                        }
+                    </figcaption>
+                </figure>
+            }
+        </div>
+
+        <p class="T1" role="heading" aria-level="2" id="files">Help project files</p>
+        <p>The original RoboHelp project in <code>HelpSource/</code>.</p>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered help-table">
+                <thead><tr><th>File</th><th>Type</th><th>Size</th><th>Contents</th><th>Used by</th></tr></thead>
+                <tbody>
+                    @foreach (var f in Model.Files)
+                    {
+                        <tr>
+                            <td><code>@f.Name</code></td>
+                            <td>@f.Kind</td>
+                            <td class="text-nowrap">@ResourcesModel.FormatSize(f.Size)</td>
+                            <td>@f.Role</td>
+                            <td>@f.UsedBy</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <p class="T1" role="heading" aria-level="2" id="assets">Styles &amp; scripts</p>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered help-table">
+                <thead><tr><th>File</th><th>Size</th><th>Role</th></tr></thead>
+                <tbody>
+                    @foreach (var a in Model.Assets)
+                    {
+                        <tr>
+                            <td><a href="@Url.Content("~" + a.Url)" target="_blank" rel="noopener"><code>@a.Url</code></a></td>
+                            <td class="text-nowrap">@ResourcesModel.FormatSize(a.Size)</td>
+                            <td>@a.Role</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <p class="T1" role="heading" aria-level="2" id="strings">UI strings <span class="ui-meta">RoboHHRE.lng</span></p>
+        <p>Captions of the original WebHelp interface. The <a asp-page="/Classic/Index">Classic Viewer</a> uses these labels.</p>
+        @foreach (var (sectionName, entries) in Model.Source.Strings)
+        {
+            <details class="strings-section">
+                <summary><span class="Term-Soft">[@sectionName]</span> <span class="ui-meta">@entries.Count entries</span></summary>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered help-table">
+                        <tbody>
+                            @foreach (var (key, value) in entries)
+                            {
+                                <tr><th scope="row"><code>@key</code></th><td>@value</td></tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+        }
+
+        <p class="T1" role="heading" aria-level="2" id="options">Options</p>
+        <p class="T2" role="heading" aria-level="3">eHelp.xml</p>
+        <ul>
+            <li><p>WebSearch button: <span class="Term-Soft">@(web.Enabled ? "Enabled" : "Disabled")</span> (label: <span class="Term-OS">@web.ButtonLabel</span>)</p></li>
+            <li><p>Embedded: @(web.Embedded ? "Yes" : "No") / Main window only: @(web.MainWindowOnly ? "Yes" : "No")</p></li>
+            <li><p>First page: @(Model.Source.FirstPage ?? "Not set (Using Help is shown first)")</p></li>
+        </ul>
+        <p class="T2" role="heading" aria-level="3">Browse sequences (.brs)</p>
+        <p>@(Model.Source.BrowseSequences.Count == 0 ? "No browse sequences are defined. Previous / Next follow the table of contents order." : $"{Model.Source.BrowseSequences.Count} sequence(s) defined.")</p>
+        <p class="T2" role="heading" aria-level="3">Glossary (.glo)</p>
+        <p>@(Model.Source.Glossary.Count == 0 ? "No glossary terms are defined." : $"{Model.Source.Glossary.Count} term(s) defined.")</p>
+    </div>
+</article>

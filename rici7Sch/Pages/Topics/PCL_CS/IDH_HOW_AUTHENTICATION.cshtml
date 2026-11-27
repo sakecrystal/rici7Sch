@@ -1,0 +1,66 @@
+@page
+@model rici7Sch.Pages.Topics.PCL_CS.IDH_HOW_AUTHENTICATIONModel
+@* このファイルは tools/convert_help.py により生成されています。 *@
+
+<p>If the user authentication settings have been made on the printer, you 
+ also need to make the user authentication settings on the printer driver.</p>
+<p>Depending on the printer you use, this function may not be available.</p>
+<h2>What Is User Authentication?</h2>
+<p>With user authentication, only users who are registered on the printer 
+ or server can print using the printer. You need to make the login user 
+ name and login password settings for a user to enable that user to print. 
+ Users who are not registered on the printer or server cannot use the printer.</p>
+<p>Follow the steps to utilize the <span class="Term-Soft">User Authentication</span> 
+ function.</p>
+<p class="Note">Note:</p>
+<ul>
+<li><p>For details about user authentication, see the 
+ operating instructions provided with the printer.</p></li>
+<li><p>When the user authentication function is used, 
+ the user code setting on the <span class="Term-Soft">Job Setup</span> menu 
+ of the <span class="Term-Soft">Detailed Settings</span> tab becomes invalid.</p></li>
+</ul>
+<ol>
+<li><p>In the <span class="Term-OS">Devices and Printers</span> 
+ window, open the printer properties dialog box.</p></li>
+</ol>
+<ol start="2">
+<li><p>On the <span class="Term-Soft">Advanced Options</span> tab, click <span class="Term-Soft">User Authentication...</span> to open the <span class="Term-Soft">User Authentication</span> dialog box.</p></li>
+</ol>
+<div class="help-step-extra">
+<ul>
+<li><p class="Normal-indent">When you make 
+ settings on the <span class="Term-Soft">Advanced Options</span> tab, you 
+ must log on as a member of the Administrators or Power Users group.</p></li>
+</ul>
+</div>
+<ol start="3">
+<li><p>Select <span class="Term-Soft">On</span> for <span class="Term-Soft">User Authentication</span>.</p></li>
+<li><p>Select the check box for <span class="Term-Soft">Display [Authentication] Dialog Before Printing</span> or <span class="Term-Soft">Display [Authentication] Dialog Before Printing for Windows Credentials</span>.</p></li>
+<li><p>Select the <span class="Term-Soft">Encrypt [Login Password]</span>, enter the driver encryption key already set on 
+ the printer and click <span class="Term-Soft">OK</span>.</p></li>
+<li><p>Click <span class="Term-OS">OK</span> to close the 
+ printer properties dialog box.</p></li>
+<li><p>In the <span class="Term-OS">Devices and Printers</span> 
+ window, open the printing preferences dialog box.</p></li>
+<li><p>On the <span class="Term-Soft">Basic</span> tab, click 
+ <span class="Term-Soft">Authentication...</span>.<br/>The <span class="Term-Soft">Authentication</span> dialog 
+ box appears.</p></li>
+</ol>
+<ol start="9">
+<li><p>Select a type of login user name, and then enter 
+ a login user name and password that is already set on the printer or server 
+ for user authentication.</p></li>
+</ol>
+<div class="help-step-extra">
+<ul>
+<li><p class="Normal-indent">If you do not 
+ enter a valid login user name and login password, printing will not start.</p></li>
+</ul>
+</div>
+<ol start="10">
+<li><p>Click <span class="Term-OS">OK</span> to close 
+ the dialog box.</p></li>
+<li><p>Click <span class="Term-OS">OK</span> to close the 
+ printing preferences dialog box.</p></li>
+</ol>

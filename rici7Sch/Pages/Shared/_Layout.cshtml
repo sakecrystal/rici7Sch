@@ -1,0 +1,177 @@
+﻿@using rici7Sch.Services
+@inject HelpCatalog Catalog
+@{
+    var currentTopic = ViewData["TopicId"] as string;
+    var page = ViewContext.RouteData.Values["page"] as string ?? "";
+    string Active(string p) => string.Equals(page, p, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+    string? Current(string p) => string.Equals(page, p, StringComparison.OrdinalIgnoreCase) ? "page" : null;
+    var webSearch = Catalog.Options.WebSearch;
+    var hideSidebar = ViewData["HideSidebar"] is true;
+    var wide = ViewData["Wide"] is true;
+    // 元トピックが mshtmlExp2nd.css を使っていた場合はそれも重ねる
+    var use2nd = string.Equals(ViewData["Stylesheet"] as string, "mshtmlExp2nd", StringComparison.OrdinalIgnoreCase);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Printer Driver Help</title>
+    <link rel="icon" href="~/favicon.ico" />
+    <script>
+        // 表示前にテーマを適用 (ちらつき防止)
+        (function () {
+            try {
+                var t = localStorage.getItem('help-theme');
+                if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-bs-theme', t);
+            } catch (e) { }
+        })();
+    </script>
+    @*
+        CSS の重ね順 (cascade layers):
+          bootstrap  <  legacy (mshtmlExpNonbrand.css / mshtmlExp2nd.css)  <  site.css
+        site.css の先頭で宣言・読み込みしている。
+    *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @if (use2nd)
+    {
+        <style>@@import url("@Url.Content("~/css/mshtmlExp2nd.css")") layer(legacy);</style>
+    }
+</head>
+<body class="@(use2nd ? "style-2nd" : "")">
+    <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
+    <header class="app-header sticky-top">
+        <nav class="navbar navbar-expand-xl" aria-label="Main">
+            <div class="container-fluid">
+                @if (!hideSidebar)
+                {
+                    <button class="btn btn-sm btn-header d-lg-none me-2" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Show contents">
+                        <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M2 3h12v1.5H2zm0 4.25h12v1.5H2zM2 11.5h12V13H2z" /></svg>
+                    </button>
+                }
+                <a class="navbar-brand" asp-page="/Index">
+                    <span class="brand-mark" aria-hidden="true">?</span>
+                    <span>Printer Driver Help</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link @Active("/Index")" aria-current="@Current("/Index")" asp-page="/Index">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle @(currentTopic is not null ? "active" : "")" href="#" role="button"
+                               data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Topics</a>
+                            @* 全トピックへのメニュー (目次順 + 目次にないトピック) *@
+                            <div class="dropdown-menu topics-menu">
+                                @foreach (var section in Catalog.Toc)
+                                {
+                                    <div class="topics-menu-group">
+                                        @foreach (var (node, depth) in HelpCatalog.Flatten([section]))
+                                        {
+                                            if (node.Url is not null)
+                                            {
+                                                var cur = string.Equals(node.Topic, currentTopic, StringComparison.OrdinalIgnoreCase);
+                                                <a class="dropdown-item @(depth == 0 ? "topics-menu-head" : "") @(cur ? "active" : "")"
+                                                   style="--depth:@depth" href="@Url.Content("~" + node.Url)"
+                                                   aria-current="@(cur ? "page" : null)">@node.Title</a>
+                                            }
+                                            else
+                                            {
+                                                <h6 class="dropdown-header @(depth == 0 ? "topics-menu-head" : "")" style="--depth:@depth">@node.Title</h6>
+                                            }
+                                        }
+                                    </div>
+                                }
+                                <div class="topics-menu-group">
+                                    <h6 class="dropdown-header topics-menu-head">Other topics</h6>
+                                    @foreach (var t in Catalog.TopicsNotInToc)
+                                    {
+                                        <a class="dropdown-item" style="--depth:1" href="@Url.Content("~" + t.Url)">@t.Title</a>
+                                    }
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link @Active("/Keywords")" aria-current="@Current("/Keywords")" asp-page="/Keywords">Index</a></li>
+                        <li class="nav-item"><a class="nav-link @Active("/Search")" aria-current="@Current("/Search")" asp-page="/Search">Search</a></li>
+                        <li class="nav-item"><a class="nav-link @Active("/Classic/Index")" aria-current="@Current("/Classic/Index")" asp-page="/Classic/Index">Classic</a></li>
+                        <li class="nav-item"><a class="nav-link @Active("/Resources")" aria-current="@Current("/Resources")" asp-page="/Resources">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link @Active("/Privacy")" aria-current="@Current("/Privacy")" asp-page="/Privacy">Privacy</a></li>
+                        <li class="nav-item"><a class="nav-link @Active("/Error")" aria-current="@Current("/Error")" asp-page="/Error">Error</a></li>
+                    </ul>
+                    <form class="d-flex header-search my-2 my-xl-0" role="search" method="get" asp-page="/Search">
+                        <input class="form-control form-control-sm" type="search" name="q" placeholder="Search help…"
+                               aria-label="Search help" value="@(page == "/Search" ? Context.Request.Query["q"].ToString() : "")" />
+                        @if (webSearch.Enabled)
+                        {
+                            <button class="btn btn-sm btn-header ms-2" type="submit">@webSearch.ButtonLabel</button>
+                        }
+                    </form>
+                    <button class="btn btn-sm btn-header ms-xl-2" type="button" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 1.5v11a5.5 5.5 0 0 1 0-11z" /></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="app-shell">
+        @if (!hideSidebar)
+        {
+            <aside class="offcanvas-lg offcanvas-start app-sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header">
+                    <h2 class="offcanvas-title h6" id="sidebarLabel">Contents</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <nav class="toc" aria-label="Table of contents">
+                        <div class="toc-heading d-none d-lg-flex">
+                            <span>Contents</span>
+                            <button type="button" class="btn btn-link btn-sm p-0" id="tocCollapseAll">Collapse all</button>
+                        </div>
+                        <partial name="_TocTree" model="(Catalog.Toc, currentTopic)" />
+                    </nav>
+                </div>
+            </aside>
+        }
+
+        <div class="app-main">
+            <main id="main" role="main" class="app-content @(wide ? "app-content-wide" : "")">
+                @RenderBody()
+            </main>
+            <footer class="app-footer">
+                <span>&copy; 2026 Printer Driver Help</span>
+                <span class="sep" aria-hidden="true">|</span>
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/Resources">Resources</a>
+                <a asp-page="/Privacy">Privacy</a>
+            </footer>
+        </div>
+    </div>
+
+    @* ファイルポップアップ (旧 BSSCPopup) 用のモーダル *@
+    <div class="modal fade" id="helpPopup" tabindex="-1" aria-labelledby="helpPopupTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="helpPopupTitle"></h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body help-content"></div>
+                <div class="modal-footer">
+                    <a class="btn btn-outline-primary btn-sm" id="helpPopupOpen" href="#">Open as page</a>
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    // エクスプローラーで .cshtml の下に .cshtml.cs / .cshtml.css を重ねて表示する
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.cshtml": "${capture}.cshtml.cs, ${capture}.cshtml.css",
+        "*.razor": "${capture}.razor.cs, ${capture}.razor.css",
+        "appsettings.json": "appsettings.*.json",
+        "*.csproj": "${capture}.csproj.user"
+    }
+}

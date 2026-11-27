@@ -1,0 +1,57 @@
+@using rici7Sch.Services
+@{
+    Layout = "_Layout";
+    var nav = (TopicNavigation)ViewData["TopicNavigation"]!;
+}
+@* 移植したヘルプトピック共通の枠: パンくず・タイトル・ツールバー・前後トピック *@
+<article class="topic" data-topic-id="@nav.Topic.Id">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            @foreach (var b in nav.Breadcrumb)
+            {
+                if (b.Url is not null)
+                {
+                    <li class="breadcrumb-item"><a href="@Url.Content("~" + b.Url)">@b.Title</a></li>
+                }
+                else
+                {
+                    <li class="breadcrumb-item">@b.Title</li>
+                }
+            }
+        </ol>
+    </nav>
+
+    <header class="topic-header">
+        <h1 class="topic-title">@nav.Topic.Title</h1>
+        <div class="topic-tools" role="toolbar" aria-label="Topic tools">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="expandAll" hidden>Show all</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-action="print">Print</button>
+        </div>
+    </header>
+
+    <div class="help-content">
+        @RenderBody()
+    </div>
+
+    <nav class="topic-pager" aria-label="Browse sequence">
+        @if (nav.Previous is not null)
+        {
+            <a class="pager-link prev" href="@Url.Content("~" + nav.Previous.Url)" rel="prev">
+                <span class="pager-label">&laquo; Previous</span>
+                <span class="pager-title">@nav.Previous.Title</span>
+            </a>
+        }
+        else
+        {
+            <span></span>
+        }
+        @if (nav.Next is not null)
+        {
+            <a class="pager-link next" href="@Url.Content("~" + nav.Next.Url)" rel="next">
+                <span class="pager-label">Next &raquo;</span>
+                <span class="pager-title">@nav.Next.Title</span>
+            </a>
+        }
+    </nav>
+</article>

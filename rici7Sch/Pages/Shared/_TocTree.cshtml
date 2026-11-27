@@ -1,0 +1,36 @@
+@using rici7Sch.Services
+@model (IReadOnlyList<TocNode> Nodes, string? Current)
+@* 目次ツリー (.hhc の構造を再現)。現在のトピックまでの本は開いた状態で表示する。 *@
+<ul class="toc-list">
+    @foreach (var node in Model.Nodes)
+    {
+        var isCurrent = node.Topic is not null && string.Equals(node.Topic, Model.Current, StringComparison.OrdinalIgnoreCase);
+        <li class="toc-item">
+            @if (node.Children.Count > 0)
+            {
+                var open = HelpCatalog.Contains(node, Model.Current);
+                <details open="@open" class="toc-book">
+                    <summary class="toc-summary">
+                        @if (node.Url is not null)
+                        {
+                            <a href="@Url.Content("~" + node.Url)" class="toc-link @(isCurrent ? "current" : "")" aria-current="@(isCurrent ? "page" : null)">@node.Title</a>
+                        }
+                        else
+                        {
+                            <span class="toc-book-title">@node.Title</span>
+                        }
+                    </summary>
+                    <partial name="_TocTree" model="((IReadOnlyList<TocNode>)node.Children, Model.Current)" />
+                </details>
+            }
+            else if (node.Url is not null)
+            {
+                <a href="@Url.Content("~" + node.Url)" class="toc-link toc-page @(isCurrent ? "current" : "")" aria-current="@(isCurrent ? "page" : null)">@node.Title</a>
+            }
+            else
+            {
+                <span class="toc-book-title">@node.Title</span>
+            }
+        </li>
+    }
+</ul>

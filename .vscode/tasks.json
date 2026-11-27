@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": ["build", "${workspaceFolder}/rici7Sch.slnx", "/property:GenerateFullPaths=true", "/consoleloggerparameters:NoSummary"],
+            "problemMatcher": "$msCompile",
+            "group": { "kind": "build", "isDefault": true }
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": ["watch", "run", "--project", "${workspaceFolder}/rici7Sch/rici7Sch.csproj"],
+            "options": { "cwd": "${workspaceFolder}/rici7Sch" },
+            "problemMatcher": "$msCompile",
+            "isBackground": true
+        },
+        {
+            "label": "convert-help",
+            "detail": "HelpSource/ の RoboHelp 資産から Pages/Topics と Data/*.json を再生成",
+            "command": "python3",
+            "type": "process",
+            "args": ["${workspaceFolder}/rici7Sch/tools/convert_help.py"],
+            "problemMatcher": []
+        }
+    ]
+}

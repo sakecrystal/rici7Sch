@@ -1,0 +1,158 @@
+BODY {
+	margin-left: 10px;
+	margin-top: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.3em;
+	color: Black;
+	text-decoration: none;
+}
+
+H1 {
+	margin-top: 0px;
+	padding-bottom: 4px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #666699;
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	line-height: 1.2em;
+	color: #333333;
+}
+
+H2,
+H3 {
+	margin-top: 20px;
+	padding-bottom: 2px;
+	margin-bottom: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.2em;
+	color: #333333;
+	border-bottom: 1px solid #666699;
+}
+
+H3 {
+	font-weight: normal;
+}
+
+P.T1 {
+	margin-top: 20px;
+	margin-bottom: 12px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 12px;
+	font-weight: normal;
+	border-top: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+	background-color: #F0F0F0;
+}
+
+H4,
+H5,
+H6,
+P.T2,
+P.T3,
+P.T4 {
+	margin-top: 8px;
+	margin-bottom: 4px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+P.T3,
+P.T4 {
+	background-image: url(t3.gif);
+	background-position: 2px 50%;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+P.T4 {
+	font-weight: normal;
+}
+
+P.Note,
+P.Note-indent,
+P.Note-ol {
+	margin-top: 8px;
+	margin-bottom: 4px;
+	margin-left: 1px;
+	padding-left: 4px;
+	border-left: 4px solid #FF9966;
+	font-size: 11px;
+}
+
+P.T3,
+P.T4,
+P.Normal-indent,
+P.Note-indent {
+	margin-left: 20px;
+}
+
+P.Normal-ol,
+P.Note-ol {
+	margin-left: 40px;
+}
+
+P {
+	margin-top: 2px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.3em;
+}
+
+CAPTION {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+TABLE {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+UL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 40px;
+}
+
+OL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 40px;
+}
+
+A:link,
+A:visited {
+	color: #333399;
+	border-bottom: 1px dotted #6671D5;
+	text-decoration: none;
+}
+
+A:hover,
+A:active {
+	color: #000000;
+	background-color: #E3E4F7;
+	border-bottom: 1px solid #6671D5;
+}
+
+span.Term-Hard,
+span.Term-OS,
+span.Term-Soft {
+	font-weight: bolder;
+}
+
+#table span.Term-Hard,
+#table span.Term-OS,
+#table span.Term-Soft,
+P.T1 span.Term-Hard,
+P.T1 span.Term-OS,
+P.T1 span.Term-Soft {
+	font-weight: normal;
+}
+

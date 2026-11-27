@@ -1,0 +1,8 @@
+{
+ "webSearch": {
+  "enabled": false,
+  "embedded": true,
+  "mainWindowOnly": false,
+  "buttonLabel": "WebSearch"
+ }
+}

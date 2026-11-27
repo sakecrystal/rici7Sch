@@ -1,0 +1,56 @@
+@page
+@model SearchModel
+@{
+    ViewData["Title"] = string.IsNullOrWhiteSpace(Model.Query) ? "Search" : $"Search: {Model.Query}";
+}
+<article class="topic">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Search</li>
+        </ol>
+    </nav>
+    <header class="topic-header">
+        <h1 class="topic-title">Search</h1>
+    </header>
+
+    <form method="get" class="filter-bar" role="search">
+        <label for="searchInput" class="form-label">Type in the word(s) to search for:</label>
+        <div class="d-flex gap-2">
+            <input id="searchInput" name="q" class="form-control" type="search" value="@Model.Query" autofocus />
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+        <p class="filter-hint">All words must appear in a topic. Use quotes for an exact phrase, e.g. <code>"2 sided"</code>.</p>
+    </form>
+
+    @if (Model.Terms.Count > 0)
+    {
+        <p class="filter-count" aria-live="polite">
+            @Model.Results.Count topic@(Model.Results.Count == 1 ? "" : "s") found for <strong>@Model.Query</strong>
+        </p>
+
+        @if (Model.Results.Count == 0)
+        {
+            <div class="empty-state">
+                <p>No topics found. Try fewer or different words, or browse the <a asp-page="/Keywords">Index</a>.</p>
+            </div>
+        }
+        else
+        {
+            <ol class="search-results">
+                @foreach (var hit in Model.Results)
+                {
+                    <li class="search-result">
+                        <a class="search-result-title" href="@Url.Content("~" + hit.Topic.Url)">@hit.Topic.Title</a>
+                        <p class="search-result-snippet">
+                            @foreach (var (text, match) in hit.Snippet)
+                            {
+                                if (match) { <mark>@text</mark> } else { @text }
+                            }
+                        </p>
+                    </li>
+                }
+            </ol>
+        }
+    }
+</article>

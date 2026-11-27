@@ -1,0 +1,1747 @@
+[
+ {
+  "keyword": "2 sided",
+  "topics": [
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "topic": "IDH_DDUPLEX"
+   },
+   {
+    "title": "Printing on Both Sides of the Paper",
+    "topic": "IDH_HOW_DUPLEX"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "[Tab Stock] Printing",
+  "topics": [
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   }
+  ]
+ },
+ {
+  "keyword": "About",
+  "topics": [
+   {
+    "title": "Configuration/About Tab",
+    "topic": "IDH_DCONFIGURATION"
+   },
+   {
+    "title": "About Dialog Box",
+    "topic": "IDH_DABOUT"
+   }
+  ]
+ },
+ {
+  "keyword": "Add Bitmap",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Printing Images Superimposed on Prints",
+    "topic": "RPCS/IDH_HOW_IMAGES"
+   }
+  ]
+ },
+ {
+  "keyword": "Add Overlay",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Overlaying Printing Documents with Data",
+    "topic": "RPCS/IDH_HOW_OVERLAY"
+   }
+  ]
+ },
+ {
+  "keyword": "Adjust Image Quality/Color",
+  "topics": [
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   },
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "Adjust Photographs",
+  "topics": [
+   {
+    "title": "Print Quality:Advanced",
+    "topic": "idh_dprint_qlt_ad"
+   },
+   {
+    "title": "Correcting the Hue of the Digital Photos",
+    "topic": "IDH_HOW_CAMERA"
+   }
+  ]
+ },
+ {
+  "keyword": "Always apply COLOR to dmColor setting for application",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Application Collate",
+  "topics": [
+   {
+    "title": "Having Prints Sorted",
+    "topic": "IDH_HOW_COLLATE"
+   }
+  ]
+ },
+ {
+  "keyword": "Authentication",
+  "topics": [
+   {
+    "title": "Authentication Dialog Box",
+    "topic": "PCL_CS/IDH_DAUTHENTICATION"
+   },
+   {
+    "title": "Using User Authentication",
+    "topic": "PCL_CS/IDH_HOW_AUTHENTICATION"
+   },
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Advanced Options Tab",
+    "topic": "IDH_DADVANCED_OPTIONS"
+   }
+  ]
+ },
+ {
+  "keyword": "Auto Reduce",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Automatically Update Printer Information",
+  "topics": [
+   {
+    "title": "Accessories Tab",
+    "topic": "IDH_DACCESS"
+   }
+  ]
+ },
+ {
+  "keyword": "Back Cover",
+  "topics": [
+   {
+    "title": "Printing the Back Cover on a Different Type of Paper",
+    "topic": "IDH_HOW_BACKCOVER"
+   },
+   {
+    "title": "Cover/Slip/Designate",
+    "topic": "idh_dcover"
+   }
+  ]
+ },
+ {
+  "keyword": "Background Numbering",
+  "topics": [
+   {
+    "title": "Background Numbering Details Dialog Box",
+    "topic": "IDH_DBACKGROUND"
+   },
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Printing Control Numbers on the Background of Documents",
+    "topic": "IDH_HOW_BACKGROUNDNUMBERING"
+   }
+  ]
+ },
+ {
+  "keyword": "Barrier-free Color Management",
+  "topics": [
+   {
+    "title": "Printing a Document Using the Colors Applicable to Color Universal Design",
+    "topic": "IDH_DCUD"
+   },
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   },
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   }
+  ]
+ },
+ {
+  "keyword": "Bitmap",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Edit Bitmap Dialog Box",
+    "topic": "RPCS/idh_dbitmap"
+   },
+   {
+    "title": "Printing Images Superimposed on Prints",
+    "topic": "RPCS/IDH_HOW_IMAGES"
+   }
+  ]
+ },
+ {
+  "keyword": "Black Over Print",
+  "topics": [
+   {
+    "title": "Adjusting Black Printing Quality",
+    "topic": "IDH_HOW_BLACK_PRINTING"
+   },
+   {
+    "title": "Print Quality:Advanced",
+    "topic": "idh_dprint_qlt_ad"
+   }
+  ]
+ },
+ {
+  "keyword": "Booklet",
+  "topics": [
+   {
+    "title": "Printing with a Layout Suitable for Making Booklets",
+    "topic": "IDH_HOW_BOOKLET"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   },
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "topic": "IDH_DDUPLEX"
+   }
+  ]
+ },
+ {
+  "keyword": "Brightness",
+  "topics": [
+   {
+    "title": "Color Balance Tab",
+    "topic": "RPCS/idh_dcolorbalance"
+   }
+  ]
+ },
+ {
+  "keyword": "Bypass Tray",
+  "topics": [
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   },
+   {
+    "title": "Paper Position in Bypass Tray Dialog Box",
+    "topic": "RPCS/IDH_DBYPASSTRAY"
+   },
+   {
+    "title": "Selecting the Paper Tray",
+    "topic": "RPCS/IDH_HOW_OUTPUTTRAY"
+   }
+  ]
+ },
+ {
+  "keyword": "Call Preset",
+  "topics": [
+   {
+    "title": "Color Balance Tab",
+    "topic": "RPCS/idh_dcolorbalance"
+   }
+  ]
+ },
+ {
+  "keyword": "Change Data Processing",
+  "topics": [
+   {
+    "title": "Changing Bitmap Printing Resolution and Speed",
+    "topic": "PCL_CS/IDH_HOW_BMP"
+   }
+  ]
+ },
+ {
+  "keyword": "Classification Code",
+  "topics": [
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Registering Classification Code/User Code",
+    "topic": "PCL_CS/IDH_HOW_CLASS"
+   }
+  ]
+ },
+ {
+  "keyword": "Collapse",
+  "topics": [
+   {
+    "title": "Settings Summary Dialog Box",
+    "topic": "IDH_DSETSUMMARY"
+   }
+  ]
+ },
+ {
+  "keyword": "Collapse list",
+  "topics": [
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Collate",
+  "topics": [
+   {
+    "title": "Having Prints Sorted",
+    "topic": "IDH_HOW_COLLATE"
+   },
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   },
+   {
+    "title": "Collate Details Dialog Box",
+    "topic": "IDH_DCOLLATE"
+   }
+  ]
+ },
+ {
+  "keyword": "Color Balance",
+  "topics": [
+   {
+    "title": "Color Balance Details: Whole Document Dialog Box",
+    "topic": "RPCS/idh_dcolorbalance"
+   },
+   {
+    "title": "Adjusting the Color Balance",
+    "topic": "RPCS/idh_how_colorbalance"
+   }
+  ]
+ },
+ {
+  "keyword": "Color Profile",
+  "topics": [
+   {
+    "title": "Changing Color Profiling Patterns",
+    "topic": "IDH_HOW_COLORPROFILE"
+   },
+   {
+    "title": "Color Profile Settings Dialog Box",
+    "topic": "RPCS/IDH_DCOLOR_MATCH"
+   },
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "Color Profile Method",
+  "topics": [
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "Color/ Black and White",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   },
+   {
+    "title": "Printing in Color or Black and White",
+    "topic": "IDH_HOW_PRINT_COLOR"
+   },
+   {
+    "title": "Printing in Two Colors",
+    "topic": "RPCS/IDH_HOW_TWOCOLOR"
+   }
+  ]
+ },
+ {
+  "keyword": "Contrast",
+  "topics": [
+   {
+    "title": "Color Balance Tab",
+    "topic": "RPCS/idh_dcolorbalance"
+   }
+  ]
+ },
+ {
+  "keyword": "Copies",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Creep Adjustment",
+  "topics": [
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "topic": "IDH_DDUPLEX"
+   },
+   {
+    "title": "Creep Adjustment Dialog Box",
+    "topic": "RPCS/IDH_DCREEP"
+   },
+   {
+    "title": "Using the Creep Adjustment Function",
+    "topic": "RPCS/IDH_HOW_CREEP"
+   }
+  ]
+ },
+ {
+  "keyword": "Crop Marks",
+  "topics": [
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   },
+   {
+    "title": "Print Crop Marks Details Dialog Box",
+    "topic": "RPCS/IDH_DCROP"
+   },
+   {
+    "title": "Printing a Document with Crop Marks",
+    "topic": "RPCS/IDH_HOW_CROP"
+   }
+  ]
+ },
+ {
+  "keyword": "Custom Paper Size",
+  "topics": [
+   {
+    "title": "Custom Paper Size Dialog Box",
+    "topic": "IDH_DCUSTOM_SIZE"
+   },
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Printing on Custom Size Paper",
+    "topic": "idh_how_custom"
+   },
+   {
+    "title": "Register Custom Paper Size Dialog Box",
+    "topic": "IDH_DSAVE_CUSTOM"
+   },
+   {
+    "title": "Registering Custom Paper Size",
+    "topic": "IDH_HOW_CUSTOMSIZEREG"
+   },
+   {
+    "title": "Advanced Options Tab",
+    "topic": "IDH_DADVANCED_OPTIONS"
+   }
+  ]
+ },
+ {
+  "keyword": "Data Security for Copying",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Data Security for Copying Details Dialog Box",
+    "topic": "RPCS/IDH_DSECURITY"
+   },
+   {
+    "title": "Using Data Security for Copying Function (Destroy the Image and Print gray)",
+    "topic": "IDH_HOW_GUARD"
+   }
+  ]
+ },
+ {
+  "keyword": "Default Menu for Detailed Settings",
+  "topics": [
+   {
+    "title": "Configuration/About Tab",
+    "topic": "IDH_DCONFIGURATION"
+   }
+  ]
+ },
+ {
+  "keyword": "Default Tab",
+  "topics": [
+   {
+    "title": "Configuration/About Tab",
+    "topic": "IDH_DCONFIGURATION"
+   }
+  ]
+ },
+ {
+  "keyword": "Designate/Chapter",
+  "topics": [
+   {
+    "title": "Using Designate/Chapter Function",
+    "topic": "IDH_HOW_CHAPTER"
+   },
+   {
+    "title": "Cover/Slip/Designate",
+    "topic": "idh_dcover"
+   },
+   {
+    "title": "Designate/Chapter Details Dialog Box",
+    "topic": "idh_ddesignate"
+   }
+  ]
+ },
+ {
+  "keyword": "Directional Magnification",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Reducing and Enlarging a Document Size",
+    "topic": "idh_how_zoom"
+   }
+  ]
+ },
+ {
+  "keyword": "Display Preview and Print Screen",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   },
+   {
+    "title": "Displaying the Preview Screen before Printing",
+    "topic": "RPCS/IDH_HOW_PREVIEW"
+   }
+  ]
+ },
+ {
+  "keyword": "Dithering",
+  "topics": [
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   },
+   {
+    "title": "Changing the Dithering Pattern",
+    "topic": "IDH_HOW_DITHERING"
+   },
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "Do not [Fit to Print Size] auto.",
+  "topics": [
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "topic": "IDH_DDUPLEX"
+   }
+  ]
+ },
+ {
+  "keyword": "Do not Print Blank Pages",
+  "topics": [
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "topic": "IDH_DDUPLEX"
+   }
+  ]
+ },
+ {
+  "keyword": "Document Server",
+  "topics": [
+   {
+    "title": "Using the Document Server",
+    "topic": "IDH_HOW_DOCUMENT_SERVER"
+   },
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Document Size",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Driver Encryption Key",
+  "topics": [
+   {
+    "title": "Driver Encryption Key Dialog Box",
+    "topic": "IDH_DDNETWORKKEY"
+   },
+   {
+    "title": "Advanced Options Tab",
+    "topic": "IDH_DADVANCED_OPTIONS"
+   }
+  ]
+ },
+ {
+  "keyword": "Edge Smoothing",
+  "topics": [
+   {
+    "title": "Print Quality:Advanced",
+    "topic": "idh_dprint_qlt_ad"
+   }
+  ]
+ },
+ {
+  "keyword": "Eject Face-up",
+  "topics": [
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   },
+   {
+    "title": "Printing a Document Face Up",
+    "topic": "idh_toc_faceup"
+   }
+  ]
+ },
+ {
+  "keyword": "Encryption",
+  "topics": [
+   {
+    "title": "Advanced Options Tab",
+    "topic": "IDH_DADVANCED_OPTIONS"
+   }
+  ]
+ },
+ {
+  "keyword": "Expand list",
+  "topics": [
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Extended Option",
+  "topics": [
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   }
+  ]
+ },
+ {
+  "keyword": "Fit to Print Size",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Reducing and Enlarging a Document Size",
+    "topic": "idh_how_zoom"
+   }
+  ]
+ },
+ {
+  "keyword": "Fold",
+  "topics": [
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   },
+   {
+    "title": "Printing with the Folding Unit",
+    "topic": "idh_how_foldtype"
+   }
+  ]
+ },
+ {
+  "keyword": "Fore Edge Cut",
+  "topics": [
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   },
+   {
+    "title": "Fore Edge Cut Details Dialog Box",
+    "topic": "IDH_DTRIMSETTING"
+   }
+  ]
+ },
+ {
+  "keyword": "Front Cover",
+  "topics": [
+   {
+    "title": "Printing Only the First Sheet on a Different Type of Paper",
+    "topic": "IDH_HOW_FRONTCOVER"
+   },
+   {
+    "title": "Cover/Slip/Designate",
+    "topic": "idh_dcover"
+   }
+  ]
+ },
+ {
+  "keyword": "Gray Reproduction",
+  "topics": [
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   },
+   {
+    "title": "Adjusting Black Printing Quality",
+    "topic": "IDH_HOW_BLACK_PRINTING"
+   },
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "Header/Footer",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Edit Header/Footer Dialog Box",
+    "topic": "RPCS/IDH_DHEADFOOT"
+   },
+   {
+    "title": "Printing a Document with a Header and Footer",
+    "topic": "RPCS/IDH_HOW_HEADER"
+   }
+  ]
+ },
+ {
+  "keyword": "Hold Print",
+  "topics": [
+   {
+    "title": "Printing Documents Later",
+    "topic": "IDH_HOW_HOLDPRINT"
+   },
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "ICM",
+  "topics": [
+   {
+    "title": "Using ICM",
+    "topic": "IDH_HOW_ICM"
+   },
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "ICM Intent",
+  "topics": [
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "Image Overlay",
+  "topics": [
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Registering Image Overlay",
+    "topic": "RPCS/IDH_HOW_IMAGEOVER"
+   },
+   {
+    "title": "Register Image Overlay Dialog Box",
+    "topic": "RPCS/IDH_DOVERLAY"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Image Position",
+  "topics": [
+   {
+    "title": "Set Image Position Dialog Box",
+    "topic": "RPCS/IDH_DIMGPOSITION"
+   }
+  ]
+ },
+ {
+  "keyword": "Imposition",
+  "topics": [
+   {
+    "title": "Imposition",
+    "topic": "idh_dimposition"
+   },
+   {
+    "title": "Printing a Document with Imposition Methods",
+    "topic": "RPCS/IDH_HOW_IMPOSITION"
+   }
+  ]
+ },
+ {
+  "keyword": "Increase Auto-keep Settings for Applications",
+  "topics": [
+   {
+    "title": "Applying the One Sheet Print Setting to Others",
+    "topic": "PCL_CS/IDH_HOW_APPLICATION"
+   },
+   {
+    "title": "Advanced Options Tab",
+    "topic": "IDH_DADVANCED_OPTIONS"
+   }
+  ]
+ },
+ {
+  "keyword": "Input Tray",
+  "topics": [
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   },
+   {
+    "title": "Change Input Tray Settings Dialog Box",
+    "topic": "IDH_DINPUTTRAY"
+   },
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   },
+   {
+    "title": "Selecting the Paper Tray",
+    "topic": "RPCS/IDH_HOW_OUTPUTTRAY"
+   }
+  ]
+ },
+ {
+  "keyword": "Input Tray Settings",
+  "topics": [
+   {
+    "title": "Setting Up Options",
+    "topic": "IDH_DSETUPOPTION"
+   },
+   {
+    "title": "Accessories Tab",
+    "topic": "IDH_DACCESS"
+   }
+  ]
+ },
+ {
+  "keyword": "Insert Separation Sheet",
+  "topics": [
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   }
+  ]
+ },
+ {
+  "keyword": "Insert Slip Sheet After Every Page",
+  "topics": [
+   {
+    "title": "Cover/Slip/Designate",
+    "topic": "idh_dcover"
+   },
+   {
+    "title": "Inserting Different Paper between Pages",
+    "topic": "IDH_HOW_SLIPSHEET"
+   }
+  ]
+ },
+ {
+  "keyword": "Job Load Distribution",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Job Type",
+  "topics": [
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   },
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   }
+  ]
+ },
+ {
+  "keyword": "Layout",
+  "topics": [
+   {
+    "title": "Printing Multiple Pages on a Sheet",
+    "topic": "IDH_HOW_LAYOUT"
+   },
+   {
+    "title": "Edit",
+    "topic": "IDH_DDUPLEX"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Letterhead Setting",
+  "topics": [
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   }
+  ]
+ },
+ {
+  "keyword": "Locked Print",
+  "topics": [
+   {
+    "title": "Avoiding Others Seeing Your Prints",
+    "topic": "IDH_HOW_SECURE_START"
+   },
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Measurement Unit",
+  "topics": [
+   {
+    "title": "Custom Paper Size Dialog Box",
+    "topic": "IDH_DCUSTOM_SIZE"
+   },
+   {
+    "title": "Register Custom Paper Size Dialog Box",
+    "topic": "IDH_DSAVE_CUSTOM"
+   }
+  ]
+ },
+ {
+  "keyword": "Menu",
+  "topics": [
+   {
+    "title": "Detailed Settings Tab",
+    "topic": "IDH_DDETAILSET"
+   }
+  ]
+ },
+ {
+  "keyword": "Multi-sheet Fold",
+  "topics": [
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   }
+  ]
+ },
+ {
+  "keyword": "Near Standard Size",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   },
+   {
+    "title": "Printing a Scanned Data on a Standard Size of Paper",
+    "topic": "RPCS/IDH_HOW_SCAN"
+   }
+  ]
+ },
+ {
+  "keyword": "One Click Preset List Type",
+  "topics": [
+   {
+    "title": "Configuration/About Tab",
+    "topic": "IDH_DCONFIGURATION"
+   }
+  ]
+ },
+ {
+  "keyword": "Options",
+  "topics": [
+   {
+    "title": "Accessories Tab",
+    "topic": "IDH_DACCESS"
+   },
+   {
+    "title": "Setting Up Options",
+    "topic": "IDH_DSETUPOPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Orientation",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Output Tray",
+  "topics": [
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   }
+  ]
+ },
+ {
+  "keyword": "Overlay",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Edit Overlay Dialog Box",
+    "topic": "RPCS/IDH_DOVERLAY_EDIT"
+   },
+   {
+    "title": "Overlaying Printing Documents with Data",
+    "topic": "RPCS/IDH_HOW_OVERLAY"
+   }
+  ]
+ },
+ {
+  "keyword": "Pamphlet",
+  "topics": [
+   {
+    "title": "Imposition",
+    "topic": "idh_dimposition"
+   }
+  ]
+ },
+ {
+  "keyword": "Paper Position in Bypass Tray",
+  "topics": [
+   {
+    "title": "Paper Position in Bypass Tray Dialog Box",
+    "topic": "RPCS/IDH_DBYPASSTRAY"
+   }
+  ]
+ },
+ {
+  "keyword": "Paper Type",
+  "topics": [
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   },
+   {
+    "title": "Change Input Tray Settings Dialog Box",
+    "topic": "IDH_DINPUTTRAY"
+   },
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   },
+   {
+    "title": "Setting Up Options",
+    "topic": "IDH_DSETUPOPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Perfect Binding",
+  "topics": [
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   },
+   {
+    "title": "Perfect Binding Details Dialog Box",
+    "topic": "idh_dperfect_binding"
+   },
+   {
+    "title": "Binding Documents by Perfect Binding",
+    "topic": "IDH_HOW_PERFECT_BINDING"
+   }
+  ]
+ },
+ {
+  "keyword": "POP Display",
+  "topics": [
+   {
+    "title": "Adjust Image Quality/Color Tab",
+    "topic": "RPCS/idh_qualitycolor"
+   }
+  ]
+ },
+ {
+  "keyword": "Position in bypass tray",
+  "topics": [
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   },
+   {
+    "title": "Selecting the Paper Tray",
+    "topic": "RPCS/IDH_HOW_OUTPUTTRAY"
+   }
+  ]
+ },
+ {
+  "keyword": "Poster",
+  "topics": [
+   {
+    "title": "Imposition",
+    "topic": "idh_dimposition"
+   },
+   {
+    "title": "Splitting the Document Image across Multiple Sheets (Poster)",
+    "topic": "RPCS/idh_how_poster"
+   }
+  ]
+ },
+ {
+  "keyword": "Print All Text as Black",
+  "topics": [
+   {
+    "title": "Adjusting Black Printing Quality",
+    "topic": "IDH_HOW_BLACK_PRINTING"
+   },
+   {
+    "title": "Print Quality:Advanced",
+    "topic": "idh_dprint_qlt_ad"
+   }
+  ]
+ },
+ {
+  "keyword": "Print Crop Marks",
+  "topics": [
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   },
+   {
+    "title": "Print Crop Marks Details Dialog Box",
+    "topic": "RPCS/IDH_DCROP"
+   },
+   {
+    "title": "Printing a Document with Crop Marks",
+    "topic": "RPCS/IDH_HOW_CROP"
+   }
+  ]
+ },
+ {
+  "keyword": "Print On",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Print Priority",
+  "topics": [
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   },
+   {
+    "title": "Changing Bitmap Printing Resolution and Speed",
+    "topic": "PCL_CS/IDH_HOW_BMP"
+   }
+  ]
+ },
+ {
+  "keyword": "Print Watermark",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Having Text Stamped on Prints",
+    "topic": "IDH_HOW_WATERMARK"
+   }
+  ]
+ },
+ {
+  "keyword": "Printable Area",
+  "topics": [
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "topic": "IDH_DDUPLEX"
+   },
+   {
+    "title": "Fine-tuning the Printable Area",
+    "topic": "RPCS/IDH_HOW_AREACOMPATI"
+   }
+  ]
+ },
+ {
+  "keyword": "Printer Collate",
+  "topics": [
+   {
+    "title": "Having Prints Sorted",
+    "topic": "IDH_HOW_COLLATE"
+   }
+  ]
+ },
+ {
+  "keyword": "Printer Properties",
+  "topics": [
+   {
+    "title": "Configuration/About Tab",
+    "topic": "IDH_DCONFIGURATION"
+   }
+  ]
+ },
+ {
+  "keyword": "Punch",
+  "topics": [
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   },
+   {
+    "title": "Punching Prints",
+    "topic": "idh_how_punch"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Reduce/Enlarge",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Reducing and Enlarging a Document Size",
+    "topic": "idh_how_zoom"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Register Custom Paper Size",
+  "topics": [
+   {
+    "title": "Advanced Options Tab",
+    "topic": "IDH_DADVANCED_OPTIONS"
+   },
+   {
+    "title": "Register Custom Paper Size Dialog Box",
+    "topic": "IDH_DSAVE_CUSTOM"
+   },
+   {
+    "title": "Registering Custom Paper Size",
+    "topic": "IDH_HOW_CUSTOMSIZEREG"
+   }
+  ]
+ },
+ {
+  "keyword": "Resolution",
+  "topics": [
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   },
+   {
+    "title": "Changing the Print Resolution",
+    "topic": "IDH_HOW_RESOLUTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Restore Last Emulation",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Reverse Order Printing",
+  "topics": [
+   {
+    "title": "Starting Printing from the Last Page",
+    "topic": "IDH_HOW_REVERSE"
+   },
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   }
+  ]
+ },
+ {
+  "keyword": "Ring Binding",
+  "topics": [
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   },
+   {
+    "title": "Binding Documents by Ring Comb",
+    "topic": "IDH_HOW_RING"
+   }
+  ]
+ },
+ {
+  "keyword": "Rotate by 180 degrees",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Rotating the Image by 180 Degrees",
+    "topic": "IDH_HOW_ROTATE180"
+   }
+  ]
+ },
+ {
+  "keyword": "Rotate Mixed Original Orientation",
+  "topics": [
+   {
+    "title": "Output Settings",
+    "topic": "idh_ddeliver"
+   },
+   {
+    "title": "Rotate Mixed Original Orientation Dialog Box",
+    "topic": "RPCS/IDH_DMIX"
+   },
+   {
+    "title": "Changing the Page Rotation Direction for Mixed Orientation Documents",
+    "topic": "RPCS/IDH_HOW_MIXDOCUMENT"
+   }
+  ]
+ },
+ {
+  "keyword": "Sample Print",
+  "topics": [
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Printing a Single Sample Set before Remaining Sets",
+    "topic": "IDH_HOW_PROOF_START"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Saturation",
+  "topics": [
+   {
+    "title": "Color Balance Tab",
+    "topic": "RPCS/idh_dcolorbalance"
+   }
+  ]
+ },
+ {
+  "keyword": "Save Driver Settings",
+  "topics": [
+   {
+    "title": "About Dialog Box",
+    "topic": "IDH_DABOUT"
+   }
+  ]
+ },
+ {
+  "keyword": "Separate into CMYK, then Print in Designated Color Only",
+  "topics": [
+   {
+    "title": "Print Quality:Advanced",
+    "topic": "idh_dprint_qlt_ad"
+   },
+   {
+    "title": "Printing a Document Using Only Specific CMYK Colors",
+    "topic": "PS_CS/IDH_HOW_CMYK"
+   }
+  ]
+ },
+ {
+  "keyword": "Set Image Position",
+  "topics": [
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "topic": "IDH_DDUPLEX"
+   },
+   {
+    "title": "Fine-tuning the Printable Area",
+    "topic": "RPCS/IDH_HOW_AREACOMPATI"
+   }
+  ]
+ },
+ {
+  "keyword": "Settings Summary",
+  "topics": [
+   {
+    "title": "Detailed Settings Tab",
+    "topic": "IDH_DDETAILSET"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   },
+   {
+    "title": "Settings Summary Dialog Box",
+    "topic": "IDH_DSETSUMMARY"
+   }
+  ]
+ },
+ {
+  "keyword": "Shift Print Position for [Tab Stock]",
+  "topics": [
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   }
+  ]
+ },
+ {
+  "keyword": "Slip Sheet",
+  "topics": [
+   {
+    "title": "Inserting Different Paper between Pages",
+    "topic": "IDH_HOW_SLIPSHEET"
+   },
+   {
+    "title": "Cover/Slip/Designate",
+    "topic": "idh_dcover"
+   }
+  ]
+ },
+ {
+  "keyword": "Spool Data in EMF Format",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "Staple",
+  "topics": [
+   {
+    "title": "Stapling Prints",
+    "topic": "IDH_HOW_STAPLE"
+   },
+   {
+    "title": "Finishing",
+    "topic": "IDH_DFINISH"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Store and Print",
+  "topics": [
+   {
+    "title": "Storing Documents on the Printer and Printing them",
+    "topic": "IDH_HOW_STORE_PRINT"
+   },
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Stored Print",
+  "topics": [
+   {
+    "title": "Storing Documents on the Hard Disk",
+    "topic": "IDH_HOW_SAVE_PRINTER"
+   },
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Frequently Used Settings Tab",
+    "topic": "IDH_DONECLICK"
+   }
+  ]
+ },
+ {
+  "keyword": "Tab Stock",
+  "topics": [
+   {
+    "title": "Paper",
+    "topic": "IDH_DPAPER"
+   }
+  ]
+ },
+ {
+  "keyword": "Toner Saving",
+  "topics": [
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   },
+   {
+    "title": "Saving on Toner When Printing",
+    "topic": "IDH_HOW_TONERSAVING"
+   },
+   {
+    "title": "Toner Save User Settings Dialog Box",
+    "topic": "RPCS/IDH_DTONERSAVE_SET"
+   }
+  ]
+ },
+ {
+  "keyword": "Total Memory",
+  "topics": [
+   {
+    "title": "Accessories Tab",
+    "topic": "IDH_DACCESS"
+   }
+  ]
+ },
+ {
+  "keyword": "Two-color",
+  "topics": [
+   {
+    "title": "Print Quality:Standard",
+    "topic": "IDH_DPRINT_QLT"
+   },
+   {
+    "title": "Printing in Two Colors",
+    "topic": "RPCS/IDH_HOW_TWOCOLOR"
+   }
+  ]
+ },
+ {
+  "keyword": "Unauthorized Copy Prevention",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   }
+  ]
+ },
+ {
+  "keyword": "Unauthorized Copy Prevention for Pattern",
+  "topics": [
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Unauthorized Copy Prevention for Pattern Details Dialog Box",
+    "topic": "RPCS/IDH_DUNAUTHORIZE"
+   },
+   {
+    "title": "Using Unauthorized Copy Prevention Function (Effects of Prevention for Pattern)",
+    "topic": "IDH_HOW_PREVENT"
+   }
+  ]
+ },
+ {
+  "keyword": "Use Application Zoom",
+  "topics": [
+   {
+    "title": "Driver Options",
+    "topic": "PS_CS/IDH_DDRIVER_OPTION"
+   }
+  ]
+ },
+ {
+  "keyword": "User Authentication",
+  "topics": [
+   {
+    "title": "Advanced Options Tab",
+    "topic": "IDH_DADVANCED_OPTIONS"
+   },
+   {
+    "title": "Using User Authentication",
+    "topic": "PCL_CS/IDH_HOW_AUTHENTICATION"
+   }
+  ]
+ },
+ {
+  "keyword": "User Code",
+  "topics": [
+   {
+    "title": "Job Setup",
+    "topic": "IDH_DJOBSETUP"
+   },
+   {
+    "title": "Registering Classification Code and User Code",
+    "topic": "PCL_CS/IDH_HOW_CLASS"
+   }
+  ]
+ },
+ {
+  "keyword": "Vector/Raster",
+  "topics": [
+   {
+    "title": "Printing the Whole Page as Image Data",
+    "topic": "PCL_CS/IDH_HOW_RASTERVECTOR"
+   },
+   {
+    "title": "Print Quality:Advanced",
+    "topic": "idh_dprint_qlt_ad"
+   }
+  ]
+ },
+ {
+  "keyword": "Vertical/Horizontal",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   }
+  ]
+ },
+ {
+  "keyword": "Watermark",
+  "topics": [
+   {
+    "title": "Edit Watermark Dialog Box",
+    "topic": "IDH_DWATERMARK"
+   },
+   {
+    "title": "Effects",
+    "topic": "IDH_DEFFECTS"
+   },
+   {
+    "title": "Having Text Stamped on Prints",
+    "topic": "IDH_HOW_WATERMARK"
+   }
+  ]
+ },
+ {
+  "keyword": "Web Image Monitor",
+  "topics": [
+   {
+    "title": "Configuration/About Tab",
+    "topic": "IDH_DCONFIGURATION"
+   },
+   {
+    "title": "Checking the Printer's Status",
+    "topic": "IDH_HOW_WIM"
+   }
+  ]
+ },
+ {
+  "keyword": "Zoom",
+  "topics": [
+   {
+    "title": "Basic",
+    "topic": "IDH_DBASIC"
+   },
+   {
+    "title": "Reducing and Enlarging a Document Size",
+    "topic": "idh_how_zoom"
+   }
+  ]
+ }
+]

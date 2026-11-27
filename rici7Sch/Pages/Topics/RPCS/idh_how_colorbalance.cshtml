@@ -1,0 +1,64 @@
+@page
+@model rici7Sch.Pages.Topics.RPCS.idh_how_colorbalanceModel
+@* このファイルは tools/convert_help.py により生成されています。 *@
+
+<p>The color balance is adjusted by changing the mixture of red (R) green 
+ (G), and blue (B).</p>
+<p>The color balance is adjusted by changing the mixture of black (K) cyan 
+ (C), magenta (M), and yellow (Y).</p>
+<ul>
+<li><p>This function is available only for color printers.</p></li>
+</ul>
+<h2>Complementary Color</h2>
+<p>The colors of the RGB color model can be mixed to produce the cyan, 
+ magenta, and yellow of the CMY color model and vice versa. Two colors 
+ of one model are mixed to produce the color of the other (mixing blue 
+ and green produces cyan, for example). The remaining color is the complement 
+ of the color produced (red in this example). Complementary colors are: 
+ red and cyan, green and magenta, blue and yellow.</p>
+<p><img alt="" class="help-img" height="121" loading="lazy" src="~/images/help/RGBCMYK.gif" width="122"/></p>
+<h2>Registering the Color Balance in a User Setting</h2>
+<ol>
+<li><p>Open the printing preferences dialog box.</p></li>
+<li><p>Click the <span class="Term-Soft">Print Quality:Standard</span> 
+ menu on the <span class="Term-Soft">Detailed Settings</span> tab.</p></li>
+<li><p>Select <span class="Term-Soft">Advanced Settings</span> 
+ for <span class="Term-Soft">Adjust Image Quality/Color</span>.</p></li>
+<li><p>Click <span class="Term-Soft">Details...</span> 
+ button to open the <span class="Term-Soft">Details</span> dialog box and 
+ click <span class="Term-Soft">Color Balance</span> tab.</p></li>
+<li><p>If you select <span class="Term-Soft">Single Component</span> 
+ for <span class="Term-Soft">Setting Method</span>, select the component 
+ you want to adjust from <span class="Term-Soft">Text</span>, <span class="Term-Soft">Graphics</span>, 
+ or <span class="Term-Soft">Photograph</span>.</p></li>
+<li><p>Specify a value in the <span class="Term-Soft">Brightness: 
+ </span>spin box to adjust the brightness.</p></li>
+<li><p>Specify a value in the <span class="Term-Soft">Contrast: 
+ </span>spin box to adjust the contrast.</p></li>
+<li><p>Specify a value in the <span class="Term-Soft">Saturation: 
+ </span>spin box to adjust the saturation.</p></li>
+<li><p>Specify a value in the spin box in the <span class="Term-Soft">Adjust 
+ Each Color</span> group to adjust the color balance of red (R), green 
+ (G), and blue (B).</p></li>
+<li><p>Click <span class="Term-Soft">OK</span> to save 
+ the color balance and close the dialog box.</p></li>
+</ol>
+<h2>Tips for Adjusting the Color Balance</h2>
+<p>The following methods are available to make a specific color stronger: 
+ decreasing the color's complementary color or decreasing the other colors 
+ (that is, decreasing complementary colors relatively). A combination of 
+ both methods can be used. For example, to make red more vivid, make it 
+ stronger (by decreasing cyan) or decrease green and blue (making magenta 
+ and yellow stronger). The more red that is used, the brighter it looks. 
+ This is useful to adjust the colors of a dark image. Conversely, the less 
+ green and blue that are used, the duller the image looks. Use this method 
+ to make a bright image dull.</p>
+<p><button aria-controls="dropdown-1" aria-expanded="false" class="help-dropdown-toggle" data-bs-target="#dropdown-1" data-bs-toggle="collapse" type="button">Example</button>
+</p><div class="collapse help-dropdown" id="dropdown-1">
+<p class="Normal-indent">No adjustment:<br/>
+<img alt="" class="help-img" height="128" loading="lazy" src="~/images/help/ColorBalance.gif" width="182"/></p>
+<p class="Normal-indent">Increased red:</p>
+<p class="Normal-indent"><img alt="" class="help-img" height="128" loading="lazy" src="~/images/help/ColorBalanceR.gif" width="182"/></p>
+<p class="Normal-indent">Decreased green and blue:</p>
+<p class="Normal-indent"><img alt="" class="help-img" height="128" loading="lazy" src="~/images/help/ColorBalanceGB.gif" width="182"/></p>
+</div>

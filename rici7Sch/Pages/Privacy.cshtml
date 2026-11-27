@@ -1,0 +1,37 @@
+@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy";
+}
+<article class="topic">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Privacy</li>
+        </ol>
+    </nav>
+    <header class="topic-header">
+        <h1 class="topic-title">Privacy</h1>
+    </header>
+    <div class="help-content">
+        <p>This help site does not require sign-in and does not collect personal information.</p>
+
+        <p class="T1" role="heading" aria-level="2">Information stored in your browser</p>
+        <p class="T2" role="heading" aria-level="3">Display theme</p>
+        <p>Your light/dark theme choice is stored in your browser's local storage (<code>help-theme</code>) so it is remembered on your next visit. It is never sent to the server.</p>
+        <p class="T2" role="heading" aria-level="3">Classic Viewer</p>
+        <p>The <span class="Term-Soft">Classic</span> viewer shows the original help pages and scripts. It does not store any information.</p>
+
+        <p class="T1" role="heading" aria-level="2">Information sent to the server</p>
+        <p class="T2" role="heading" aria-level="3">Search words</p>
+        <p>Words you enter in <span class="Term-Soft">Search</span> are sent to this server only to find matching topics. They are not stored.</p>
+        <p class="T2" role="heading" aria-level="3">Access logs</p>
+        <p>Like most web servers, the server may record standard request information (such as the requested page and time) for operation and troubleshooting.</p>
+
+        <p class="Note">Note:</p>
+            <ul>
+                <li><p>No cookies are used for tracking or advertising.</p></li>
+                <li><p>No external services or content delivery networks are used.</p></li>
+            </ul>
+    </div>
+</article>

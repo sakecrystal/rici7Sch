@@ -1,0 +1,109 @@
+@page
+@model IndexModel
+@using rici7Sch.Services
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="home">
+    <section class="hero">
+        <p class="hero-eyebrow">RPCS Printer Driver</p>
+        <h1 class="hero-title">Printer Driver Help</h1>
+        <p class="hero-lead">
+            Explanations of every tab, menu and dialog box in the printing preferences,
+            plus step-by-step procedures for common printing tasks.
+        </p>
+        <form class="hero-search" role="search" method="get" asp-page="/Search">
+            <label class="visually-hidden" for="heroSearch">Search help</label>
+            <input id="heroSearch" class="form-control" type="search" name="q" placeholder="e.g. booklet, staple, toner saving" />
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+        <ul class="hero-stats">
+            <li><strong>@Model.TopicCount</strong> topics</li>
+            <li><strong>@Model.KeywordCount</strong> index keywords</li>
+            <li><strong>@Model.Sections.Count</strong> sections</li>
+        </ul>
+    </section>
+
+    <section aria-labelledby="pagesHeading">
+        <h2 id="pagesHeading" class="section-heading">Pages</h2>
+        <div class="page-grid">
+            @foreach (var p in Model.Pages)
+            {
+                <a class="page-card" href="@Url.Content("~" + p.Url)">
+                    <strong>@p.Title</strong>
+                    <span>@p.Description</span>
+                    <code>@p.Url</code>
+                </a>
+            }
+        </div>
+    </section>
+
+    <section aria-labelledby="sectionsHeading">
+        <h2 id="sectionsHeading" class="section-heading">Contents</h2>
+        <div class="section-grid">
+            @foreach (var s in Model.Sections)
+            {
+                var url = IndexModel.FirstUrl(s);
+                <div class="section-card">
+                    <h3 class="section-card-title">
+                        @if (url is not null)
+                        {
+                            <a href="@Url.Content("~" + url)">@s.Title</a>
+                        }
+                        else
+                        {
+                            @s.Title
+                        }
+                    </h3>
+                    @if (s.Children.Count > 0)
+                    {
+                        <ul class="section-card-list">
+                            @foreach (var (c, depth) in HelpCatalog.Flatten(s.Children))
+                            {
+                                <li class="@(depth > 0 ? "sub" : "")">
+                                    @if (c.Url is not null)
+                                    {
+                                        <a href="@Url.Content("~" + c.Url)">@c.Title</a>
+                                    }
+                                    else
+                                    {
+                                        <strong>@c.Title</strong>
+                                    }
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            }
+            @if (Model.OtherTopics.Count > 0)
+            {
+                <div class="section-card">
+                    <h3 class="section-card-title">Other topics</h3>
+                    <ul class="section-card-list">
+                        @foreach (var t in Model.OtherTopics)
+                        {
+                            <li><a href="@Url.Content("~" + t.Url)">@t.Title</a></li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+    </section>
+
+    <section aria-labelledby="allHeading">
+        <h2 id="allHeading" class="section-heading">All topics A–Z</h2>
+        <details class="all-topics-box">
+            <summary>Show all @Model.TopicCount topics</summary>
+            <ul class="all-topics">
+                @foreach (var g in Model.AllTopics)
+                {
+                    <li class="letter">@g.Key</li>
+                    @foreach (var t in g)
+                    {
+                        <li><a href="@Url.Content("~" + t.Url)">@t.Title</a></li>
+                    }
+                }
+            </ul>
+        </details>
+    </section>
+</div>

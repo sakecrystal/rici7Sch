@@ -1,0 +1,160 @@
+@page
+@model rici7Sch.Pages.Classic.IndexModel
+@using rici7Sch.Services
+@{
+    var S = Model.Source;
+    ViewData["Title"] = "Classic Viewer";
+    ViewData["HideSidebar"] = true;
+    ViewData["Wide"] = true;
+    string L(string key, string fallback) => S.T("WebHelp", key, fallback);
+    string C(string key, string fallback) => S.T("Common", key, fallback);
+    string B(string key, string fallback) => S.T("BrowseSequence", key, fallback);
+    string G(string key, string fallback) => S.T("GlossaryTab", key, fallback);
+    var web = Model.Catalog.Options.WebSearch;
+}
+<section class="classic" data-classic
+         data-start="@IndexModel.FrameUrl(Model.StartTopic)"
+         data-sequence="@System.Text.Json.JsonSerializer.Serialize(Model.Sequence)"
+         data-search-url="@Url.Page("/Classic/Index", "Search")"
+         data-msg-found="@L("TopicsFound", "Topics Found")"
+         data-msg-notfound="@L("TopicsNotFound", "No Topics Found.")"
+         data-msg-searching="@L("Searching", "Searching...")"
+         data-msg-select="@L("IndexSelectTopicError", "Please select a topic.")"
+         data-msg-show="@L("Show_Navigation_Component", "Show Navigation Component")"
+         data-msg-hide="@L("Hide_Navigation_Component", "Hide Navigation Component")">
+
+    <header class="classic-header">
+        <div>
+            <h1 class="classic-title">Classic Viewer</h1>
+            <p class="classic-sub">The original help topics, styles and DHTML effects (<code>ehlpdhtm.js</code>) in a WebHelp-style viewer.</p>
+        </div>
+        <div class="classic-toolbar" role="toolbar" aria-label="Viewer tools">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="nav" title="@L("Hide_Navigation_Component", "Hide Navigation Component")">@C("Hide", "Hide")</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="sync" title="@L("SyncTocTooltip", "Sync TOC")">@C("SyncToc", "SyncToc")</button>
+            <span class="classic-sep" aria-hidden="true">@C("Seperate", "|")</span>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="prev" title="@B("PreTooltip", "Previous Topic")">@C("Prev", "<<") @B("PreCaption", "Previous")</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="next" title="@B("NextTooltip", "Next Topic")">@B("NextCaption", "Next") @C("Next", ">>")</button>
+            <span class="classic-sep" aria-hidden="true">@C("Seperate", "|")</span>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="print">@L("Print", "Print")</button>
+            <a class="btn btn-sm btn-outline-primary" data-cmd="modern" href="~/Topics/@Model.StartTopic">Open modern page</a>
+            @if (web.Enabled)
+            {
+                <a class="btn btn-sm btn-outline-secondary" asp-page="/Search">@L("WebSearch", web.ButtonLabel)</a>
+            }
+        </div>
+    </header>
+
+    <div class="classic-body">
+        <aside class="classic-nav" aria-label="Navigation">
+            <ul class="nav nav-tabs classic-tabs" role="tablist">
+                <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#c-toc" type="button" role="tab">@C("Contents", "Contents")</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#c-index" type="button" role="tab">@C("Index", "Index")</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#c-search" type="button" role="tab">@C("Search", "Search")</button></li>
+                <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#c-glossary" type="button" role="tab">@G("TabCaption", "Glossary")</button></li>
+            </ul>
+            <div class="tab-content classic-panes">
+                @* Contents: .hhc *@
+                <div class="tab-pane fade show active" id="c-toc" role="tabpanel">
+                    <ul class="classic-toc">
+                        @foreach (var (node, depth) in HelpCatalog.Flatten(Model.Catalog.Toc))
+                        {
+                            <li style="--depth:@depth" class="@(node.Topic is null ? "book" : "page")"
+                                title="@(node.Topic is null ? L("Book", "Book") : L("Page", "Page"))">
+                                @if (node.Topic is not null)
+                                {
+                                    <a href="@IndexModel.FrameUrl(node.Topic)" target="classicFrame" data-topic="@node.Topic">@node.Title</a>
+                                }
+                                else
+                                {
+                                    <span>@node.Title</span>
+                                }
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                @* Index: .hhk *@
+                <div class="tab-pane fade" id="c-index" role="tabpanel">
+                    <label class="form-label small" for="cIndexInput">@L("IndexInputPrompt", "Type in the keyword to find:")</label>
+                    <input id="cIndexInput" class="form-control form-control-sm mb-2" type="search" autocomplete="off" />
+                    <ul class="classic-index" id="cIndexList">
+                        @for (var i = 0; i < Model.Catalog.Keywords.Count; i++)
+                        {
+                            var k = Model.Catalog.Keywords[i];
+                            <li data-keyword="@k.Keyword.ToLowerInvariant()">
+                                @if (k.Topics.Count == 1)
+                                {
+                                    <a href="@IndexModel.FrameUrl(k.Topics[0].Topic)" target="classicFrame" data-topic="@k.Topics[0].Topic">@k.Keyword</a>
+                                }
+                                else
+                                {
+                                    <button type="button" class="btn btn-link p-0 text-start" data-choose="kw-@i">@k.Keyword</button>
+                                    <template id="kw-@i">
+                                        @foreach (var t in k.Topics)
+                                        {
+                                            <option value="@IndexModel.FrameUrl(t.Topic)">@t.Title</option>
+                                        }
+                                    </template>
+                                }
+                            </li>
+                        }
+                    </ul>
+                    @* 複数トピック時の「トピックの選択」 *@
+                    <div class="classic-chooser" id="cChooser" hidden>
+                        <p class="small fw-bold mb-1">@L("IndexSelectTopicTitle", "Select a Topic")</p>
+                        <p class="small text-body-secondary mb-1">@L("IndexSelectTopicLabel", "Select a topic, then click Display")</p>
+                        <select class="form-select form-select-sm" size="5" id="cChooserList"></select>
+                        <div class="d-flex gap-2 mt-2">
+                            <button type="button" class="btn btn-sm btn-primary" id="cChooserDisplay">@L("Display", "Display")</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" id="cChooserCancel">@L("Cancel", "Cancel")</button>
+                        </div>
+                    </div>
+                </div>
+
+                @* Search *@
+                <div class="tab-pane fade" id="c-search" role="tabpanel">
+                    <form id="cSearchForm" role="search">
+                        <label class="form-label small" for="cSearchInput">@L("FtsInputPrompt", "Type in the word(s) to search for:")</label>
+                        <div class="d-flex gap-2 mb-2">
+                            <input id="cSearchInput" class="form-control form-control-sm" type="search" />
+                            <button class="btn btn-sm btn-primary" type="submit">@L("FtsBtnText", "Go")</button>
+                        </div>
+                    </form>
+                    <p class="small text-body-secondary" id="cSearchStatus" aria-live="polite"></p>
+                    <ol class="classic-results" id="cSearchResults"></ol>
+                </div>
+
+                @* Glossary: .glo *@
+                <div class="tab-pane fade" id="c-glossary" role="tabpanel">
+                    @if (S.Glossary.Count == 0)
+                    {
+                        <p class="small text-body-secondary">No glossary terms are defined in this help project (<code>.glo</code> file is empty).</p>
+                    }
+                    else
+                    {
+                        <label class="form-label small" for="cGlossaryList">@G("TermCaption", "Term")</label>
+                        <select class="form-select form-select-sm" size="8" id="cGlossaryList">
+                            @foreach (var g in S.Glossary)
+                            {
+                                <option value="@g.Definition">@g.Term</option>
+                            }
+                        </select>
+                        <p class="small fw-bold mt-2 mb-1">@G("DefinitionCaption", "Definition For:") <span id="cGlossaryTerm"></span></p>
+                        <div class="classic-definition small" id="cGlossaryDef"></div>
+                    }
+                </div>
+            </div>
+            <p class="classic-foot small">
+                @(Model.SequenceFromBrs ? "Browse sequence: .brs" : "Browse sequence: table of contents order (.brs is empty)")
+            </p>
+        </aside>
+
+        <div class="classic-view">
+            <iframe name="classicFrame" id="classicFrame" title="Help topic" src="@IndexModel.FrameUrl(Model.StartTopic)"></iframe>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/classic.js" asp-append-version="true"></script>
+}

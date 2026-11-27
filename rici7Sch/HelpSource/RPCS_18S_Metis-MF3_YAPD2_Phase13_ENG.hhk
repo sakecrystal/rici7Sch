@@ -1,0 +1,947 @@
+<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="SiteType" value="index">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="[Tab Stock] Printing">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="2 sided">
+    <param name="Name" value="2 Sided/Layout/Booklet">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+    <param name="Name" value="Printing on Both Sides of the Paper">
+    <param name="Local" value="HTMLFILE/IDH_HOW_DUPLEX.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="About">
+    <param name="Name" value="Configuration/About Tab">
+    <param name="Local" value="HTMLFILE/IDH_DCONFIGURATION.htm">
+    <param name="Name" value="About Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DABOUT.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Add Bitmap">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Printing Images Superimposed on Prints">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_IMAGES.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Add Overlay">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Overlaying Printing Documents with Data">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_OVERLAY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Adjust Image Quality/Color">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Adjust Photographs">
+    <param name="Name" value="Print Quality:Advanced">
+    <param name="Local" value="HTMLFILE/idh_dprint_qlt_ad.htm">
+    <param name="Name" value="Correcting the Hue of the Digital Photos">
+    <param name="Local" value="HTMLFILE/IDH_HOW_CAMERA.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Always apply COLOR to dmColor setting for application">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Application Collate">
+    <param name="Name" value="Having Prints Sorted">
+    <param name="Local" value="HTMLFILE/IDH_HOW_COLLATE.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Authentication">
+    <param name="Name" value="Authentication Dialog Box">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_DAUTHENTICATION.htm">
+    <param name="Name" value="Using User Authentication">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_AUTHENTICATION.htm">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Advanced Options Tab">
+    <param name="Local" value="HTMLFILE/IDH_DADVANCED_OPTIONS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Auto Reduce">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Automatically Update Printer Information">
+    <param name="Name" value="Accessories Tab">
+    <param name="Local" value="HTMLFILE/IDH_DACCESS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Back Cover">
+    <param name="Name" value="Printing the Back Cover on a Different Type of Paper">
+    <param name="Local" value="HTMLFILE/IDH_HOW_BACKCOVER.htm">
+    <param name="Name" value="Cover/Slip/Designate">
+    <param name="Local" value="HTMLFILE/idh_dcover.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Background Numbering">
+    <param name="Name" value="Background Numbering Details Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DBACKGROUND.htm">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Printing Control Numbers on the Background of Documents">
+    <param name="Local" value="HTMLFILE/IDH_HOW_BACKGROUNDNUMBERING.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Barrier-free Color Management">
+    <param name="Name" value="Printing a Document Using the Colors Applicable to Color Universal Design">
+    <param name="Local" value="HTMLFILE/IDH_DCUD.htm">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bitmap">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Edit Bitmap Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/idh_dbitmap.htm">
+    <param name="Name" value="Printing Images Superimposed on Prints">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_IMAGES.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Black Over Print">
+    <param name="Name" value="Adjusting Black Printing Quality">
+    <param name="Local" value="HTMLFILE/IDH_HOW_BLACK_PRINTING.htm">
+    <param name="Name" value="Print Quality:Advanced">
+    <param name="Local" value="HTMLFILE/idh_dprint_qlt_ad.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Booklet">
+    <param name="Name" value="Printing with a Layout Suitable for Making Booklets">
+    <param name="Local" value="HTMLFILE/IDH_HOW_BOOKLET.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+    <param name="Name" value="2 Sided/Layout/Booklet">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Brightness">
+    <param name="Name" value="Color Balance Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_dcolorbalance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Bypass Tray">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+    <param name="Name" value="Paper Position in Bypass Tray Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DBYPASSTRAY.htm">
+    <param name="Name" value="Selecting the Paper Tray">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_OUTPUTTRAY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Call Preset">
+    <param name="Name" value="Color Balance Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_dcolorbalance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Change Data Processing">
+    <param name="Name" value="Changing Bitmap Printing Resolution and Speed">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_BMP.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Classification Code">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Registering Classification Code/User Code">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_CLASS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Collapse">
+    <param name="Name" value="Settings Summary Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DSETSUMMARY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Collapse list">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Collate">
+    <param name="Name" value="Having Prints Sorted">
+    <param name="Local" value="HTMLFILE/IDH_HOW_COLLATE.htm">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+    <param name="Name" value="Collate Details Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DCOLLATE.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Color Balance">
+    <param name="Name" value="Color Balance Details: Whole Document Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/idh_dcolorbalance.htm">
+    <param name="Name" value="Adjusting the Color Balance">
+    <param name="Local" value="HTMLFILE/RPCS/idh_how_colorbalance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Color Profile">
+    <param name="Name" value="Changing Color Profiling Patterns">
+    <param name="Local" value="HTMLFILE/IDH_HOW_COLORPROFILE.htm">
+    <param name="Name" value="Color Profile Settings Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DCOLOR_MATCH.htm">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Color Profile Method">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Color/ Black and White">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+    <param name="Name" value="Printing in Color or Black and White">
+    <param name="Local" value="HTMLFILE/IDH_HOW_PRINT_COLOR.htm">
+    <param name="Name" value="Printing in Two Colors">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_TWOCOLOR.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Contrast">
+    <param name="Name" value="Color Balance Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_dcolorbalance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Copies">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Creep Adjustment">
+    <param name="Name" value="2 Sided/Layout/Booklet">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+    <param name="Name" value="Creep Adjustment Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DCREEP.htm">
+    <param name="Name" value="Using the Creep Adjustment Function">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_CREEP.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Crop Marks">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+    <param name="Name" value="Print Crop Marks Details Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DCROP.htm">
+    <param name="Name" value="Printing a Document with Crop Marks">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_CROP.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Custom Paper Size">
+    <param name="Name" value="Custom Paper Size Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DCUSTOM_SIZE.htm">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Printing on Custom Size Paper">
+    <param name="Local" value="HTMLFILE/idh_how_custom.htm">
+    <param name="Name" value="Register Custom Paper Size Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DSAVE_CUSTOM.htm">
+    <param name="Name" value="Registering Custom Paper Size">
+    <param name="Local" value="HTMLFILE/IDH_HOW_CUSTOMSIZEREG.htm">
+    <param name="Name" value="Advanced Options Tab">
+    <param name="Local" value="HTMLFILE/IDH_DADVANCED_OPTIONS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Data Security for Copying">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Data Security for Copying Details Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DSECURITY.htm">
+    <param name="Name" value="Using Data Security for Copying Function (Destroy the Image and Print gray)">
+    <param name="Local" value="HTMLFILE/IDH_HOW_GUARD.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Default Menu for Detailed Settings">
+    <param name="Name" value="Configuration/About Tab">
+    <param name="Local" value="HTMLFILE/IDH_DCONFIGURATION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Default Tab">
+    <param name="Name" value="Configuration/About Tab">
+    <param name="Local" value="HTMLFILE/IDH_DCONFIGURATION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Designate/Chapter">
+    <param name="Name" value="Using Designate/Chapter Function">
+    <param name="Local" value="HTMLFILE/IDH_HOW_CHAPTER.htm">
+    <param name="Name" value="Cover/Slip/Designate">
+    <param name="Local" value="HTMLFILE/idh_dcover.htm">
+    <param name="Name" value="Designate/Chapter Details Dialog Box">
+    <param name="Local" value="HTMLFILE/idh_ddesignate.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Directional Magnification">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Reducing and Enlarging a Document Size">
+    <param name="Local" value="HTMLFILE/idh_how_zoom.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Display Preview and Print Screen">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+    <param name="Name" value="Displaying the Preview Screen before Printing">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_PREVIEW.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Dithering">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+    <param name="Name" value="Changing the Dithering Pattern">
+    <param name="Local" value="HTMLFILE/IDH_HOW_DITHERING.htm">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Do not [Fit to Print Size] auto.">
+    <param name="Name" value="2 Sided/Layout/Booklet">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Do not Print Blank Pages">
+    <param name="Name" value="2 Sided/Layout/Booklet">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Document Server">
+    <param name="Name" value="Using the Document Server">
+    <param name="Local" value="HTMLFILE/IDH_HOW_DOCUMENT_SERVER.htm">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Document Size">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Driver Encryption Key">
+    <param name="Name" value="Driver Encryption Key Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DDNETWORKKEY.htm">
+    <param name="Name" value="Advanced Options Tab">
+    <param name="Local" value="HTMLFILE/IDH_DADVANCED_OPTIONS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Edge Smoothing">
+    <param name="Name" value="Print Quality:Advanced">
+    <param name="Local" value="HTMLFILE/idh_dprint_qlt_ad.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Eject Face-up">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+    <param name="Name" value="Printing a Document Face Up">
+    <param name="Local" value="HTMLFILE/idh_toc_faceup.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Encryption">
+    <param name="Name" value="Advanced Options Tab">
+    <param name="Local" value="HTMLFILE/IDH_DADVANCED_OPTIONS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Expand list">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Extended Option">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Fit to Print Size">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Reducing and Enlarging a Document Size">
+    <param name="Local" value="HTMLFILE/idh_how_zoom.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Fold">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+    <param name="Name" value="Printing with the Folding Unit">
+    <param name="Local" value="HTMLFILE/idh_how_foldtype.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Fore Edge Cut">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+    <param name="Name" value="Fore Edge Cut Details Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DTRIMSETTING.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Front Cover">
+    <param name="Name" value="Printing Only the First Sheet on a Different Type of Paper">
+    <param name="Local" value="HTMLFILE/IDH_HOW_FRONTCOVER.htm">
+    <param name="Name" value="Cover/Slip/Designate">
+    <param name="Local" value="HTMLFILE/idh_dcover.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Gray Reproduction">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+    <param name="Name" value="Adjusting Black Printing Quality">
+    <param name="Local" value="HTMLFILE/IDH_HOW_BLACK_PRINTING.htm">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Header/Footer">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Edit Header/Footer Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DHEADFOOT.htm">
+    <param name="Name" value="Printing a Document with a Header and Footer">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_HEADER.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Hold Print">
+    <param name="Name" value="Printing Documents Later">
+    <param name="Local" value="HTMLFILE/IDH_HOW_HOLDPRINT.htm">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ICM">
+    <param name="Name" value="Using ICM">
+    <param name="Local" value="HTMLFILE/IDH_HOW_ICM.htm">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ICM Intent">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Image Overlay">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Registering Image Overlay">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_IMAGEOVER.htm">
+    <param name="Name" value="Register Image Overlay Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DOVERLAY.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Image Position">
+    <param name="Name" value="Set Image Position Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DIMGPOSITION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Imposition">
+    <param name="Name" value="Imposition">
+    <param name="Local" value="HTMLFILE/idh_dimposition.htm">
+    <param name="Name" value="Printing a Document with Imposition Methods">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_IMPOSITION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Increase Auto-keep Settings for Applications">
+    <param name="Name" value="Applying the One Sheet Print Setting to Others">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_APPLICATION.htm">
+    <param name="Name" value="Advanced Options Tab">
+    <param name="Local" value="HTMLFILE/IDH_DADVANCED_OPTIONS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Input Tray">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+    <param name="Name" value="Change Input Tray Settings Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DINPUTTRAY.htm">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+    <param name="Name" value="Selecting the Paper Tray">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_OUTPUTTRAY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Input Tray Settings">
+    <param name="Name" value="Setting Up Options">
+    <param name="Local" value="HTMLFILE/IDH_DSETUPOPTION.htm">
+    <param name="Name" value="Accessories Tab">
+    <param name="Local" value="HTMLFILE/IDH_DACCESS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Insert Separation Sheet">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Insert Slip Sheet After Every Page">
+    <param name="Name" value="Cover/Slip/Designate">
+    <param name="Local" value="HTMLFILE/idh_dcover.htm">
+    <param name="Name" value="Inserting Different Paper between Pages">
+    <param name="Local" value="HTMLFILE/IDH_HOW_SLIPSHEET.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Job Load Distribution">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Job Type">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Layout">
+    <param name="Name" value="Printing Multiple Pages on a Sheet">
+    <param name="Local" value="HTMLFILE/IDH_HOW_LAYOUT.htm">
+    <param name="Name" value="Edit">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Letterhead Setting">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Locked Print">
+    <param name="Name" value="Avoiding Others Seeing Your Prints">
+    <param name="Local" value="HTMLFILE/IDH_HOW_SECURE_START.htm">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Measurement Unit">
+    <param name="Name" value="Custom Paper Size Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DCUSTOM_SIZE.htm">
+    <param name="Name" value="Register Custom Paper Size Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DSAVE_CUSTOM.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Menu">
+    <param name="Name" value="Detailed Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DDETAILSET.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Multi-sheet Fold">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Near Standard Size">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+    <param name="Name" value="Printing a Scanned Data on a Standard Size of Paper">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_SCAN.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="One Click Preset List Type">
+    <param name="Name" value="Configuration/About Tab">
+    <param name="Local" value="HTMLFILE/IDH_DCONFIGURATION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Options">
+    <param name="Name" value="Accessories Tab">
+    <param name="Local" value="HTMLFILE/IDH_DACCESS.htm">
+    <param name="Name" value="Setting Up Options">
+    <param name="Local" value="HTMLFILE/IDH_DSETUPOPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Orientation">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Output Tray">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Overlay">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Edit Overlay Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DOVERLAY_EDIT.htm">
+    <param name="Name" value="Overlaying Printing Documents with Data">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_OVERLAY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Pamphlet">
+    <param name="Name" value="Imposition">
+    <param name="Local" value="HTMLFILE/idh_dimposition.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Paper Position in Bypass Tray">
+    <param name="Name" value="Paper Position in Bypass Tray Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DBYPASSTRAY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Paper Type">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+    <param name="Name" value="Change Input Tray Settings Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DINPUTTRAY.htm">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+    <param name="Name" value="Setting Up Options">
+    <param name="Local" value="HTMLFILE/IDH_DSETUPOPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Perfect Binding">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+    <param name="Name" value="Perfect Binding Details Dialog Box">
+    <param name="Local" value="HTMLFILE/idh_dperfect_binding.htm">
+    <param name="Name" value="Binding Documents by Perfect Binding">
+    <param name="Local" value="HTMLFILE/IDH_HOW_PERFECT_BINDING.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="POP Display">
+    <param name="Name" value="Adjust Image Quality/Color Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_qualitycolor.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Position in bypass tray">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+    <param name="Name" value="Selecting the Paper Tray">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_OUTPUTTRAY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Poster">
+    <param name="Name" value="Imposition">
+    <param name="Local" value="HTMLFILE/idh_dimposition.htm">
+    <param name="Name" value="Splitting the Document Image across Multiple Sheets (Poster)">
+    <param name="Local" value="HTMLFILE/RPCS/idh_how_poster.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Print All Text as Black">
+    <param name="Name" value="Adjusting Black Printing Quality">
+    <param name="Local" value="HTMLFILE/IDH_HOW_BLACK_PRINTING.htm">
+    <param name="Name" value="Print Quality:Advanced">
+    <param name="Local" value="HTMLFILE/idh_dprint_qlt_ad.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Print Crop Marks">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+    <param name="Name" value="Print Crop Marks Details Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DCROP.htm">
+    <param name="Name" value="Printing a Document with Crop Marks">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_CROP.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Print On">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Print Priority">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+    <param name="Name" value="Changing Bitmap Printing Resolution and Speed">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_BMP.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Print Watermark">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Having Text Stamped on Prints">
+    <param name="Local" value="HTMLFILE/IDH_HOW_WATERMARK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Printable Area">
+    <param name="Name" value="2 Sided/Layout/Booklet">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+    <param name="Name" value="Fine-tuning the Printable Area">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_AREACOMPATI.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Printer Collate">
+    <param name="Name" value="Having Prints Sorted">
+    <param name="Local" value="HTMLFILE/IDH_HOW_COLLATE.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Printer Properties">
+    <param name="Name" value="Configuration/About Tab">
+    <param name="Local" value="HTMLFILE/IDH_DCONFIGURATION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Punch">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+    <param name="Name" value="Punching Prints">
+    <param name="Local" value="HTMLFILE/idh_how_punch.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Reduce/Enlarge">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Reducing and Enlarging a Document Size">
+    <param name="Local" value="HTMLFILE/idh_how_zoom.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Register Custom Paper Size">
+    <param name="Name" value="Advanced Options Tab">
+    <param name="Local" value="HTMLFILE/IDH_DADVANCED_OPTIONS.htm">
+    <param name="Name" value="Register Custom Paper Size Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DSAVE_CUSTOM.htm">
+    <param name="Name" value="Registering Custom Paper Size">
+    <param name="Local" value="HTMLFILE/IDH_HOW_CUSTOMSIZEREG.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Resolution">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+    <param name="Name" value="Changing the Print Resolution">
+    <param name="Local" value="HTMLFILE/IDH_HOW_RESOLUTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Restore Last Emulation">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Reverse Order Printing">
+    <param name="Name" value="Starting Printing from the Last Page">
+    <param name="Local" value="HTMLFILE/IDH_HOW_REVERSE.htm">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Ring Binding">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+    <param name="Name" value="Binding Documents by Ring Comb">
+    <param name="Local" value="HTMLFILE/IDH_HOW_RING.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rotate by 180 degrees">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Rotating the Image by 180 Degrees">
+    <param name="Local" value="HTMLFILE/IDH_HOW_ROTATE180.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Rotate Mixed Original Orientation">
+    <param name="Name" value="Output Settings">
+    <param name="Local" value="HTMLFILE/idh_ddeliver.htm">
+    <param name="Name" value="Rotate Mixed Original Orientation Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DMIX.htm">
+    <param name="Name" value="Changing the Page Rotation Direction for Mixed Orientation Documents">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_MIXDOCUMENT.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sample Print">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Printing a Single Sample Set before Remaining Sets">
+    <param name="Local" value="HTMLFILE/IDH_HOW_PROOF_START.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Saturation">
+    <param name="Name" value="Color Balance Tab">
+    <param name="Local" value="HTMLFILE/RPCS/idh_dcolorbalance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Save Driver Settings">
+    <param name="Name" value="About Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DABOUT.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Separate into CMYK, then Print in Designated Color Only">
+    <param name="Name" value="Print Quality:Advanced">
+    <param name="Local" value="HTMLFILE/idh_dprint_qlt_ad.htm">
+    <param name="Name" value="Printing a Document Using Only Specific CMYK Colors">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_HOW_CMYK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Set Image Position">
+    <param name="Name" value="2 Sided/Layout/Booklet">
+    <param name="Local" value="HTMLFILE/IDH_DDUPLEX.htm">
+    <param name="Name" value="Fine-tuning the Printable Area">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_AREACOMPATI.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Settings Summary">
+    <param name="Name" value="Detailed Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DDETAILSET.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+    <param name="Name" value="Settings Summary Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DSETSUMMARY.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Shift Print Position for [Tab Stock]">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Slip Sheet">
+    <param name="Name" value="Inserting Different Paper between Pages">
+    <param name="Local" value="HTMLFILE/IDH_HOW_SLIPSHEET.htm">
+    <param name="Name" value="Cover/Slip/Designate">
+    <param name="Local" value="HTMLFILE/idh_dcover.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Spool Data in EMF Format">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Staple">
+    <param name="Name" value="Stapling Prints">
+    <param name="Local" value="HTMLFILE/IDH_HOW_STAPLE.htm">
+    <param name="Name" value="Finishing">
+    <param name="Local" value="HTMLFILE/IDH_DFINISH.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Store and Print">
+    <param name="Name" value="Storing Documents on the Printer and Printing them">
+    <param name="Local" value="HTMLFILE/IDH_HOW_STORE_PRINT.htm">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Stored Print">
+    <param name="Name" value="Storing Documents on the Hard Disk">
+    <param name="Local" value="HTMLFILE/IDH_HOW_SAVE_PRINTER.htm">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Frequently Used Settings Tab">
+    <param name="Local" value="HTMLFILE/IDH_DONECLICK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Tab Stock">
+    <param name="Name" value="Paper">
+    <param name="Local" value="HTMLFILE/IDH_DPAPER.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Toner Saving">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+    <param name="Name" value="Saving on Toner When Printing">
+    <param name="Local" value="HTMLFILE/IDH_HOW_TONERSAVING.htm">
+    <param name="Name" value="Toner Save User Settings Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DTONERSAVE_SET.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Total Memory">
+    <param name="Name" value="Accessories Tab">
+    <param name="Local" value="HTMLFILE/IDH_DACCESS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Two-color">
+    <param name="Name" value="Print Quality:Standard">
+    <param name="Local" value="HTMLFILE/IDH_DPRINT_QLT.htm">
+    <param name="Name" value="Printing in Two Colors">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_HOW_TWOCOLOR.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Unauthorized Copy Prevention">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Unauthorized Copy Prevention for Pattern">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Unauthorized Copy Prevention for Pattern Details Dialog Box">
+    <param name="Local" value="HTMLFILE/RPCS/IDH_DUNAUTHORIZE.htm">
+    <param name="Name" value="Using Unauthorized Copy Prevention Function (Effects of Prevention for Pattern)">
+    <param name="Local" value="HTMLFILE/IDH_HOW_PREVENT.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Use Application Zoom">
+    <param name="Name" value="Driver Options">
+    <param name="Local" value="HTMLFILE/PS_CS/IDH_DDRIVER_OPTION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="User Authentication">
+    <param name="Name" value="Advanced Options Tab">
+    <param name="Local" value="HTMLFILE/IDH_DADVANCED_OPTIONS.htm">
+    <param name="Name" value="Using User Authentication">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_AUTHENTICATION.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="User Code">
+    <param name="Name" value="Job Setup">
+    <param name="Local" value="HTMLFILE/IDH_DJOBSETUP.htm">
+    <param name="Name" value="Registering Classification Code and User Code">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_CLASS.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vector/Raster">
+    <param name="Name" value="Printing the Whole Page as Image Data">
+    <param name="Local" value="HTMLFILE/PCL_CS/IDH_HOW_RASTERVECTOR.htm">
+    <param name="Name" value="Print Quality:Advanced">
+    <param name="Local" value="HTMLFILE/idh_dprint_qlt_ad.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Vertical/Horizontal">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Watermark">
+    <param name="Name" value="Edit Watermark Dialog Box">
+    <param name="Local" value="HTMLFILE/IDH_DWATERMARK.htm">
+    <param name="Name" value="Effects">
+    <param name="Local" value="HTMLFILE/IDH_DEFFECTS.htm">
+    <param name="Name" value="Having Text Stamped on Prints">
+    <param name="Local" value="HTMLFILE/IDH_HOW_WATERMARK.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Web Image Monitor">
+    <param name="Name" value="Configuration/About Tab">
+    <param name="Local" value="HTMLFILE/IDH_DCONFIGURATION.htm">
+    <param name="Name" value="Checking the Printer's Status">
+    <param name="Local" value="HTMLFILE/IDH_HOW_WIM.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Zoom">
+    <param name="Name" value="Basic">
+    <param name="Local" value="HTMLFILE/IDH_DBASIC.htm">
+    <param name="Name" value="Reducing and Enlarging a Document Size">
+    <param name="Local" value="HTMLFILE/idh_how_zoom.htm">
+  </object>
+</ul>
+</html>

@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ASP.NET Core 起動 (rici7Sch)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/rici7Sch/bin/Debug/net10.0/rici7Sch.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/rici7Sch",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5276"
+            }
+        },
+        {
+            "name": "プロセスにアタッチ",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

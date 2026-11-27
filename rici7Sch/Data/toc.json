@@ -1,0 +1,792 @@
+[
+ {
+  "title": "Using Help",
+  "children": [],
+  "topic": "IDH_CONTENTS"
+ },
+ {
+  "title": "Features of This Printer Driver",
+  "children": [],
+  "topic": "IDH_HOW_ONECLICK"
+ },
+ {
+  "title": "One Click Presets",
+  "children": [
+   {
+    "title": "Registering One Click Presets",
+    "children": [],
+    "topic": "IDH_HOW_ONECLICK_NEW"
+   },
+   {
+    "title": "Changing a One Click Preset Name and Comment",
+    "children": [],
+    "topic": "IDH_HOW_ONECLICK_NAME"
+   },
+   {
+    "title": "Changing the One Click Preset Display Order",
+    "children": [],
+    "topic": "IDH_HOW_ONECLICK_ORDER"
+   },
+   {
+    "title": "Saving a Registered One Click Preset as a File",
+    "children": [],
+    "topic": "IDH_HOW_ONECLICK_EXPORT"
+   },
+   {
+    "title": "Loading a Printing Preferences Settings File as a One Click Preset",
+    "children": [],
+    "topic": "IDH_HOW_ONECLICK_IMPORT"
+   },
+   {
+    "title": "Deleting a One Click Preset",
+    "children": [],
+    "topic": "IDH_HOW_ONECLICK_DELETE"
+   },
+   {
+    "title": "Sharing One Click Presets",
+    "children": [],
+    "topic": "IDH_HOW_ONE_ONECLICK_SHARE"
+   }
+  ]
+ },
+ {
+  "title": "Frequently Used Settings Tab",
+  "children": [
+   {
+    "title": "Frequently Used Settings Tab",
+    "children": [],
+    "topic": "IDH_DONECLICK"
+   },
+   {
+    "title": "Settings Summary Dialog Box",
+    "children": [],
+    "topic": "IDH_DSETSUMMARY"
+   },
+   {
+    "title": "Register Current Settings as One Click Preset Dialog Box",
+    "children": [],
+    "topic": "idh_dregist_current"
+   },
+   {
+    "title": "Manage One Click Preset List Dialog Box (Printing Preferences)",
+    "children": [],
+    "topic": "IDH_DMANAGE_ONECLICK"
+   }
+  ]
+ },
+ {
+  "title": "Detailed Settings Tab",
+  "children": [
+   {
+    "title": "Detailed Settings Tab",
+    "children": [],
+    "topic": "IDH_DDETAILSET"
+   },
+   {
+    "title": "Settings Summary Dialog Box",
+    "children": [],
+    "topic": "IDH_DSETSUMMARY"
+   },
+   {
+    "title": "Register Current Settings as One Click Preset Dialog Box",
+    "children": [],
+    "topic": "idh_dregist_current"
+   }
+  ]
+ },
+ {
+  "title": "Detailed Settings Menus and Dialog Boxes",
+  "children": [
+   {
+    "title": "Job Setup",
+    "children": [
+     {
+      "title": "Job Setup",
+      "children": [],
+      "topic": "IDH_DJOBSETUP"
+     },
+     {
+      "title": "Job Type Details Dialog Box",
+      "children": [],
+      "topic": "IDH_DJOBDETAIL"
+     },
+     {
+      "title": "Register Image Overlay Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DOVERLAY"
+     },
+     {
+      "title": "Authentication Dialog Box",
+      "children": [],
+      "topic": "PCL_CS/IDH_DAUTHENTICATION"
+     }
+    ]
+   },
+   {
+    "title": "Basic",
+    "children": [
+     {
+      "title": "Basic",
+      "children": [],
+      "topic": "IDH_DBASIC"
+     },
+     {
+      "title": "Custom Paper Size Dialog Box",
+      "children": [],
+      "topic": "IDH_DCUSTOM_SIZE"
+     }
+    ]
+   },
+   {
+    "title": "Paper",
+    "children": [
+     {
+      "title": "Paper",
+      "children": [],
+      "topic": "IDH_DPAPER"
+     },
+     {
+      "title": "Paper Position in Bypass Tray Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DBYPASSTRAY"
+     }
+    ]
+   },
+   {
+    "title": "Cover/Slip/Designate",
+    "children": [
+     {
+      "title": "Cover/Slip/Designate",
+      "children": [],
+      "topic": "idh_dcover"
+     },
+     {
+      "title": "Paper Type in Bypass Tray Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DPAPERTYPEBYPASS"
+     },
+     {
+      "title": "Designate/Chapter Details Dialog Box",
+      "children": [],
+      "topic": "idh_ddesignate"
+     }
+    ]
+   },
+   {
+    "title": "2 Sided/Layout/Booklet",
+    "children": [
+     {
+      "title": "2 Sided/Layout/Booklet",
+      "children": [],
+      "topic": "IDH_DDUPLEX"
+     },
+     {
+      "title": "Mixed Original Orientations: Layout Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DMIXLAYOUT"
+     },
+     {
+      "title": "Binding Margins for 2 sided Printing Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DMARGIN"
+     },
+     {
+      "title": "Mixed Original Orientations: Booklet Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DMIXBOOKLET"
+     },
+     {
+      "title": "Creep Adjustment Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DCREEP"
+     },
+     {
+      "title": "Set Image Position Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DIMGPOSITION"
+     }
+    ]
+   },
+   {
+    "title": "Imposition",
+    "children": [
+     {
+      "title": "Imposition",
+      "children": [],
+      "topic": "idh_dimposition"
+     }
+    ]
+   },
+   {
+    "title": "Output Settings",
+    "children": [
+     {
+      "title": "Output Settings",
+      "children": [],
+      "topic": "idh_ddeliver"
+     },
+     {
+      "title": "Collate Details Dialog Box",
+      "children": [],
+      "topic": "IDH_DCOLLATE"
+     },
+     {
+      "title": "Rotate Mixed Original Orientation Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DMIX"
+     },
+     {
+      "title": "Print Crop Marks Details Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DCROP"
+     }
+    ]
+   },
+   {
+    "title": "Finishing",
+    "children": [
+     {
+      "title": "Finishing",
+      "children": [],
+      "topic": "IDH_DFINISH"
+     },
+     {
+      "title": "Perfect Binding Details Dialog Box",
+      "children": [],
+      "topic": "idh_dperfect_binding"
+     },
+     {
+      "title": "Fore Edge Cut Details Dialog Box",
+      "children": [],
+      "topic": "IDH_DTRIMSETTING"
+     }
+    ]
+   },
+   {
+    "title": "Print Quality:Standard",
+    "children": [
+     {
+      "title": "Print Quality:Standard",
+      "children": [],
+      "topic": "IDH_DPRINT_QLT"
+     },
+     {
+      "title": "Toner Save User Settings Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DTONERSAVE_SET"
+     },
+     {
+      "title": "Color Profile Settings Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DCOLOR_MATCH"
+     },
+     {
+      "title": "Adjust Image Quality/Color Tab",
+      "children": [],
+      "topic": "RPCS/idh_qualitycolor"
+     },
+     {
+      "title": "Color Balance Tab",
+      "children": [],
+      "topic": "RPCS/idh_dcolorbalance"
+     }
+    ]
+   },
+   {
+    "title": "Print Quality:Advanced",
+    "children": [
+     {
+      "title": "Print Quality:Advanced",
+      "children": [],
+      "topic": "idh_dprint_qlt_ad"
+     }
+    ]
+   },
+   {
+    "title": "Effects",
+    "children": [
+     {
+      "title": "Effects",
+      "children": [],
+      "topic": "IDH_DEFFECTS"
+     },
+     {
+      "title": "Unauthorized Copy Prevention for Pattern Details Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DUNAUTHORIZE"
+     },
+     {
+      "title": "Data Security for Copying Details Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DSECURITY"
+     },
+     {
+      "title": "Background Numbering Details Dialog Box",
+      "children": [],
+      "topic": "IDH_DBACKGROUND"
+     },
+     {
+      "title": "Edit Header/Footer Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DHEADFOOT"
+     },
+     {
+      "title": "Edit Watermark Dialog Box",
+      "children": [],
+      "topic": "IDH_DWATERMARK"
+     },
+     {
+      "title": "Edit Overlay Dialog Box",
+      "children": [],
+      "topic": "RPCS/IDH_DOVERLAY_EDIT"
+     },
+     {
+      "title": "Edit Bitmap Dialog Box",
+      "children": [],
+      "topic": "RPCS/idh_dbitmap"
+     }
+    ]
+   },
+   {
+    "title": "Driver Options",
+    "children": [
+     {
+      "title": "Driver Options",
+      "children": [],
+      "topic": "PS_CS/IDH_DDRIVER_OPTION"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "Configuration/About Tab",
+  "children": [
+   {
+    "title": "Configuration/About Tab",
+    "children": [],
+    "topic": "IDH_DCONFIGURATION"
+   },
+   {
+    "title": "About Dialog Box",
+    "children": [],
+    "topic": "IDH_DABOUT"
+   }
+  ]
+ },
+ {
+  "title": "Printer Properties",
+  "children": [
+   {
+    "title": "Accessories Tab",
+    "children": [],
+    "topic": "IDH_DACCESS"
+   },
+   {
+    "title": "Change Input Tray Settings Dialog Box",
+    "children": [],
+    "topic": "IDH_DINPUTTRAY"
+   },
+   {
+    "title": "Advanced Options Tab",
+    "children": [],
+    "topic": "IDH_DADVANCED_OPTIONS"
+   },
+   {
+    "title": "User Authentication Dialog Box",
+    "children": [],
+    "topic": "idh_dadvanced_auth"
+   },
+   {
+    "title": "Job Type/Code Dialog Settings Dialog Box",
+    "children": [],
+    "topic": "idh_dadvanced_printing"
+   },
+   {
+    "title": "Security Settings Dialog Box",
+    "children": [],
+    "topic": "idh_dadvanced_security"
+   },
+   {
+    "title": "Manage One Click Preset List Dialog Box (Printer Properties)",
+    "children": [],
+    "topic": "idh_dmanage_oneclick_advanced"
+   },
+   {
+    "title": "Driver Encryption Key Dialog Box",
+    "children": [],
+    "topic": "IDH_DDNETWORKKEY"
+   },
+   {
+    "title": "Register Custom Paper Size Dialog Box",
+    "children": [],
+    "topic": "IDH_DSAVE_CUSTOM"
+   }
+  ]
+ },
+ {
+  "title": "Various Printing Techniques",
+  "children": [
+   {
+    "title": "Printing in Color or Black and White",
+    "children": [],
+    "topic": "IDH_HOW_PRINT_COLOR"
+   },
+   {
+    "title": "Rotating the Image by 180 Degrees",
+    "children": [],
+    "topic": "IDH_HOW_ROTATE180"
+   },
+   {
+    "title": "Printing on Custom Size Paper",
+    "children": [],
+    "topic": "idh_how_custom"
+   },
+   {
+    "title": "Reducing and Enlarging a Document Size",
+    "children": [],
+    "topic": "idh_how_zoom"
+   },
+   {
+    "title": "Selecting the Paper Tray",
+    "children": [],
+    "topic": "RPCS/IDH_HOW_OUTPUTTRAY"
+   },
+   {
+    "title": "Printing Multiple Pages on a Sheet",
+    "children": [],
+    "topic": "IDH_HOW_LAYOUT"
+   },
+   {
+    "title": "Printing on Both Sides of the Paper",
+    "children": [],
+    "topic": "IDH_HOW_DUPLEX"
+   },
+   {
+    "title": "Printing Eight Pages on a Sheet for Making Pamphlets",
+    "children": [],
+    "topic": "RPCS/idh_how_pamphlet"
+   },
+   {
+    "title": "Printing with a Layout Suitable for Making Booklets",
+    "children": [],
+    "topic": "IDH_HOW_BOOKLET"
+   },
+   {
+    "title": "Splitting the Document Image across Multiple Sheets (Poster)",
+    "children": [],
+    "topic": "RPCS/idh_how_poster"
+   },
+   {
+    "title": "Fine-tuning the Printable Area",
+    "children": [],
+    "topic": "RPCS/IDH_HOW_AREACOMPATI"
+   },
+   {
+    "title": "Advanced Functions",
+    "children": [
+     {
+      "title": "Printing a Single Sample Set before Remaining Sets",
+      "children": [],
+      "topic": "IDH_HOW_PROOF_START"
+     },
+     {
+      "title": "Avoiding Others Seeing Your Prints",
+      "children": [],
+      "topic": "IDH_HOW_SECURE_START"
+     },
+     {
+      "title": "Printing Documents Later",
+      "children": [],
+      "topic": "IDH_HOW_HOLDPRINT"
+     },
+     {
+      "title": "Storing Documents on the Hard Disk",
+      "children": [],
+      "topic": "IDH_HOW_SAVE_PRINTER"
+     },
+     {
+      "title": "Storing Documents on the Printer and Printing Them",
+      "children": [],
+      "topic": "IDH_HOW_STORE_PRINT"
+     },
+     {
+      "title": "Using the Document Server",
+      "children": [],
+      "topic": "IDH_HOW_DOCUMENT_SERVER"
+     },
+     {
+      "title": "Registering Image Overlay",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_IMAGEOVER"
+     },
+     {
+      "title": "Registering Classification Code and User Code",
+      "children": [],
+      "topic": "PCL_CS/IDH_HOW_CLASS"
+     },
+     {
+      "title": "Using the Creep Adjustment Function",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_CREEP"
+     },
+     {
+      "title": "Printing a Document with Imposition Methods",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_IMPOSITION"
+     },
+     {
+      "title": "Printing a Document with Crop Marks",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_CROP"
+     },
+     {
+      "title": "Using Unauthorized Copy Prevention Function (Effects of Prevention for Pattern)",
+      "children": [],
+      "topic": "IDH_HOW_PREVENT"
+     },
+     {
+      "title": "Using Data Security for Copying Function (Destroy the Image and Print Gray)",
+      "children": [],
+      "topic": "IDH_HOW_GUARD"
+     },
+     {
+      "title": "Printing Control Numbers on the Background of Documents",
+      "children": [],
+      "topic": "IDH_HOW_BACKGROUNDNUMBERING"
+     },
+     {
+      "title": "Printing a Document with a Header and Footer",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_HEADER"
+     },
+     {
+      "title": "Overlaying Printing Documents with Data",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_OVERLAY"
+     },
+     {
+      "title": "Having Text Stamped on Prints",
+      "children": [],
+      "topic": "IDH_HOW_WATERMARK"
+     },
+     {
+      "title": "Printing Images Superimposed on Prints",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_IMAGES"
+     },
+     {
+      "title": "Printing a Scanned Data on a Custom Size of Paper",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_SCAN"
+     },
+     {
+      "title": "Displaying the Preview Screen before Printing",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_PREVIEW"
+     }
+    ]
+   },
+   {
+    "title": "Changing the Paper Type of Some Pages Only",
+    "children": [
+     {
+      "title": "Printing Only the First Sheet on a Different Type of Paper",
+      "children": [],
+      "topic": "IDH_HOW_FRONTCOVER"
+     },
+     {
+      "title": "Printing the Back Cover on a Different Type of Paper",
+      "children": [],
+      "topic": "IDH_HOW_BACKCOVER"
+     },
+     {
+      "title": "Inserting Different Paper between Pages",
+      "children": [],
+      "topic": "IDH_HOW_SLIPSHEET"
+     },
+     {
+      "title": "Using Designate/Chapter Function",
+      "children": [],
+      "topic": "IDH_HOW_CHAPTER"
+     }
+    ]
+   },
+   {
+    "title": "Setting the Finishing Method after Printing",
+    "children": [
+     {
+      "title": "Having Prints Sorted",
+      "children": [],
+      "topic": "IDH_HOW_COLLATE"
+     },
+     {
+      "title": "Starting Printing from the Last Page",
+      "children": [],
+      "topic": "IDH_HOW_REVERSE"
+     },
+     {
+      "title": "Printing a Document Face Up",
+      "children": [],
+      "topic": "idh_toc_faceup"
+     },
+     {
+      "title": "Stapling Prints",
+      "children": [],
+      "topic": "IDH_HOW_STAPLE"
+     },
+     {
+      "title": "Punching Prints",
+      "children": [],
+      "topic": "idh_how_punch"
+     },
+     {
+      "title": "Printing with the Folding Unit",
+      "children": [],
+      "topic": "idh_how_foldtype"
+     },
+     {
+      "title": "Changing the Page Rotation Direction for Mixed Orientation Documents",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_MIXDOCUMENT"
+     },
+     {
+      "title": "Binding Documents by Ring Comb",
+      "children": [],
+      "topic": "IDH_HOW_RING"
+     },
+     {
+      "title": "Binding Documents by Perfect Binding",
+      "children": [],
+      "topic": "IDH_HOW_PERFECT_BINDING"
+     }
+    ]
+   },
+   {
+    "title": "Adjusting Print Quality",
+    "children": [
+     {
+      "title": "Printing with Optimal Settings for Document",
+      "children": [],
+      "topic": "IDH_HOW_PRINTQUALITYTYPE"
+     },
+     {
+      "title": "Changing Bitmap Printing Resolution and Speed",
+      "children": [],
+      "topic": "PCL_CS/IDH_HOW_BMP"
+     },
+     {
+      "title": "Saving on Toner When Printing",
+      "children": [],
+      "topic": "IDH_HOW_TONERSAVING"
+     },
+     {
+      "title": "Printing in Two Colors",
+      "children": [],
+      "topic": "RPCS/IDH_HOW_TWOCOLOR"
+     },
+     {
+      "title": "Changing the Dithering Pattern",
+      "children": [],
+      "topic": "IDH_HOW_DITHERING"
+     },
+     {
+      "title": "Changing the Color Profiling Pattern",
+      "children": [],
+      "topic": "IDH_HOW_COLORPROFILE"
+     },
+     {
+      "title": "Using ICM",
+      "children": [],
+      "topic": "IDH_HOW_ICM"
+     },
+     {
+      "title": "Changing the Print Resolution",
+      "children": [],
+      "topic": "IDH_HOW_RESOLUTION"
+     },
+     {
+      "title": "Adjusting Black Printing Quality",
+      "children": [],
+      "topic": "IDH_HOW_BLACK_PRINTING"
+     },
+     {
+      "title": "Printing a Document Using the Colors Applicable to Color Universal Design",
+      "children": [],
+      "topic": "IDH_DCUD"
+     },
+     {
+      "title": "Adjusting the Color Balance",
+      "children": [],
+      "topic": "RPCS/idh_how_colorbalance"
+     },
+     {
+      "title": "Printing a Document Using Only Specific CMYK Colors",
+      "children": [],
+      "topic": "PS_CS/IDH_HOW_CMYK"
+     },
+     {
+      "title": "Printing the Whole Page as Image Data",
+      "children": [],
+      "topic": "PCL_CS/IDH_HOW_RASTERVECTOR"
+     },
+     {
+      "title": "Correcting the Hue of the Digital Photos",
+      "children": [],
+      "topic": "IDH_HOW_CAMERA"
+     }
+    ]
+   },
+   {
+    "title": "Changing Printer Driver Settings",
+    "children": [
+     {
+      "title": "Setting Up Options",
+      "children": [],
+      "topic": "IDH_DSETUPOPTION"
+     },
+     {
+      "title": "Using User Authentication",
+      "children": [],
+      "topic": "PCL_CS/IDH_HOW_AUTHENTICATION"
+     },
+     {
+      "title": "Applying One Sheet Print Settings to Other Sheets",
+      "children": [],
+      "topic": "PCL_CS/IDH_HOW_APPLICATION"
+     },
+     {
+      "title": "Registering Custom Paper Sizes",
+      "children": [],
+      "topic": "IDH_HOW_CUSTOMSIZEREG"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "Appendix",
+  "children": [
+   {
+    "title": "Checking the Printer's Status",
+    "children": [],
+    "topic": "IDH_HOW_WIM"
+   },
+   {
+    "title": "Upgrading the Printer Driver",
+    "children": [],
+    "topic": "RPCS/IDH_HOW_VERSIONUP"
+   },
+   {
+    "title": "Troubleshooting",
+    "children": [],
+    "topic": "IDH_TROUBLESHOOT"
+   },
+   {
+    "title": "Trademarks",
+    "children": [],
+    "topic": "IDH_TRADEMARKS"
+   }
+  ]
+ }
+]
