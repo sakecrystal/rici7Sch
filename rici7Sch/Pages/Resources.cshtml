@@ -1,31 +1,32 @@
 @page
 @model ResourcesModel
 @{
-    ViewData["Title"] = "Resources";
+    ViewData["Title"] = "資料";
     var web = Model.Catalog.Options.WebSearch;
+    var ja = Model.Source.JapaneseStrings;
 }
 <article class="topic">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Resources</li>
+            <li class="breadcrumb-item"><a asp-page="/Index">ホーム</a></li>
+            <li class="breadcrumb-item active" aria-current="page">資料</li>
         </ol>
     </nav>
     <header class="topic-header">
-        <h1 class="topic-title">Resources</h1>
+        <h1 class="topic-title">資料</h1>
     </header>
 
-    <nav class="page-toc" aria-label="On this page">
-        <a href="#images">Images</a>
-        <a href="#files">Project files</a>
-        <a href="#assets">Styles &amp; scripts</a>
-        <a href="#strings">UI strings</a>
-        <a href="#options">Options</a>
+    <nav class="page-toc" aria-label="このページの内容">
+        <a href="#images">画像</a>
+        <a href="#files">プロジェクトファイル</a>
+        <a href="#assets">CSS と JS</a>
+        <a href="#strings">UI 文言</a>
+        <a href="#options">オプション</a>
     </nav>
 
     <div class="help-content">
-        <p class="T1" role="heading" aria-level="2" id="images">Images <span class="badge text-bg-secondary">@Model.Images.Count</span></p>
-        <p>All images from <code>HelpSource/image</code>, with the topics that use them.</p>
+        <p class="T1" role="heading" aria-level="2" id="images">画像 <span class="badge text-bg-secondary">@Model.Images.Count</span></p>
+        <p><code>HelpSource/image</code> にあるすべての画像と、その画像を使っているトピックです。</p>
         <div class="image-grid">
             @foreach (var img in Model.Images)
             {
@@ -36,7 +37,7 @@
                         <span class="image-meta">@ResourcesModel.FormatSize(img.Size)</span>
                         @if (img.UsedBy.Count == 0)
                         {
-                            <span class="image-meta">Not used by any topic</span>
+                            <span class="image-meta">どのトピックでも使われていません</span>
                         }
                         else
                         {
@@ -52,11 +53,11 @@
             }
         </div>
 
-        <p class="T1" role="heading" aria-level="2" id="files">Help project files</p>
-        <p>The original RoboHelp project in <code>HelpSource/</code>.</p>
+        <p class="T1" role="heading" aria-level="2" id="files">ヘルププロジェクトのファイル</p>
+        <p><code>HelpSource/</code> にある元の RoboHelp プロジェクトです。</p>
         <div class="table-responsive">
             <table class="table table-sm table-bordered help-table">
-                <thead><tr><th>File</th><th>Type</th><th>Size</th><th>Contents</th><th>Used by</th></tr></thead>
+                <thead><tr><th>ファイル</th><th>種類</th><th>サイズ</th><th>内容</th><th>使用箇所</th></tr></thead>
                 <tbody>
                     @foreach (var f in Model.Files)
                     {
@@ -72,10 +73,10 @@
             </table>
         </div>
 
-        <p class="T1" role="heading" aria-level="2" id="assets">Styles &amp; scripts</p>
+        <p class="T1" role="heading" aria-level="2" id="assets">CSS と JS</p>
         <div class="table-responsive">
             <table class="table table-sm table-bordered help-table">
-                <thead><tr><th>File</th><th>Size</th><th>Role</th></tr></thead>
+                <thead><tr><th>ファイル</th><th>サイズ</th><th>役割</th></tr></thead>
                 <tbody>
                     @foreach (var a in Model.Assets)
                     {
@@ -89,18 +90,25 @@
             </table>
         </div>
 
-        <p class="T1" role="heading" aria-level="2" id="strings">UI strings <span class="ui-meta">RoboHHRE.lng</span></p>
-        <p>Captions of the original WebHelp interface. The <a asp-page="/Classic/Index">Classic Viewer</a> uses these labels.</p>
-        @foreach (var (sectionName, entries) in Model.Source.Strings)
+        <p class="T1" role="heading" aria-level="2" id="strings">UI 文言 <span class="ui-meta">RoboHHRE.lng / RoboHHRE.ja.lng</span></p>
+        <p>元の WebHelp 画面の文言 (英語) と日本語訳です。<a asp-page="/Classic/Index">Classic 表示</a>は日本語訳を使い、訳がない文言は英語で表示します。</p>
+        @foreach (var (sectionName, entries) in Model.Source.OriginalStrings)
         {
+            ja.TryGetValue(sectionName, out var jaEntries);
             <details class="strings-section">
-                <summary><span class="Term-Soft">[@sectionName]</span> <span class="ui-meta">@entries.Count entries</span></summary>
+                <summary><span class="Term-Soft">[@sectionName]</span> <span class="ui-meta">@entries.Count 件 (日本語訳 @(jaEntries?.Count ?? 0) 件)</span></summary>
                 <div class="table-responsive">
                     <table class="table table-sm table-bordered help-table">
+                        <thead><tr><th>キー</th><th>英語 (元)</th><th>日本語</th></tr></thead>
                         <tbody>
                             @foreach (var (key, value) in entries)
                             {
-                                <tr><th scope="row"><code>@key</code></th><td>@value</td></tr>
+                                var jv = jaEntries is not null && jaEntries.TryGetValue(key, out var v) ? v : null;
+                                <tr>
+                                    <th scope="row"><code>@key</code></th>
+                                    <td>@value</td>
+                                    <td>@(jv ?? "—")</td>
+                                </tr>
                             }
                         </tbody>
                     </table>
@@ -108,16 +116,16 @@
             </details>
         }
 
-        <p class="T1" role="heading" aria-level="2" id="options">Options</p>
+        <p class="T1" role="heading" aria-level="2" id="options">オプション</p>
         <p class="T2" role="heading" aria-level="3">eHelp.xml</p>
         <ul>
-            <li><p>WebSearch button: <span class="Term-Soft">@(web.Enabled ? "Enabled" : "Disabled")</span> (label: <span class="Term-OS">@web.ButtonLabel</span>)</p></li>
-            <li><p>Embedded: @(web.Embedded ? "Yes" : "No") / Main window only: @(web.MainWindowOnly ? "Yes" : "No")</p></li>
-            <li><p>First page: @(Model.Source.FirstPage ?? "Not set (Using Help is shown first)")</p></li>
+            <li><p>Web 検索ボタン: <span class="Term-Soft">@(web.Enabled ? "有効" : "無効")</span> (ボタン名: <span class="Term-OS">@web.ButtonLabel</span>)</p></li>
+            <li><p>埋め込み: @(web.Embedded ? "はい" : "いいえ") / メインウィンドウのみ: @(web.MainWindowOnly ? "はい" : "いいえ")</p></li>
+            <li><p>最初のページ: @(Model.Source.FirstPage ?? "未設定 (Using Help を最初に表示)")</p></li>
         </ul>
-        <p class="T2" role="heading" aria-level="3">Browse sequences (.brs)</p>
-        <p>@(Model.Source.BrowseSequences.Count == 0 ? "No browse sequences are defined. Previous / Next follow the table of contents order." : $"{Model.Source.BrowseSequences.Count} sequence(s) defined.")</p>
-        <p class="T2" role="heading" aria-level="3">Glossary (.glo)</p>
-        <p>@(Model.Source.Glossary.Count == 0 ? "No glossary terms are defined." : $"{Model.Source.Glossary.Count} term(s) defined.")</p>
+        <p class="T2" role="heading" aria-level="3">ブラウズシーケンス (.brs)</p>
+        <p>@(Model.Source.BrowseSequences.Count == 0 ? "ブラウズシーケンスは定義されていません。前へ / 次へ は目次の順序で移動します。" : $"{Model.Source.BrowseSequences.Count} 件のシーケンスが定義されています。")</p>
+        <p class="T2" role="heading" aria-level="3">用語集 (.glo)</p>
+        <p>@(Model.Source.Glossary.Count == 0 ? "用語は定義されていません。" : $"{Model.Source.Glossary.Count} 件の用語が定義されています。")</p>
     </div>
 </article>

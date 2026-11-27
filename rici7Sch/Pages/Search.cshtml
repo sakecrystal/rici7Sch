@@ -1,38 +1,38 @@
 @page
 @model SearchModel
 @{
-    ViewData["Title"] = string.IsNullOrWhiteSpace(Model.Query) ? "Search" : $"Search: {Model.Query}";
+    ViewData["Title"] = string.IsNullOrWhiteSpace(Model.Query) ? "検索" : $"検索: {Model.Query}";
 }
 <article class="topic">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Search</li>
+            <li class="breadcrumb-item"><a asp-page="/Index">ホーム</a></li>
+            <li class="breadcrumb-item active" aria-current="page">検索</li>
         </ol>
     </nav>
     <header class="topic-header">
-        <h1 class="topic-title">Search</h1>
+        <h1 class="topic-title">検索</h1>
     </header>
 
     <form method="get" class="filter-bar" role="search">
-        <label for="searchInput" class="form-label">Type in the word(s) to search for:</label>
+        <label for="searchInput" class="form-label">検索する語句を入力してください:</label>
         <div class="d-flex gap-2">
             <input id="searchInput" name="q" class="form-control" type="search" value="@Model.Query" autofocus />
-            <button class="btn btn-primary" type="submit">Search</button>
+            <button class="btn btn-primary" type="submit">検索</button>
         </div>
-        <p class="filter-hint">All words must appear in a topic. Use quotes for an exact phrase, e.g. <code>"2 sided"</code>.</p>
+        <p class="filter-hint">すべての語句を含むトピックを表示します。本文は英語なので英語で入力してください。語句をそのまま探すときは <code>"2 sided"</code> のように引用符で囲みます。</p>
     </form>
 
     @if (Model.Terms.Count > 0)
     {
         <p class="filter-count" aria-live="polite">
-            @Model.Results.Count topic@(Model.Results.Count == 1 ? "" : "s") found for <strong>@Model.Query</strong>
+            <strong>@Model.Query</strong> の検索結果: @Model.Results.Count 件
         </p>
 
         @if (Model.Results.Count == 0)
         {
             <div class="empty-state">
-                <p>No topics found. Try fewer or different words, or browse the <a asp-page="/Keywords">Index</a>.</p>
+                <p>トピックが見つかりませんでした。語句を減らすか変えてみるか、<a asp-page="/Keywords">索引</a>から探してください。</p>
             </div>
         }
         else

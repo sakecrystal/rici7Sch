@@ -1,36 +1,36 @@
 @page
 @model ErrorModel
 @{
-    ViewData["Title"] = Model.IsNotFound ? "Page not found" : "Error";
+    ViewData["Title"] = Model.IsNotFound ? "ページが見つかりません" : "エラー";
 }
 <section class="status-page">
     <p class="status-code">@Model.Code</p>
     @if (Model.IsNotFound)
     {
-        <h1 class="status-title">Topic not found</h1>
+        <h1 class="status-title">ページが見つかりません</h1>
         <p class="status-text">
-            The page
+            お探しのページ
             @if (!string.IsNullOrEmpty(Model.OriginalPath))
             {
                 <code>@Model.OriginalPath</code>
             }
-            does not exist. It may have been moved, or the link may be incorrect.
+            は存在しません。移動したか、リンクが間違っている可能性があります。
         </p>
     }
     else
     {
-        <h1 class="status-title">Something went wrong</h1>
-        <p class="status-text">An error occurred while processing your request. Please try again.</p>
+        <h1 class="status-title">エラーが発生しました</h1>
+        <p class="status-text">要求の処理中にエラーが発生しました。もう一度お試しください。</p>
     }
 
     <div class="status-actions">
-        <a class="btn btn-primary" asp-page="/Index">Back to Home</a>
-        <a class="btn btn-outline-secondary" asp-page="/Search">Search help</a>
-        <a class="btn btn-outline-secondary" asp-page="/Keywords">Browse index</a>
+        <a class="btn btn-primary" asp-page="/Index">ホームに戻る</a>
+        <a class="btn btn-outline-secondary" asp-page="/Search">ヘルプを検索</a>
+        <a class="btn btn-outline-secondary" asp-page="/Keywords">索引を見る</a>
     </div>
 
     @if (Model.ShowRequestId)
     {
-        <p class="status-meta">Request ID: <code>@Model.RequestId</code></p>
+        <p class="status-meta">要求 ID: <code>@Model.RequestId</code></p>
     }
 </section>

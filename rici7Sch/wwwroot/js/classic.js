@@ -66,7 +66,7 @@
     });
     const navBtn = $('[data-cmd="nav"]');
     navBtn.dataset.hide = navBtn.textContent.trim();
-    navBtn.dataset.show = 'Show';
+    navBtn.dataset.show = root.dataset.labelShow || 'Show';
 
     // ---------------------------------------------------------------- 索引
     const indexInput = $('#cIndexInput');

@@ -35,7 +35,8 @@
     --bs-link-color: #333399;
     --bs-link-color-rgb: 51, 51, 153;
     --bs-link-hover-color: #000000;
-    --bs-body-font-family: Arial, Helvetica, sans-serif;   /* BODY と同じ書体 */
+    /* BODY と同じ Arial を先頭に、日本語は和文フォントで表示 */
+    --bs-body-font-family: Arial, Helvetica, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans JP", sans-serif;
 }
 
 [data-bs-theme="dark"] {
@@ -62,6 +63,7 @@
 /* BODY { margin: 10px } はアプリ全体のレイアウトでは不要 */
 body {
     margin: 0;
+    font-family: var(--bs-body-font-family);
     background: var(--help-ground);
     color: var(--help-text);
     min-height: 100vh;

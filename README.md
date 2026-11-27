@@ -30,6 +30,8 @@ cd rici7Sch && dotnet run      # http://localhost:5276
 
 ## ページ一覧
 
+画面の文言（ヘッダー・ボタン・案内など）は日本語です。トピックの本文とタイトルは元データのまま英語です。
+
 ホーム (`/`) とヘッダーから、以下のすべてのページと全 140 トピックに移動できます
 （ヘッダーの **Topics** メニュー、ホームの Contents / All topics A–Z）。
 
@@ -70,7 +72,8 @@ cd rici7Sch && dotnet run      # http://localhost:5276
 | `*.hhk`（索引） | Index、Classic の索引タブ |
 | `*.brs`（ブラウズシーケンス） | Classic の前へ/次へ（元データが空のため目次順を使用） |
 | `*.glo`（用語集） | Classic の用語集タブ（元データが空） |
-| `RoboHHRE.lng`（UI 文言） | Classic のボタン・ラベル、Resources |
+| `RoboHHRE.lng`（UI 文言・英語） | 日本語訳がない文言の予備、Resources |
+| `RoboHHRE.ja.lng`（UI 文言・日本語） | Classic のボタン・ラベル、Resources（英語と並べて表示） |
 | `eHelp.xml`（WebSearch 設定） | ヘッダー / Classic の WebSearch ボタン（元の設定どおり無効）、Resources |
 | `wwwroot/js/ehlpdhtm.js` | Classic（元のドロップダウン・ポップアップ効果） |
 
@@ -118,3 +121,4 @@ python3 rici7Sch/tools/convert_help.py
 - 2026-11-27: Razor Pages プロジェクトを作成。Index / Error / Privacy を作成し、RoboHelp ヘルプ 140 トピック・目次・索引・検索を移植。VS Code の「実行とデバッグ」設定を追加。
 - 2026-11-27: プロジェクトを `rici7Sch/` に移動。`rici7Sch.slnx` にプロジェクトを登録し、VS Code 設定のパスを更新。元資産を `HelpSource/` に整理。`mshtmlExpNonbrand.css` / `mshtmlExp2nd.css` / `site.css` をレイヤーで重ねて UI に使用。Classic ビューアー（`ehlpdhtm.js`・.lng・.brs・.glo・eHelp.xml を使用）と Resources ページを追加。ホームとヘッダーから全ページ・全トピックへ移動できるように変更。
 - 2026-11-27: VS Code のエクスプローラーで `.cshtml.cs` を `.cshtml` の下に重ねて表示する設定を追加。
+- 2026-11-27: UI を日本語化（ヘッダー、各ページ、ボタン、JS のメッセージ）。Classic 用に `RoboHHRE.ja.lng` を追加し、英語版に重ねて読み込むように変更。日本語フォントの代替指定と、日本語を文字参照にせず出力する設定を追加。

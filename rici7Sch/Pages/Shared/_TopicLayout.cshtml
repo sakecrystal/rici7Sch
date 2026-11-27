@@ -5,9 +5,9 @@
 }
 @* 移植したヘルプトピック共通の枠: パンくず・タイトル・ツールバー・前後トピック *@
 <article class="topic" data-topic-id="@nav.Topic.Id">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+            <li class="breadcrumb-item"><a asp-page="/Index">ホーム</a></li>
             @foreach (var b in nav.Breadcrumb)
             {
                 if (b.Url is not null)
@@ -24,9 +24,9 @@
 
     <header class="topic-header">
         <h1 class="topic-title">@nav.Topic.Title</h1>
-        <div class="topic-tools" role="toolbar" aria-label="Topic tools">
-            <button type="button" class="btn btn-outline-secondary btn-sm" id="expandAll" hidden>Show all</button>
-            <button type="button" class="btn btn-outline-secondary btn-sm" data-action="print">Print</button>
+        <div class="topic-tools" role="toolbar" aria-label="トピックの操作">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="expandAll" hidden>すべて展開</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" data-action="print">印刷</button>
         </div>
     </header>
 
@@ -34,11 +34,11 @@
         @RenderBody()
     </div>
 
-    <nav class="topic-pager" aria-label="Browse sequence">
+    <nav class="topic-pager" aria-label="前後のトピック">
         @if (nav.Previous is not null)
         {
             <a class="pager-link prev" href="@Url.Content("~" + nav.Previous.Url)" rel="prev">
-                <span class="pager-label">&laquo; Previous</span>
+                <span class="pager-label">&laquo; 前へ</span>
                 <span class="pager-title">@nav.Previous.Title</span>
             </a>
         }
@@ -49,7 +49,7 @@
         @if (nav.Next is not null)
         {
             <a class="pager-link next" href="@Url.Content("~" + nav.Next.Url)" rel="next">
-                <span class="pager-label">Next &raquo;</span>
+                <span class="pager-label">次へ &raquo;</span>
                 <span class="pager-title">@nav.Next.Title</span>
             </a>
         }

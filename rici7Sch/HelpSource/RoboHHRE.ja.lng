@@ -1,0 +1,73 @@
+; RoboHHRE.lng の日本語版。ここにないキーは RoboHHRE.lng (英語) の文言を使う。
+[GlossaryTab]
+TabCaption=用語集(&G)
+TermCaption=用語(&T)
+DefinitionCaption=定義(&D):
+
+[BrowseSequence]
+PreCaption=前へ
+PreTooltip=前のトピック
+NextCaption=次へ
+NextTooltip=次のトピック
+BlockTooltip=ブロックを選択
+
+[Common]
+Contents=目次
+Index=索引
+Search=検索
+Glossary=用語集
+Logo/Author=提供
+Show=表示
+Hide=非表示
+SyncToc=目次と同期
+Prev=<<
+Next=>>
+Disabled Prev=<<
+Disabled Next=>>
+Seperate = |
+
+[WebHelp]
+Cancel=キャンセル
+CantOpenURLorFile=URL またはファイルを開けません
+CompletingContents=目次を作成しています...
+Display=表示
+Term=用語:
+Definition=定義:
+Done=完了
+Find=検索
+IndexInputPrompt=検索するキーワードを入力してください:
+RelateTopicListPrompt=トピックをクリックしてから [表示] をクリックしてください。
+LoadingData=データを読み込んでいます。お待ちください...
+LoadingContents=目次を読み込んでいます。お待ちください...
+LoadingContentsData=読み込み中です。クリックするとキャンセルします...
+LoadingFTS=検索データを読み込んでいます...
+LoadingIndex=索引を読み込んでいます...
+LoadingTOCItem=目次を読み込んでいます:
+Searching=検索しています...
+FtsInputPrompt=検索する語句を入力してください:
+TopicsFound=件のトピックが見つかりました
+TopicsNotFound=トピックが見つかりませんでした。
+CantSearch=その語句は検索できません。
+IndexBtnText=実行
+FtsBtnText=実行
+ToolBarSearchBtnText=実行
+InTopicSearchBtnText=実行
+SearchLabel=検索
+SearchPrompt=- 検索 -
+PreTooltip=前のトピック
+NextTooltip=次のトピック
+WebSearch=Web 検索
+SyncTocTooltip=目次と同期
+Book=ブック
+Page=ページ
+Remote_Page=リモートページ
+Show_Navigation_Component=ナビゲーションを表示
+Hide_Navigation_Component=ナビゲーションを非表示
+IndexSelectTopicTitle=トピックの選択
+IndexSelectTopicLabel=トピックを選択して [表示] をクリックしてください
+IndexSelectTopicError=トピックを選択してください。
+PoweredBy=提供
+GeneratedBy=作成
+Author=作成者
+About=バージョン情報
+Print=印刷

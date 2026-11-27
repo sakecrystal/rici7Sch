@@ -17,13 +17,13 @@ public class IndexModel(HelpCatalog catalog) : PageModel
     /// <summary>サイト内のページ一覧 (ヘッダーと同じ並び)。</summary>
     public IReadOnlyList<PageLink> Pages { get; } =
     [
-        new("Contents", "/Topics/IDH_CONTENTS", "Start with “Using Help” and browse the table of contents"),
-        new("Index", "/Keywords", "Browse alphabetically by keyword"),
-        new("Search", "/Search", "Find topics containing specific words"),
-        new("Classic Viewer", "/Classic", "Original pages, styles and effects in a WebHelp-style viewer"),
-        new("Resources", "/Resources", "Images, project files, UI strings, styles and scripts"),
-        new("Privacy", "/Privacy", "What this site stores and sends"),
-        new("Error", "/Error", "The page shown when something goes wrong"),
+        new("目次", "/Topics/IDH_CONTENTS", "「Using Help」(ヘルプの使い方) から目次をたどる"),
+        new("索引", "/Keywords", "キーワードをアルファベット順に探す"),
+        new("検索", "/Search", "語句を含むトピックを全文検索する"),
+        new("Classic 表示", "/Classic", "元のページ・スタイル・効果を WebHelp 形式で表示する"),
+        new("資料", "/Resources", "画像・プロジェクトファイル・UI 文言・CSS / JS の一覧"),
+        new("プライバシー", "/Privacy", "このサイトが保存・送信する情報"),
+        new("エラー", "/Error", "問題が発生したときに表示されるページ"),
     ];
 
     public void OnGet()

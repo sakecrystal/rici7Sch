@@ -1,29 +1,29 @@
 @page
 @model KeywordsModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "索引";
 }
 <article class="topic">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Index</li>
+            <li class="breadcrumb-item"><a asp-page="/Index">ホーム</a></li>
+            <li class="breadcrumb-item active" aria-current="page">索引</li>
         </ol>
     </nav>
     <header class="topic-header">
-        <h1 class="topic-title">Index</h1>
+        <h1 class="topic-title">索引</h1>
     </header>
 
     <form method="get" class="filter-bar" role="search" data-keyword-filter>
-        <label for="keywordFilter" class="form-label">Type in the keyword to find:</label>
+        <label for="keywordFilter" class="form-label">検索するキーワードを入力してください:</label>
         <div class="d-flex gap-2">
             <input id="keywordFilter" name="k" class="form-control" type="search" value="@Model.Filter" autocomplete="off" />
-            <noscript><button class="btn btn-primary" type="submit">Filter</button></noscript>
+            <noscript><button class="btn btn-primary" type="submit">絞り込む</button></noscript>
         </div>
-        <p class="filter-count" aria-live="polite"><span data-count>@Model.Total</span> keywords</p>
+        <p class="filter-count" aria-live="polite"><span data-count>@Model.Total</span> 件のキーワード</p>
     </form>
 
-    <nav class="alpha-nav" aria-label="Jump to letter">
+    <nav class="alpha-nav" aria-label="頭文字へ移動">
         @foreach (var g in Model.Groups)
         {
             <a href="#kw-@KeywordsModel.Slug(g.Key)" data-alpha="@g.Key">@g.Key</a>
@@ -32,7 +32,7 @@
 
     @if (Model.Total == 0)
     {
-        <p class="empty-state">No keywords match “@Model.Filter”.</p>
+        <p class="empty-state">「@Model.Filter」に一致するキーワードはありません。</p>
     }
 
     <div class="keyword-index">
@@ -71,5 +71,5 @@
             </section>
         }
     </div>
-    <p class="empty-state" data-empty hidden>No keywords match.</p>
+    <p class="empty-state" data-empty hidden>一致するキーワードはありません。</p>
 </article>

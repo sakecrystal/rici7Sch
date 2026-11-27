@@ -2,30 +2,30 @@
 @model IndexModel
 @using rici7Sch.Services
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "ホーム";
 }
 <div class="home">
     <section class="hero">
-        <p class="hero-eyebrow">RPCS Printer Driver</p>
-        <h1 class="hero-title">Printer Driver Help</h1>
+        <p class="hero-eyebrow">RPCS プリンタードライバー</p>
+        <h1 class="hero-title">プリンタードライバー ヘルプ</h1>
         <p class="hero-lead">
-            Explanations of every tab, menu and dialog box in the printing preferences,
-            plus step-by-step procedures for common printing tasks.
+            印刷設定のタブ・メニュー・ダイアログボックスの説明と、
+            よく使う印刷機能の操作手順をまとめています（本文は英語）。
         </p>
         <form class="hero-search" role="search" method="get" asp-page="/Search">
-            <label class="visually-hidden" for="heroSearch">Search help</label>
-            <input id="heroSearch" class="form-control" type="search" name="q" placeholder="e.g. booklet, staple, toner saving" />
-            <button class="btn btn-primary" type="submit">Search</button>
+            <label class="visually-hidden" for="heroSearch">ヘルプを検索</label>
+            <input id="heroSearch" class="form-control" type="search" name="q" placeholder="例: booklet, staple, toner saving" />
+            <button class="btn btn-primary" type="submit">検索</button>
         </form>
         <ul class="hero-stats">
-            <li><strong>@Model.TopicCount</strong> topics</li>
-            <li><strong>@Model.KeywordCount</strong> index keywords</li>
-            <li><strong>@Model.Sections.Count</strong> sections</li>
+            <li>トピック <strong>@Model.TopicCount</strong> 件</li>
+            <li>索引キーワード <strong>@Model.KeywordCount</strong> 件</li>
+            <li>セクション <strong>@Model.Sections.Count</strong> 件</li>
         </ul>
     </section>
 
     <section aria-labelledby="pagesHeading">
-        <h2 id="pagesHeading" class="section-heading">Pages</h2>
+        <h2 id="pagesHeading" class="section-heading">ページ一覧</h2>
         <div class="page-grid">
             @foreach (var p in Model.Pages)
             {
@@ -39,7 +39,7 @@
     </section>
 
     <section aria-labelledby="sectionsHeading">
-        <h2 id="sectionsHeading" class="section-heading">Contents</h2>
+        <h2 id="sectionsHeading" class="section-heading">目次</h2>
         <div class="section-grid">
             @foreach (var s in Model.Sections)
             {
@@ -78,7 +78,7 @@
             @if (Model.OtherTopics.Count > 0)
             {
                 <div class="section-card">
-                    <h3 class="section-card-title">Other topics</h3>
+                    <h3 class="section-card-title">その他のトピック</h3>
                     <ul class="section-card-list">
                         @foreach (var t in Model.OtherTopics)
                         {
@@ -91,9 +91,9 @@
     </section>
 
     <section aria-labelledby="allHeading">
-        <h2 id="allHeading" class="section-heading">All topics A–Z</h2>
+        <h2 id="allHeading" class="section-heading">全トピック (A–Z)</h2>
         <details class="all-topics-box">
-            <summary>Show all @Model.TopicCount topics</summary>
+            <summary>全 @Model.TopicCount 件のトピックを表示</summary>
             <ul class="all-topics">
                 @foreach (var g in Model.AllTopics)
                 {

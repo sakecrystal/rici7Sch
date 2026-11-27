@@ -32,7 +32,7 @@
         collapseAll.addEventListener('click', () => {
             const anyOpen = $$('.toc details[open]').length > 0;
             $$('.toc details').forEach(d => { d.open = !anyOpen; });
-            collapseAll.textContent = anyOpen ? 'Expand all' : 'Collapse all';
+            collapseAll.textContent = anyOpen ? 'すべて開く' : 'すべて閉じる';
         });
     }
 
@@ -45,7 +45,7 @@
         expandAll.addEventListener('click', () => {
             shown = !shown;
             panels.forEach(p => bootstrap.Collapse.getOrCreateInstance(p, { toggle: false })[shown ? 'show' : 'hide']());
-            expandAll.textContent = shown ? 'Hide all' : 'Show all';
+            expandAll.textContent = shown ? 'すべて折りたたむ' : 'すべて展開';
         });
     }
 
@@ -64,7 +64,7 @@
             ev.preventDefault();
             const url = link.getAttribute('href');
             titleEl.textContent = link.textContent.trim();
-            bodyEl.innerHTML = '<div class="text-center py-4"><div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Loading…</span></div></div>';
+            bodyEl.innerHTML = '<div class="text-center py-4"><div class="spinner-border text-secondary" role="status"><span class="visually-hidden">読み込み中…</span></div></div>';
             openEl.href = url;
             modal.show();
             try {
@@ -82,7 +82,7 @@
             } catch (e) {
                 bodyEl.innerHTML = '';
                 const p = document.createElement('p');
-                p.textContent = 'The topic could not be loaded.';
+                p.textContent = 'トピックを読み込めませんでした。';
                 bodyEl.appendChild(p);
             }
         });

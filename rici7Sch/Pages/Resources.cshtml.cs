@@ -21,14 +21,14 @@ public class ResourcesModel(HelpSourceService source, HelpCatalog catalog, IWebH
         Images = source.Images();
         (string Path, string Role)[] assets =
         [
-            ("css/site.css", "Site layout, header, sidebar and pages (loaded last)"),
-            ("css/mshtmlExpNonbrand.css", "Original topic style: headings, T1/T2/T3, Note, Term-* (all topics, Classic)"),
-            ("css/mshtmlExp2nd.css", "Original popup-topic style (topics that were opened as popups)"),
-            ("css/t3.gif", "Bullet image referenced by mshtmlExp*.css"),
-            ("js/site.js", "Dropdowns, popups, index filter, theme, print"),
-            ("js/ehlpdhtm.js", "Original RoboHelp DHTML effects (Classic viewer)"),
-            ("js/classic.js", "Classic viewer navigation (tabs, sync, previous / next)"),
-            ("favicon.ico", "Site icon"),
+            ("css/site.css", "サイトのレイアウト・ヘッダー・サイドバー・各ページ (最後に適用)"),
+            ("css/mshtmlExpNonbrand.css", "元のトピック用スタイル: 見出し・T1/T2/T3・Note・Term-* (全トピック、Classic)"),
+            ("css/mshtmlExp2nd.css", "元のポップアップ用スタイル (ポップアップで開いていたトピック)"),
+            ("css/t3.gif", "mshtmlExp*.css が参照する行頭記号の画像"),
+            ("js/site.js", "ドロップダウン・ポップアップ・索引の絞り込み・テーマ・印刷"),
+            ("js/ehlpdhtm.js", "元の RoboHelp DHTML 効果 (Classic 表示)"),
+            ("js/classic.js", "Classic 表示のナビゲーション (タブ・目次の同期・前へ / 次へ)"),
+            ("favicon.ico", "サイトのアイコン"),
         ];
         Assets = assets.Select(a =>
         {

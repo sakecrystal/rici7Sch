@@ -3,7 +3,7 @@
 @using rici7Sch.Services
 @{
     var S = Model.Source;
-    ViewData["Title"] = "Classic Viewer";
+    ViewData["Title"] = "Classic 表示";
     ViewData["HideSidebar"] = true;
     ViewData["Wide"] = true;
     string L(string key, string fallback) => S.T("WebHelp", key, fallback);
@@ -21,14 +21,15 @@
          data-msg-searching="@L("Searching", "Searching...")"
          data-msg-select="@L("IndexSelectTopicError", "Please select a topic.")"
          data-msg-show="@L("Show_Navigation_Component", "Show Navigation Component")"
-         data-msg-hide="@L("Hide_Navigation_Component", "Hide Navigation Component")">
+         data-msg-hide="@L("Hide_Navigation_Component", "Hide Navigation Component")"
+         data-label-show="@C("Show", "Show")">
 
     <header class="classic-header">
         <div>
-            <h1 class="classic-title">Classic Viewer</h1>
-            <p class="classic-sub">The original help topics, styles and DHTML effects (<code>ehlpdhtm.js</code>) in a WebHelp-style viewer.</p>
+            <h1 class="classic-title">Classic 表示</h1>
+            <p class="classic-sub">元のヘルプページ・スタイル・DHTML 効果 (<code>ehlpdhtm.js</code>) を、旧 WebHelp と同じ形式で表示します。</p>
         </div>
-        <div class="classic-toolbar" role="toolbar" aria-label="Viewer tools">
+        <div class="classic-toolbar" role="toolbar" aria-label="表示の操作">
             <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="nav" title="@L("Hide_Navigation_Component", "Hide Navigation Component")">@C("Hide", "Hide")</button>
             <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="sync" title="@L("SyncTocTooltip", "Sync TOC")">@C("SyncToc", "SyncToc")</button>
             <span class="classic-sep" aria-hidden="true">@C("Seperate", "|")</span>
@@ -36,7 +37,7 @@
             <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="next" title="@B("NextTooltip", "Next Topic")">@B("NextCaption", "Next") @C("Next", ">>")</button>
             <span class="classic-sep" aria-hidden="true">@C("Seperate", "|")</span>
             <button type="button" class="btn btn-sm btn-outline-secondary" data-cmd="print">@L("Print", "Print")</button>
-            <a class="btn btn-sm btn-outline-primary" data-cmd="modern" href="~/Topics/@Model.StartTopic">Open modern page</a>
+            <a class="btn btn-sm btn-outline-primary" data-cmd="modern" href="~/Topics/@Model.StartTopic">通常表示で開く</a>
             @if (web.Enabled)
             {
                 <a class="btn btn-sm btn-outline-secondary" asp-page="/Search">@L("WebSearch", web.ButtonLabel)</a>
@@ -45,7 +46,7 @@
     </header>
 
     <div class="classic-body">
-        <aside class="classic-nav" aria-label="Navigation">
+        <aside class="classic-nav" aria-label="ナビゲーション">
             <ul class="nav nav-tabs classic-tabs" role="tablist">
                 <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#c-toc" type="button" role="tab">@C("Contents", "Contents")</button></li>
                 <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#c-index" type="button" role="tab">@C("Index", "Index")</button></li>
@@ -128,7 +129,7 @@
                 <div class="tab-pane fade" id="c-glossary" role="tabpanel">
                     @if (S.Glossary.Count == 0)
                     {
-                        <p class="small text-body-secondary">No glossary terms are defined in this help project (<code>.glo</code> file is empty).</p>
+                        <p class="small text-body-secondary">このヘルプには用語が定義されていません (<code>.glo</code> ファイルが空です)。</p>
                     }
                     else
                     {
@@ -145,12 +146,12 @@
                 </div>
             </div>
             <p class="classic-foot small">
-                @(Model.SequenceFromBrs ? "Browse sequence: .brs" : "Browse sequence: table of contents order (.brs is empty)")
+                @(Model.SequenceFromBrs ? "ページの順序: .brs" : "ページの順序: 目次順 (.brs が空のため)")
             </p>
         </aside>
 
         <div class="classic-view">
-            <iframe name="classicFrame" id="classicFrame" title="Help topic" src="@IndexModel.FrameUrl(Model.StartTopic)"></iframe>
+            <iframe name="classicFrame" id="classicFrame" title="ヘルプトピック" src="@IndexModel.FrameUrl(Model.StartTopic)"></iframe>
         </div>
     </div>
 </section>

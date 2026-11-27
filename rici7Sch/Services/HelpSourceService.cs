@@ -33,8 +33,12 @@ namespace rici7Sch.Services
         public string Root { get; }
         public string HtmlRoot { get; }
 
-        /// <summary>RoboHHRE.lng: [セクション][キー] = 文言</summary>
+        /// <summary>UI 文言: RoboHHRE.lng (英語) に RoboHHRE.ja.lng (日本語) を重ねたもの。[セクション][キー] = 文言</summary>
         public IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> Strings { get; }
+        /// <summary>RoboHHRE.lng (元の英語の文言)。</summary>
+        public IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> OriginalStrings { get; }
+        /// <summary>RoboHHRE.ja.lng (日本語訳)。</summary>
+        public IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> JapaneseStrings { get; }
         public IReadOnlyList<GlossaryTerm> Glossary { get; }
         public IReadOnlyList<BrowseSequence> BrowseSequences { get; }
         public string? FirstPage { get; }
@@ -54,7 +58,10 @@ namespace rici7Sch.Services
                         f => f, StringComparer.OrdinalIgnoreCase)
                 : new(StringComparer.OrdinalIgnoreCase);
 
-            Strings = LoadLng(FindFile("*.lng"));
+            var lngFiles = Directory.Exists(Root) ? Directory.GetFiles(Root, "*.lng") : [];
+            OriginalStrings = LoadLng(lngFiles.FirstOrDefault(f => !f.EndsWith(".ja.lng", StringComparison.OrdinalIgnoreCase)));
+            JapaneseStrings = LoadLng(lngFiles.FirstOrDefault(f => f.EndsWith(".ja.lng", StringComparison.OrdinalIgnoreCase)));
+            Strings = Merge(OriginalStrings, JapaneseStrings);
             Glossary = LoadGlossary(FindFile("*.glo"));
             BrowseSequences = LoadBrowseSequences(FindFile("*.brs"));
             FirstPage = LoadFirstPage(Path.Combine(Root, "eHelp.xml"));
@@ -63,11 +70,27 @@ namespace rici7Sch.Services
         private string? FindFile(string pattern) =>
             Directory.Exists(Root) ? Directory.EnumerateFiles(Root, pattern).FirstOrDefault() : null;
 
-        /// <summary>lng の文言。'&amp;' (アクセスキー) は取り除く。</summary>
+        /// <summary>日本語の文言 (なければ英語) を返す。'&amp;' やアクセスキー表記 (&amp;G) は取り除く。</summary>
         public string T(string section, string key, string fallback) =>
             Strings.TryGetValue(section, out var s) && s.TryGetValue(key, out var v) && v.Length > 0
-                ? v.Replace("&", "")
+                ? Regex.Replace(v, @"\(&.\)|&", "")
                 : fallback;
+
+        private static Dictionary<string, IReadOnlyDictionary<string, string>> Merge(
+            IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> baseStrings,
+            IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> overlay)
+        {
+            var result = new Dictionary<string, IReadOnlyDictionary<string, string>>(StringComparer.OrdinalIgnoreCase);
+            foreach (var section in baseStrings.Keys.Union(overlay.Keys, StringComparer.OrdinalIgnoreCase))
+            {
+                var merged = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+                if (baseStrings.TryGetValue(section, out var b)) foreach (var (k, v) in b) merged[k] = v;
+                if (overlay.TryGetValue(section, out var o)) foreach (var (k, v) in o) merged[k] = v;
+                result[section] = merged;
+            }
+            return result;
+        }
+
 
         // ------------------------------------------------------------------ 元 HTML トピック
 
@@ -111,24 +134,25 @@ namespace rici7Sch.Services
                 ? Directory.GetFiles(Path.Combine(Root, "image")).Length : 0;
             var list = new List<HelpSourceFile>
             {
-                new("HTMLFILE/", "HTMLFILE", DirSize(HtmlRoot), "Folder",
-                    $"Original help topics ({htmlCount} files)", "Topics (converted), Classic viewer (as-is)"),
-                new("image/", "image", DirSize(Path.Combine(Root, "image")), "Folder",
-                    $"Images used in topics ({imageCount} files)", "Topics, Classic viewer, Resources gallery"),
+                new("HTMLFILE/", "HTMLFILE", DirSize(HtmlRoot), "フォルダー",
+                    $"元のヘルプトピック ({htmlCount} ファイル)", "トピック (変換して使用)、Classic ビューアー (元のまま)"),
+                new("image/", "image", DirSize(Path.Combine(Root, "image")), "フォルダー",
+                    $"トピックで使う画像 ({imageCount} ファイル)", "トピック、Classic ビューアー、資料ページのギャラリー"),
             };
             foreach (var f in Directory.EnumerateFiles(Root).OrderBy(f => f))
             {
                 var name = Path.GetFileName(f);
                 var (kind, role, used) = Path.GetExtension(f).ToLowerInvariant() switch
                 {
-                    ".hhc" => ("Table of contents", "Sitemap of books and pages", "Contents sidebar, Header, Home, Classic"),
-                    ".hhk" => ("Index", "Keywords and their topics", "Index page, Classic Index tab"),
-                    ".brs" => ("Browse sequences", "Previous / Next order", BrowseSequences.Count > 0 ? "Classic Prev/Next" : "Classic Prev/Next (empty; TOC order used)"),
-                    ".glo" => ("Glossary", "Terms and definitions", Glossary.Count > 0 ? "Classic Glossary tab" : "Classic Glossary tab (empty)"),
-                    ".lng" => ("UI strings", "Captions of the WebHelp interface", "Classic viewer labels, Resources"),
-                    ".xml" => ("eHelp options", "WebSearch button options", "Header WebSearch button, Classic"),
-                    ".gif" => ("Image", "Bullet for P.T3 / P.T4 in mshtmlExp*.css", "wwwroot/css/t3.gif"),
-                    _ => ("File", "", ""),
+                    ".hhc" => ("目次", "ブックとページの構成", "目次サイドバー、ヘッダー、ホーム、Classic"),
+                    ".hhk" => ("索引", "キーワードと該当トピック", "索引ページ、Classic の索引タブ"),
+                    ".brs" => ("ブラウズシーケンス", "前へ / 次へ の順序", BrowseSequences.Count > 0 ? "Classic の前へ/次へ" : "Classic の前へ/次へ (空のため目次順を使用)"),
+                    ".glo" => ("用語集", "用語と定義", Glossary.Count > 0 ? "Classic の用語集タブ" : "Classic の用語集タブ (空)"),
+                    ".lng" when name.EndsWith(".ja.lng", StringComparison.OrdinalIgnoreCase) => ("UI 文言 (日本語)", "RoboHHRE.lng の日本語訳", "Classic ビューアーの表示、資料ページ"),
+                    ".lng" => ("UI 文言", "WebHelp 画面の文言 (元の英語)", "日本語訳がない文言、資料ページ"),
+                    ".xml" => ("eHelp オプション", "WebSearch ボタンの設定", "ヘッダーと Classic の Web 検索ボタン"),
+                    ".gif" => ("画像", "mshtmlExp*.css の P.T3 / P.T4 の行頭記号", "wwwroot/css/t3.gif"),
+                    _ => ("ファイル", "", ""),
                 };
                 list.Add(new(name, name, new FileInfo(f).Length, kind, role, used));
             }

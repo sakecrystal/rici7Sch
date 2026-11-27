@@ -1,37 +1,37 @@
 @page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy";
+    ViewData["Title"] = "プライバシー";
 }
 <article class="topic">
-    <nav aria-label="breadcrumb">
+    <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Privacy</li>
+            <li class="breadcrumb-item"><a asp-page="/Index">ホーム</a></li>
+            <li class="breadcrumb-item active" aria-current="page">プライバシー</li>
         </ol>
     </nav>
     <header class="topic-header">
-        <h1 class="topic-title">Privacy</h1>
+        <h1 class="topic-title">プライバシー</h1>
     </header>
     <div class="help-content">
-        <p>This help site does not require sign-in and does not collect personal information.</p>
+        <p>このヘルプサイトはサインイン不要で、個人情報を収集しません。</p>
 
-        <p class="T1" role="heading" aria-level="2">Information stored in your browser</p>
-        <p class="T2" role="heading" aria-level="3">Display theme</p>
-        <p>Your light/dark theme choice is stored in your browser's local storage (<code>help-theme</code>) so it is remembered on your next visit. It is never sent to the server.</p>
-        <p class="T2" role="heading" aria-level="3">Classic Viewer</p>
-        <p>The <span class="Term-Soft">Classic</span> viewer shows the original help pages and scripts. It does not store any information.</p>
+        <p class="T1" role="heading" aria-level="2">ブラウザーに保存する情報</p>
+        <p class="T2" role="heading" aria-level="3">表示テーマ</p>
+        <p>ライト / ダークのテーマ設定を、次回も同じ表示にするためブラウザーのローカルストレージ (<code>help-theme</code>) に保存します。サーバーには送信しません。</p>
+        <p class="T2" role="heading" aria-level="3">Classic 表示</p>
+        <p><span class="Term-Soft">Classic 表示</span>は元のヘルプページとスクリプトを表示するだけで、情報を保存しません。</p>
 
-        <p class="T1" role="heading" aria-level="2">Information sent to the server</p>
-        <p class="T2" role="heading" aria-level="3">Search words</p>
-        <p>Words you enter in <span class="Term-Soft">Search</span> are sent to this server only to find matching topics. They are not stored.</p>
-        <p class="T2" role="heading" aria-level="3">Access logs</p>
-        <p>Like most web servers, the server may record standard request information (such as the requested page and time) for operation and troubleshooting.</p>
+        <p class="T1" role="heading" aria-level="2">サーバーに送信する情報</p>
+        <p class="T2" role="heading" aria-level="3">検索語句</p>
+        <p><span class="Term-Soft">検索</span>に入力した語句は、該当トピックを探すためだけにサーバーへ送信します。保存はしません。</p>
+        <p class="T2" role="heading" aria-level="3">アクセスログ</p>
+        <p>一般的な Web サーバーと同様に、運用や問題調査のため、要求されたページや日時などの標準的な情報を記録する場合があります。</p>
 
-        <p class="Note">Note:</p>
-            <ul>
-                <li><p>No cookies are used for tracking or advertising.</p></li>
-                <li><p>No external services or content delivery networks are used.</p></li>
-            </ul>
+        <p class="Note">注意:</p>
+        <ul>
+            <li><p>追跡や広告を目的とした Cookie は使用しません。</p></li>
+            <li><p>外部のサービスや CDN は使用しません。</p></li>
+        </ul>
     </div>
 </article>
