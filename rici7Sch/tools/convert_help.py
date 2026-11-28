@@ -437,6 +437,16 @@ def convert_topic(path: Path):
     text_en = re.sub(r"\s+", " ", body.get_text(" ", strip=True))
     translate_blocks(body, tid)
 
+    # ドロップダウンは ehlpdhtm.js の kadovTextPopup で開閉する形にする
+    # (訳文の照合のあとに属性を書き換えるので、対訳辞書のキーには影響しない)
+    for btn in body.find_all("button", class_="help-dropdown-toggle"):
+        target = btn.get("aria-controls", "")
+        btn.attrs = {"type": "button", "class": "help-dropdown-toggle",
+                     "id": "dropspot-" + target.rsplit("-", 1)[-1],
+                     "data-help-dropdown": target, "aria-expanded": "false", "aria-controls": target}
+    for div in body.find_all("div", class_=lambda c: c and "help-dropdown" in str(c).split()):
+        div.attrs = {"class": "help-dropdown", "id": div.get("id"), "style": "display:none"}
+
     inner = "".join(str(c) for c in body.contents)
     inner = re.sub(r"[ \t]*\n\s*\n+", "\n", inner)
     inner = re.sub(r"[ \t]+", " ", inner).strip()

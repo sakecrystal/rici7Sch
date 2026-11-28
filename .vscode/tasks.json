@@ -25,6 +25,33 @@
             "type": "process",
             "args": ["${workspaceFolder}/rici7Sch/tools/convert_help.py"],
             "problemMatcher": []
+        },
+        {
+            "label": "Claude: セッション一覧",
+            "detail": "動いている Claude Code のセッションを表示",
+            "type": "process",
+            "command": "${workspaceFolder}/scripts/claude-sessions.sh",
+            "args": ["list"],
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+        },
+        {
+            "label": "Claude: 古いセッションを停止",
+            "detail": "最新以外の Claude Code のセッションを停止 (確認あり)",
+            "type": "process",
+            "command": "${workspaceFolder}/scripts/claude-sessions.sh",
+            "args": ["stop-old"],
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true }
+        },
+        {
+            "label": "アプリ: 残っている rici7Sch を停止",
+            "detail": "ポート 5276 の使用中エラーが出たときに、残っているアプリを停止 (確認あり)",
+            "type": "process",
+            "command": "${workspaceFolder}/scripts/claude-sessions.sh",
+            "args": ["stop-app"],
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true }
         }
     ]
 }

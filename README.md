@@ -76,7 +76,7 @@ cd rici7Sch && dotnet run      # http://localhost:5276
 | `RoboHHRE.ja.lng`（UI 文言・日本語） | Classic のボタン・ラベル、Resources（英語と並べて表示） |
 | `ja/*.json`（本文の日本語訳） | 変換ツールが Topics・目次・索引の日本語化に使用 |
 | `eHelp.xml`（WebSearch 設定） | ヘッダー / Classic の WebSearch ボタン（元の設定どおり無効）、Resources |
-| `wwwroot/js/ehlpdhtm.js` | Classic（元のドロップダウン・ポップアップ効果） |
+| `wwwroot/js/ehlpdhtm.js` | 全トピックのドロップダウンの開閉（`kadovTextPopup`）、Classic（元のドロップダウン・ポップアップ効果） |
 
 ## フォルダ構成
 
@@ -124,6 +124,30 @@ python3 rici7Sch/tools/convert_help.py
 - 変換ツールを実行すると、訳がない文が `tools/untranslated.json` に書き出されます（現在は 0 件）。訳を直したいときは `HelpSource/ja/*.json` を編集して変換ツールを再実行してください。
 - 画面の項目名は一般的なプリンタードライバーの用語で訳しているため、実際の日本語版ドライバーの表示と異なる場合があります。
 
+### ehlpdhtm.js の使い方
+
+- トピックページでは `site.js` より前に `ehlpdhtm.js` を読み込み、ドロップダウン（「▼」付きの語句をクリックすると開く説明）の開閉を元のヘルプと同じ `kadovTextPopup` で行います。`ehlpdhtm.js` が読み込めない・エラーになる場合は `site.js` が代わりに開閉します（`<html data-dropdown-engine="ehlpdhtm">` で、どちらで動いているか確認できます）。
+- ファイルポップアップ（`BSSCPopup`）は、通常のページではモーダルで表示します。`ehlpdhtm.js` のポップアップは単位なしの数値で位置やサイズを指定しており、互換モード（元の HTML）でしか正しく動かないため、Classic 表示でのみ使っています。
+
+## 古い Claude セッションの停止
+
+VS Code 拡張機能を再起動したあとなどに古い Claude Code のセッションが残り、「この会話は別の場所で開いています」と表示されることがあります。次の方法でいつでも止められます。
+
+- コマンドパレット (Ctrl+Shift+P) → **Tasks: Run Task** → 次のいずれかを選ぶ
+  - **Claude: セッション一覧** … 動いているセッションを表示
+  - **Claude: 古いセッションを停止** … 最新以外のセッションを停止（確認してから停止）
+  - **アプリ: 残っている rici7Sch を停止** … 「Failed to bind to address http://127.0.0.1:5276」が出たときに、残っているアプリを停止
+- ターミナルから:
+
+```bash
+scripts/claude-sessions.sh list          # 一覧
+scripts/claude-sessions.sh stop-old      # 最新以外を停止 (-y で確認なし)
+scripts/claude-sessions.sh stop <PID>    # 指定したセッションを停止
+scripts/claude-sessions.sh stop-app      # 残っている rici7Sch アプリを停止
+```
+
+開始時刻が最も新しいセッション（いま使っているもの）と、スクリプトを実行しているセッション自身は止めません。停止はまず通常の終了要求 (SIGTERM) を送り、5 秒たっても終わらない場合だけ強制終了します。
+
 ## 更新履歴
 
 - 2026-11-27: Razor Pages プロジェクトを作成。Index / Error / Privacy を作成し、RoboHelp ヘルプ 140 トピック・目次・索引・検索を移植。VS Code の「実行とデバッグ」設定を追加。
@@ -131,3 +155,5 @@ python3 rici7Sch/tools/convert_help.py
 - 2026-11-27: VS Code のエクスプローラーで `.cshtml.cs` を `.cshtml` の下に重ねて表示する設定を追加。
 - 2026-11-27: UI を日本語化（ヘッダー、各ページ、ボタン、JS のメッセージ）。Classic 用に `RoboHHRE.ja.lng` を追加し、英語版に重ねて読み込むように変更。日本語フォントの代替指定と、日本語を文字参照にせず出力する設定を追加。
 - 2026-11-27: 移植したトピック 140 件・目次・索引を日本語化。対訳辞書 `HelpSource/ja/*.json` と、変換ツールで訳を適用する仕組みを追加。トピックに元の英語タイトルと原文へのリンクを表示。索引は英語の頭文字でまとめ、日本語・英語の両方で絞り込み可能に。Classic 表示の目次・索引は元の英語名で表示。
+- 2026-11-27: `ehlpdhtm.js` を通常のトピックページでも読み込み、ドロップダウンの開閉に `kadovTextPopup` を使用（使えない場合は自前で開閉）。
+- 2026-11-28: 古い Claude セッションと残ったアプリを停止するスクリプト `scripts/claude-sessions.sh` と VS Code タスクを追加。

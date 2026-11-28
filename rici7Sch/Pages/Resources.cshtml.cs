@@ -26,7 +26,7 @@ public class ResourcesModel(HelpSourceService source, HelpCatalog catalog, IWebH
             ("css/mshtmlExp2nd.css", "元のポップアップ用スタイル (ポップアップで開いていたトピック)"),
             ("css/t3.gif", "mshtmlExp*.css が参照する行頭記号の画像"),
             ("js/site.js", "ドロップダウン・ポップアップ・索引の絞り込み・テーマ・印刷"),
-            ("js/ehlpdhtm.js", "元の RoboHelp DHTML 効果 (Classic 表示)"),
+            ("js/ehlpdhtm.js", "元の RoboHelp DHTML スクリプト (トピックのドロップダウンの開閉、Classic 表示のポップアップ・ドロップダウン)"),
             ("js/classic.js", "Classic 表示のナビゲーション (タブ・目次の同期・前へ / 次へ)"),
             ("favicon.ico", "サイトのアイコン"),
         ];

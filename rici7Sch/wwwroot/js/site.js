@@ -1,7 +1,8 @@
 ﻿// Printer Driver Help - client scripts
-// 旧 ehlpdhtm.js (RoboHelp DHTML 効果) の機能を Bootstrap ベースで再実装:
-//   - ドロップダウン (kadovTextPopup)   → Bootstrap collapse + 「すべて表示」
+// 旧 ehlpdhtm.js (RoboHelp DHTML 効果) との連携:
+//   - ドロップダウン (kadovTextPopup)   → ehlpdhtm.js の kadovTextPopup で開閉 (読み込めない場合は自前で開閉)
 //   - ファイルポップアップ (BSSCPopup) → モーダル表示
+//     (ehlpdhtm.js のポップアップは互換モードのページ専用のため、Classic 表示でのみ使用)
 //   - 印刷ボタン / 目次の同期 / 索引の絞り込み / テーマ切替
 (function () {
     'use strict';
@@ -36,16 +37,37 @@
         });
     }
 
-    // ------------------------------------------------------------ dropdowns (kadovTextPopup)
-    const panels = $$('.help-content .help-dropdown');
-    const expandAll = $('#expandAll');
-    if (expandAll && panels.length > 0 && window.bootstrap) {
+    // ------------------------------------------------------------ dropdowns (kadovTextPopup / ehlpdhtm.js)
+    // ehlpdhtm.js が読み込まれていれば、元のヘルプと同じ kadovTextPopup で開閉する。
+    // gPopupData に「ボタン → パネル」を登録しておくと、kadovTextPopup はパネルを移動せずに表示を切り替える。
+    const legacy = typeof window.kadovTextPopup === 'function' &&
+        typeof window.textPopupData === 'function' && Array.isArray(window.gPopupData);
+    const dropdowns = Array.from(document.querySelectorAll('[data-help-dropdown]'))
+        .map(btn => ({ btn, panel: document.getElementById(btn.dataset.helpDropdown) }))
+        .filter(d => d.panel);
+    const isOpen = panel => panel.style.display !== 'none';
+    const toggle = ({ btn, panel }, want) => {
+        const was = isOpen(panel);
+        if (want !== undefined && want === was) return;
+        if (legacy) {
+            try { window.kadovTextPopup(btn.id); } catch (e) { console.warn('ehlpdhtm.js kadovTextPopup failed', e); }
+        }
+        if (isOpen(panel) === was) panel.style.display = was ? 'none' : '';   // ehlpdhtm.js が使えない場合
+        btn.setAttribute('aria-expanded', String(isOpen(panel)));
+    };
+    dropdowns.forEach(d => {
+        if (legacy) window.gPopupData.push(new window.textPopupData(d.btn.id, d.panel.id));
+        d.btn.addEventListener('click', () => toggle(d));
+    });
+    document.documentElement.dataset.dropdownEngine = legacy ? 'ehlpdhtm' : 'site';
+
+    const expandAll = document.getElementById('expandAll');
+    if (expandAll && dropdowns.length > 0) {
         expandAll.hidden = false;
-        let shown = false;
         expandAll.addEventListener('click', () => {
-            shown = !shown;
-            panels.forEach(p => bootstrap.Collapse.getOrCreateInstance(p, { toggle: false })[shown ? 'show' : 'hide']());
-            expandAll.textContent = shown ? 'すべて折りたたむ' : 'すべて展開';
+            const show = !dropdowns.every(d => isOpen(d.panel));
+            dropdowns.forEach(d => toggle(d, show));
+            expandAll.textContent = show ? 'すべて折りたたむ' : 'すべて展開';
         });
     }
 

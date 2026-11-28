@@ -170,6 +170,8 @@
     </div>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @* site.js より前に読み込む必要があるスクリプト (トピックページの ehlpdhtm.js など) *@
+    @await RenderSectionAsync("LegacyScripts", required: false)
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
