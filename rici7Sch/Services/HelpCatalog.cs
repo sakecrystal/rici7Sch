@@ -42,6 +42,8 @@ namespace rici7Sch.Services
         public string TitleEn { get; set; } = "";
         /// <summary>検索用の本文 (日本語訳 + 英語の原文)。</summary>
         public string Text { get; set; } = "";
+        /// <summary>本文から参照しているトピック (リンク・ポップアップ) の ID。</summary>
+        public List<string> Links { get; set; } = [];
         /// <summary>元トピックが参照していたスタイルシート (mshtmlExpNonbrand / mshtmlExp2nd)。</summary>
         public string Stylesheet { get; set; } = "mshtmlExpNonbrand";
         public string Url => HelpCatalog.TopicUrl(Id, null);
@@ -78,6 +80,8 @@ namespace rici7Sch.Services
         private readonly Dictionary<string, TopicInfo> _topics;
         private readonly List<string> _sequence;                         // 目次順のトピック (重複除去)
         private readonly Dictionary<string, List<TocNode>> _paths;       // トピック → 目次上の親の列
+        private readonly Dictionary<string, List<TopicInfo>> _referencedBy = new(StringComparer.OrdinalIgnoreCase);
+        private readonly Dictionary<string, List<KeywordEntry>> _keywordsByTopic = new(StringComparer.OrdinalIgnoreCase);
 
         public IReadOnlyList<TocNode> Toc { get; }
         public IReadOnlyList<KeywordEntry> Keywords { get; }
@@ -135,12 +139,36 @@ namespace rici7Sch.Services
                 }
             }
             Walk(Toc, []);
+
+            // 被リンク (このトピックを参照しているトピック)
+            foreach (var t in _topics.Values.OrderBy(t => t.Title))
+                foreach (var target in t.Links.Distinct(StringComparer.OrdinalIgnoreCase))
+                {
+                    if (!_referencedBy.TryGetValue(target, out var list)) _referencedBy[target] = list = [];
+                    list.Add(t);
+                }
+
+            // トピックごとの索引キーワード
+            foreach (var k in Keywords)
+                foreach (var target in k.Topics.Select(x => x.Topic).Distinct(StringComparer.OrdinalIgnoreCase))
+                {
+                    if (!_keywordsByTopic.TryGetValue(target, out var list)) _keywordsByTopic[target] = list = [];
+                    list.Add(k);
+                }
         }
 
         public static string TopicUrl(string id, string? anchor) =>
             "/Topics/" + id + (string.IsNullOrEmpty(anchor) ? "" : "#" + anchor);
 
         public TopicInfo? Find(string id) => _topics.GetValueOrDefault(id);
+
+        /// <summary>指定したトピックを本文から参照しているトピック。</summary>
+        public IReadOnlyList<TopicInfo> ReferencesTo(string id) =>
+            _referencedBy.TryGetValue(id, out var list) ? list : [];
+
+        /// <summary>指定したトピックが載っている索引キーワード。</summary>
+        public IReadOnlyList<KeywordEntry> KeywordsFor(string id) =>
+            _keywordsByTopic.TryGetValue(id, out var list) ? list : [];
 
         public TopicNavigation? GetNavigation(string id)
         {

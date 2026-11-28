@@ -1,7 +1,12 @@
 // このファイルは tools/convert_help.py により生成されています。
 namespace rici7Sch.Pages.Topics;
 
+/// <summary>トナーを節約して印刷する (Saving on Toner When Printing)</summary>
 public class IDH_HOW_TONERSAVINGModel : TopicPageModel
 {
     public override string TopicId => "IDH_HOW_TONERSAVING";
+    public override string SourceFile => "HTMLFILE/IDH_HOW_TONERSAVING.htm";
+    public override string OriginalTitle => "Saving on Toner When Printing";
+    public override string Stylesheet => "mshtmlExpNonbrand";
+    public override int DropdownCount => 0;
 }

@@ -1,10 +1,13 @@
+@using rici7Sch.Pages.Topics
 @using rici7Sch.Services
 @{
     Layout = "_Layout";
-    var nav = (TopicNavigation)ViewData["TopicNavigation"]!;
+    // 各トピックの PageModel (生成された .cshtml.cs) の情報を使う
+    var topic = (TopicPageModel)ViewContext.ViewData.Model!;
+    var nav = topic.Navigation;
 }
-@* 移植したヘルプトピック共通の枠: パンくず・タイトル・ツールバー・前後トピック *@
-<article class="topic" data-topic-id="@nav.Topic.Id">
+@* 移植したヘルプトピック共通の枠: パンくず・タイトル・このページの内容・関連トピック・前後トピック *@
+<article class="topic" data-topic-id="@topic.TopicId">
     <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a asp-page="/Index">ホーム</a></li>
@@ -24,22 +27,92 @@
 
     <header class="topic-header">
         <div class="topic-heading">
-            <h1 class="topic-title">@nav.Topic.Title</h1>
-            @if (!string.IsNullOrEmpty(nav.Topic.TitleEn) && nav.Topic.TitleEn != nav.Topic.Title)
+            <h1 class="topic-title">@topic.Title</h1>
+            @if (!string.IsNullOrEmpty(topic.OriginalTitle) && topic.OriginalTitle != topic.Title)
             {
-                <p class="topic-original">原文: <span lang="en">@nav.Topic.TitleEn</span></p>
+                <p class="topic-original">原文: <span lang="en">@topic.OriginalTitle</span></p>
             }
         </div>
         <div class="topic-tools" role="toolbar" aria-label="トピックの操作">
-            <button type="button" class="btn btn-outline-secondary btn-sm" id="expandAll" hidden>すべて展開</button>
+            @if (topic.DropdownCount > 0)
+            {
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="expandAll" hidden>すべて展開</button>
+            }
             <button type="button" class="btn btn-outline-secondary btn-sm" data-action="print">印刷</button>
-            <a class="btn btn-outline-secondary btn-sm" href="@Url.Content("~/Classic?topic=" + Uri.EscapeDataString(nav.Topic.Id))" title="元の英語のページを Classic 表示で開く">原文 (英語)</a>
+            <a class="btn btn-outline-secondary btn-sm" href="@Url.Content("~/Classic?topic=" + Uri.EscapeDataString(topic.TopicId))"
+               title="元の英語のページ (@topic.SourceFile) を Classic 表示で開く">原文 (英語)</a>
         </div>
     </header>
+
+    @if (topic.ShowSections)
+    {
+        <details class="topic-sections" open="@(topic.Sections.Count <= 12)">
+            <summary>このページの内容 <span class="ui-meta">@topic.Sections.Count 項目</span></summary>
+            <ol class="topic-sections-list">
+                @foreach (var s in topic.Sections)
+                {
+                    <li class="level-@s.Level"><a href="#@s.Id">@s.Title</a></li>
+                }
+            </ol>
+        </details>
+    }
 
     <div class="help-content">
         @RenderBody()
     </div>
+
+    @if (topic.RelatedTopics.Count > 0 || topic.ReferencedBy.Count > 0 || topic.Keywords.Count > 0)
+    {
+        <aside class="topic-related" aria-label="関連情報">
+            @if (topic.RelatedTopics.Count > 0)
+            {
+                <section>
+                    <h2 class="topic-related-title">関連トピック</h2>
+                    <ul>
+                        @foreach (var t in topic.RelatedTopics)
+                        {
+                            var popup = topic.PopupTopics.Contains(t.Id, StringComparer.OrdinalIgnoreCase);
+                            <li>
+                                @if (popup)
+                                {
+                                    <a href="@Url.Content("~" + t.Url)" data-help-popup="true" class="help-popup-link">@t.Title</a>
+                                    <span class="ui-meta">（ポップアップ）</span>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Content("~" + t.Url)">@t.Title</a>
+                                }
+                            </li>
+                        }
+                    </ul>
+                </section>
+            }
+            @if (topic.ReferencedBy.Count > 0)
+            {
+                <section>
+                    <h2 class="topic-related-title">このページを参照しているトピック</h2>
+                    <ul>
+                        @foreach (var t in topic.ReferencedBy)
+                        {
+                            <li><a href="@Url.Content("~" + t.Url)">@t.Title</a></li>
+                        }
+                    </ul>
+                </section>
+            }
+            @if (topic.Keywords.Count > 0)
+            {
+                <section>
+                    <h2 class="topic-related-title">索引キーワード</h2>
+                    <p class="topic-keywords">
+                        @foreach (var k in topic.Keywords)
+                        {
+                            <a class="keyword-chip" asp-page="/Keywords" asp-route-k="@k.Keyword">@k.Keyword</a>
+                        }
+                    </p>
+                </section>
+            }
+        </aside>
+    }
 
     <nav class="topic-pager" aria-label="前後のトピック">
         @if (nav.Previous is not null)
@@ -64,6 +137,9 @@
 </article>
 
 @section LegacyScripts {
-    @* 元のヘルプの DHTML スクリプト。ドロップダウンの開閉 (kadovTextPopup) に使う *@
-    <script src="~/js/ehlpdhtm.js" asp-append-version="true"></script>
+    @if (topic.DropdownCount > 0)
+    {
+        @* 元のヘルプの DHTML スクリプト。ドロップダウンの開閉 (kadovTextPopup) に使う *@
+        <script src="~/js/ehlpdhtm.js" asp-append-version="true"></script>
+    }
 }

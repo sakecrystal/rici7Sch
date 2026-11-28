@@ -1,0 +1,10 @@
+@using rici7Sch.Pages.Topics
+@{
+    var topic = (TopicPageModel)ViewContext.ViewData.Model!;
+}
+@* ポップアップ (モーダル) 用: ヘッダーやサイドバーを含まず、タイトルと本文だけを返す *@
+<article class="topic-fragment" data-topic-id="@topic.TopicId" data-title="@topic.Title" data-original-title="@topic.OriginalTitle">
+    <div class="help-content">
+        @RenderBody()
+    </div>
+</article>

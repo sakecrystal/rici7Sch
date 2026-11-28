@@ -33,12 +33,13 @@ cd rici7Sch && dotnet run      # http://localhost:5276
 画面の文言とトピックの本文・タイトル・目次・索引はすべて日本語です。各トピックには元の英語のタイトルを表示し、「原文 (英語)」ボタンから元のページを Classic 表示で開けます。検索は日本語でも英語でもヒットします。
 
 ホーム (`/`) とヘッダーから、以下のすべてのページと全 140 トピックに移動できます
-（ヘッダーの **Topics** メニュー、ホームの Contents / All topics A–Z）。
+（ヘッダーの **トピック** メニュー、ホームの「目次」「全トピック」）。
 
 | URL | ページ | 内容 |
 | --- | --- | --- |
 | `/` | `Pages/Index` | ホーム。全ページ・全セクション・全トピックへの入口 |
-| `/Topics/{ID}` | `Pages/Topics/**` | 移植したヘルプトピック 140 件 |
+| `/Topics/{ID}` | `Pages/Topics/**` | 移植したヘルプトピック 140 件（このページの内容・関連トピック・索引キーワード付き） |
+| `/Topics/{ID}?handler=Fragment` | `Pages/Topics/**` | ポップアップ用に本文だけを返す（モーダルが読み込む） |
 | `/Keywords` | `Pages/Keywords` | 索引（.hhk）。頭文字ジャンプ、入力による絞り込み |
 | `/Search?q=` | `Pages/Search` | 全文検索。`"..."` でフレーズ検索 |
 | `/Classic` | `Pages/Classic/Index` | 旧 WebHelp 形式のビューアー（目次・索引・検索・用語集タブ、前へ/次へ、目次の同期、ナビゲーションの表示/非表示、印刷） |
@@ -76,7 +77,7 @@ cd rici7Sch && dotnet run      # http://localhost:5276
 | `RoboHHRE.ja.lng`（UI 文言・日本語） | Classic のボタン・ラベル、Resources（英語と並べて表示） |
 | `ja/*.json`（本文の日本語訳） | 変換ツールが Topics・目次・索引の日本語化に使用 |
 | `eHelp.xml`（WebSearch 設定） | ヘッダー / Classic の WebSearch ボタン（元の設定どおり無効）、Resources |
-| `wwwroot/js/ehlpdhtm.js` | 全トピックのドロップダウンの開閉（`kadovTextPopup`）、Classic（元のドロップダウン・ポップアップ効果） |
+| `wwwroot/js/ehlpdhtm.js` | ドロップダウンのあるトピックでの開閉（`kadovTextPopup`）、Classic（元のドロップダウン・ポップアップ効果） |
 
 ## フォルダ構成
 
@@ -93,17 +94,56 @@ rici7Sch/                        プロジェクト
     Index, Error, Privacy        (.cshtml + .cshtml.cs)
     Keywords, Search, Resources  (.cshtml + .cshtml.cs)
     Classic/Index, Classic/Frame (.cshtml + .cshtml.cs)
-    Shared/                      _Layout・_TopicLayout・_TocTree
-    Topics/                      移植したトピック (自動生成) と TopicPageModel.cs
+    Shared/                      _Layout・_TopicLayout・_TopicFragment・_TocTree
+    Topics/                      移植したトピック (自動生成) と TopicPageModel.cs・_ViewStart
   Data/                          目次・索引・検索用データ (自動生成)
   HelpSource/                    移植元の RoboHelp 資産
   tools/convert_help.py          変換ツール
+  tools/apply_translation.py     翻訳作業用 (番号付きの訳文を対訳辞書に書き出す)
   wwwroot/
     css/   site.css, mshtmlExpNonbrand.css, mshtmlExp2nd.css, t3.gif
     js/    site.js, classic.js, ehlpdhtm.js
     images/help/                 画像 (自動コピー)
     lib/bootstrap/
+scripts/claude-sessions.sh       古い Claude セッション・残ったアプリの停止
 ```
+
+## トピックページの仕組み (.cshtml と .cshtml.cs)
+
+`Pages/Topics/` の各トピックは、変換ツールが生成する 2 つのファイルでできています。
+
+| ファイル | 内容 |
+| --- | --- |
+| `{ID}.cshtml` | 本文（日本語訳を適用したマークアップ） |
+| `{ID}.cshtml.cs` | そのトピックの情報を持つ PageModel（`TopicPageModel` を継承） |
+
+生成される `.cshtml.cs` の例:
+
+```csharp
+public class IDH_DDUPLEXModel : TopicPageModel
+{
+    public override string TopicId => "IDH_DDUPLEX";
+    public override string SourceFile => "HTMLFILE/IDH_DDUPLEX.htm";
+    public override string OriginalTitle => "2 Sided/Layout/Booklet";
+    public override string Stylesheet => "mshtmlExpNonbrand";
+    public override int DropdownCount => 0;
+    public override IReadOnlyList<TopicSection> Sections { get; } = [ new("layout", "レイアウト：", 2), ... ];
+    public override IReadOnlyList<string> LinkedTopics { get; } = ["IDH_HOW_LAYOUT", ...];
+}
+```
+
+基底クラス `Pages/Topics/TopicPageModel.cs` がこれらの情報を使って、各トピックページに次の機能を付けます。
+
+| 情報 | 使い道 |
+| --- | --- |
+| `Sections`（ページ内の見出し） | 「このページの内容」（見出しが 3 つ以上のとき。項目が多いときは折りたたみ） |
+| `LinkedTopics` / `PopupTopics` | 「関連トピック」（ポップアップ先はモーダルで開く） |
+| 全トピックの参照先（`Data/topics.json` の `links`） | 「このページを参照しているトピック」 |
+| 索引（`.hhk`） | 「索引キーワード」（クリックすると索引ページで絞り込み） |
+| `OriginalTitle` / `SourceFile` | 原文のタイトル表示、「原文 (英語)」ボタン |
+| `Stylesheet` | `mshtmlExp2nd.css` を重ねるかどうか |
+| `DropdownCount` | ドロップダウンがあるページだけ `ehlpdhtm.js` を読み込み、「すべて展開」ボタンを表示 |
+| `OnGetFragment` ハンドラー | `?handler=Fragment` で本文だけを返す（`_TopicFragment` レイアウト）。ポップアップのモーダルが使う |
 
 ## トピックを再生成するには
 
@@ -126,7 +166,7 @@ python3 rici7Sch/tools/convert_help.py
 
 ### ehlpdhtm.js の使い方
 
-- トピックページでは `site.js` より前に `ehlpdhtm.js` を読み込み、ドロップダウン（「▼」付きの語句をクリックすると開く説明）の開閉を元のヘルプと同じ `kadovTextPopup` で行います。`ehlpdhtm.js` が読み込めない・エラーになる場合は `site.js` が代わりに開閉します（`<html data-dropdown-engine="ehlpdhtm">` で、どちらで動いているか確認できます）。
+- ドロップダウンのあるトピックページでは `site.js` より前に `ehlpdhtm.js` を読み込み、ドロップダウン（「▼」付きの語句をクリックすると開く説明）の開閉を元のヘルプと同じ `kadovTextPopup` で行います。`ehlpdhtm.js` が読み込めない・エラーになる場合は `site.js` が代わりに開閉します（`<html data-dropdown-engine="ehlpdhtm">` で、どちらで動いているか確認できます）。
 - ファイルポップアップ（`BSSCPopup`）は、通常のページではモーダルで表示します。`ehlpdhtm.js` のポップアップは単位なしの数値で位置やサイズを指定しており、互換モード（元の HTML）でしか正しく動かないため、Classic 表示でのみ使っています。
 
 ## 古い Claude セッションの停止
@@ -157,3 +197,4 @@ scripts/claude-sessions.sh stop-app      # 残っている rici7Sch アプリを
 - 2026-11-27: 移植したトピック 140 件・目次・索引を日本語化。対訳辞書 `HelpSource/ja/*.json` と、変換ツールで訳を適用する仕組みを追加。トピックに元の英語タイトルと原文へのリンクを表示。索引は英語の頭文字でまとめ、日本語・英語の両方で絞り込み可能に。Classic 表示の目次・索引は元の英語名で表示。
 - 2026-11-27: `ehlpdhtm.js` を通常のトピックページでも読み込み、ドロップダウンの開閉に `kadovTextPopup` を使用（使えない場合は自前で開閉）。
 - 2026-11-28: 古い Claude セッションと残ったアプリを停止するスクリプト `scripts/claude-sessions.sh` と VS Code タスクを追加。
+- 2026-11-28: 生成するトピックの `.cshtml.cs` に、元ファイル名・英語タイトル・スタイルシート・ページ内の見出し・参照先・ポップアップ先・ドロップダウン数を持たせるように変更。これを使って「このページの内容」「関連トピック」「このページを参照しているトピック」「索引キーワード」を表示。ポップアップは `OnGetFragment`（本文だけの応答）を読み込むように変更し、`ehlpdhtm.js` はドロップダウンのあるページだけで読み込むように変更。README を現在の構成に合わせて更新。

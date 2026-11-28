@@ -454,14 +454,46 @@ def convert_topic(path: Path):
     text = BeautifulSoup(inner, "html.parser").get_text(" ", strip=True)
     text = re.sub(r"\s+", " ", text)
     norm = lambda x: re.sub(r"\s+", " ", x).strip()
-    return tid, norm(title), norm(heading), inner, text, text_en, sheet
+    info = collect_page_info(BeautifulSoup(inner, "html.parser"), tid)
+    info["sheet"] = sheet
+    info["source"] = path.relative_to(SRC).as_posix()
+    return tid, norm(title), norm(heading), inner, text, text_en, info
+
+
+def collect_page_info(doc, tid):
+    """生成する PageModel (.cshtml.cs) に持たせる、トピックごとの情報を集める。"""
+    sections = []
+    for el in doc.find_all(["p", "h2"]):
+        cls = el.get("class") or []
+        if el.get("id") and (el.name == "h2" or "T1" in cls or "T2" in cls):
+            text = re.sub(r"\s+", " ", el.get_text(" ", strip=True))
+            if text:
+                sections.append({"id": el["id"], "title": text, "level": 1 if (el.name == "h2" or "T1" in cls) else 2})
+
+    def targets(links):
+        seen = []
+        for a in links:
+            m = re.match(r"~/Topics/([^#]+)", a.get("href", ""))
+            if m and m.group(1) != tid and m.group(1) not in seen:
+                seen.append(m.group(1))
+        return seen
+
+    popups = targets(doc.find_all("a", attrs={"data-help-popup": True}))
+    links = [t for t in targets(doc.find_all("a", href=True)) if t not in popups]
+    dropdowns = len(doc.find_all("button", attrs={"data-help-dropdown": True}))
+    return {"sections": sections, "links": links, "popups": popups, "dropdowns": dropdowns}
+
+
+def cs(value: str) -> str:
+    """C# の文字列リテラル。"""
+    return json.dumps(value, ensure_ascii=False)
 
 
 def razor_escape(html: str) -> str:
     return html.replace("@", "@@")
 
 
-def write_page(tid, title, heading, inner):
+def write_page(tid, title_ja, title_en, inner, info):
     cshtml = PAGES / f"{tid}.cshtml"
     cshtml.parent.mkdir(parents=True, exist_ok=True)
     ns, cls = namespace(tid), class_name(tid)
@@ -473,15 +505,35 @@ def write_page(tid, title, heading, inner):
         + razor_escape(inner) + "\n",
         encoding="utf-8",
     )
-    (PAGES / f"{tid}.cshtml.cs").write_text(
-        "// このファイルは tools/convert_help.py により生成されています。\n"
-        f"namespace {ns};\n\n"
-        f"public class {cls} : TopicPageModel\n"
-        "{\n"
-        f"    public override string TopicId => \"{tid}\";\n"
-        "}\n",
-        encoding="utf-8",
-    )
+    lines = [
+        "// このファイルは tools/convert_help.py により生成されています。",
+        f"namespace {ns};",
+        "",
+        f"/// <summary>{title_ja} ({title_en})</summary>",
+        f"public class {cls} : TopicPageModel",
+        "{",
+        f"    public override string TopicId => {cs(tid)};",
+        f"    public override string SourceFile => {cs(info['source'])};",
+        f"    public override string OriginalTitle => {cs(title_en)};",
+        f"    public override string Stylesheet => {cs(info['sheet'])};",
+        f"    public override int DropdownCount => {info['dropdowns']};",
+    ]
+    if info["sections"]:
+        lines.append("")
+        lines.append("    /// <summary>ページ内の見出し (このページの内容)</summary>")
+        lines.append("    public override IReadOnlyList<TopicSection> Sections { get; } =")
+        lines.append("    [")
+        for sec in info["sections"]:
+            lines.append(f"        new({cs(sec['id'])}, {cs(sec['title'])}, {sec['level']}),")
+        lines.append("    ];")
+    for prop, key, doc in (("LinkedTopics", "links", "本文から参照しているトピック"),
+                           ("PopupTopics", "popups", "ポップアップで開くトピック")):
+        if info[key]:
+            lines.append("")
+            lines.append(f"    /// <summary>{doc}</summary>")
+            lines.append(f"    public override IReadOnlyList<string> {prop} {{ get; }} = [{', '.join(cs(t) for t in info[key])}];")
+    lines.append("}")
+    (PAGES / f"{tid}.cshtml.cs").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main():
@@ -500,11 +552,12 @@ def main():
     load_translations()
     topics = []
     for path in sorted(HTMLDIR.rglob("*.htm")):
-        tid, title, heading, inner, text, text_en, sheet = convert_topic(path)
-        write_page(tid, title, heading, inner)
+        tid, title, heading, inner, text, text_en, info = convert_topic(path)
         en = heading or title
+        write_page(tid, tr(en, tid), en, inner, info)
         # 検索は日本語・英語のどちらでもヒットするよう両方を持つ
-        topics.append({"id": tid, "title": tr(en, tid), "titleEn": en, "stylesheet": sheet,
+        topics.append({"id": tid, "title": tr(en, tid), "titleEn": en, "stylesheet": info["sheet"],
+                       "links": info["links"] + info["popups"],
                        "text": text if text == text_en else f"{text} {text_en}"})
 
     toc = build_toc()

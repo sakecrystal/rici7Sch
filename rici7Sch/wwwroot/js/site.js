@@ -90,16 +90,20 @@
             openEl.href = url;
             modal.show();
             try {
-                let doc = cache.get(url);
+                // トピックの PageModel の OnGetFragment (?handler=Fragment) から本文だけを取得する
+                const target = new URL(url, location.href);
+                target.hash = '';
+                target.searchParams.set('handler', 'Fragment');
+                let doc = cache.get(target.href);
                 if (!doc) {
-                    const res = await fetch(url, { headers: { 'Accept': 'text/html' } });
+                    const res = await fetch(target, { headers: { 'Accept': 'text/html' } });
                     if (!res.ok) throw new Error(res.status);
                     doc = new DOMParser().parseFromString(await res.text(), 'text/html');
-                    cache.set(url, doc);
+                    cache.set(target.href, doc);
                 }
-                const content = doc.querySelector('.topic .help-content');
-                const heading = doc.querySelector('.topic-title');
-                if (heading) titleEl.textContent = heading.textContent.trim();
+                const fragment = doc.querySelector('.topic-fragment');
+                const content = fragment && fragment.querySelector('.help-content');
+                if (fragment && fragment.dataset.title) titleEl.textContent = fragment.dataset.title;
                 bodyEl.replaceChildren(...(content ? Array.from(content.cloneNode(true).childNodes) : []));
             } catch (e) {
                 bodyEl.innerHTML = '';

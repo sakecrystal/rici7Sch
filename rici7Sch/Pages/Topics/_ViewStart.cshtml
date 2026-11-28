@@ -1,3 +1,4 @@
 @{
-    Layout = "_TopicLayout";
+    // ?handler=Fragment (ポップアップ用) のときは本文だけの枠、通常はトピック共通の枠
+    Layout = ViewData["Fragment"] is true ? "_TopicFragment" : "_TopicLayout";
 }
